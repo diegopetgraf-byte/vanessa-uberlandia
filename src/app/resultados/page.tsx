@@ -7,7 +7,7 @@ import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { CTABanner } from '@/components/ui/CTABanner';
 import { getWhatsAppUrl } from '@/lib/utils';
-import { Sparkles, Camera } from 'lucide-react';
+import { Camera } from 'lucide-react';
 
 const FILTERS = ['Todos', 'Harmonização', 'Pele', 'Colágeno', 'Contorno', 'Corporal'];
 
@@ -18,14 +18,6 @@ const RESULTS = [
   { id: 4, category: 'Contorno', label: 'Contorno e Sustentação Mandibular', desc: 'Definição sutil sem aspecto masculinizado ou exagerado' },
   { id: 5, category: 'Harmonização', label: 'Preenchimento e Proporção Labial', desc: 'Hidratação e desenho labial com naturalidade' },
   { id: 6, category: 'Corporal', label: 'Bioestimuladores & Firmeza Corporal', desc: 'Tratamento de flacidez e refinamento de contorno' },
-];
-
-const MASONRY_GALLERY = [
-  { src: '/gallery-3.png', title: 'Atendimento Personalizado', desc: 'Escuta clínica aprofundada', span: 'col-span-2 row-span-2 aspect-[4/3] sm:aspect-[16/11]' },
-  { src: '/gallery-1.png', title: 'Harmonia & Proporção', desc: 'Quiet Beauty FS', span: 'col-span-1 aspect-square' },
-  { src: '/gallery-2.png', title: 'Refinamento & Detalhes', desc: 'Biomateriais nobres', span: 'col-span-1 aspect-square' },
-  { src: '/gallery-4.png', title: 'Tecnologia & Ciência', desc: 'Estruturação avançada', span: 'col-span-1 aspect-square' },
-  { src: '/gallery-5.png', title: 'Consultório Oscar Freire', desc: 'Privacidade e conforto', span: 'col-span-1 aspect-square' },
 ];
 
 export default function ResultadosPage() {
@@ -63,40 +55,6 @@ export default function ResultadosPage() {
             </p>
           </div>
         </div>
-
-        {/* Masonry Atmosphere Gallery */}
-        <section className="section-sm bg-[#FAFAF8] border-b border-[#EAE7E0]">
-          <div className="container-uniq">
-            <AnimatedSection className="mb-8">
-              <div className="flex items-center gap-2 mb-2">
-                <Sparkles className="w-4 h-4 text-[#6B1E2E]" />
-                <span className="eyebrow block">Galeria Clínica</span>
-              </div>
-              <h2 className="text-headline text-2xl sm:text-3xl">Ambiente e Filosofia de Cuidado</h2>
-            </AnimatedSection>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {MASONRY_GALLERY.map((item, idx) => (
-                <AnimatedSection key={idx} delay={idx * 0.06} className={item.span}>
-                  <div className="group relative overflow-hidden rounded-2xl bg-[#EAE7E0] h-full shadow-sm">
-                    <img
-                      src={item.src}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1E1B18]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                      <div>
-                        <p className="text-white font-heading text-base">{item.title}</p>
-                        <p className="text-white/80 text-[0.6875rem] font-light">{item.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Subtle Placeholders Section */}
         <section className="section bg-[#FAFAF8]">
