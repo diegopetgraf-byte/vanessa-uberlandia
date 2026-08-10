@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "nome": "Carlos Thiago Jirschik",
+    "meta": "6 avaliações · 6 fotos",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Lugar maravilhoso. E o atendimento todo especial. A Fabiana nos passa muita confiança, e é de uma doçura incrível. Estava com muito medo de fazer a harmonização facial, mas ela me passou muita confiança. E o procedimento foi muito tranquilo. SUPER RECOMENDO!",
+    "verificado": true
+  },
+  {
+    "id": 2,
+    "nome": "Osmyr Placiano Júnior",
+    "meta": "2 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Excelente profissional, explica as técnicas e os procedimentos realizados de forma clara e com conhecimento. Ótima localização, consultório agradável.",
+    "verificado": true
+  },
+  {
+    "id": 3,
+    "nome": "Gonzalo Solla Sobral",
+    "meta": "2 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Lugar agradável, serviço excelente e um profissional com um nível de conhecimento e habilidade claramente elevado. Adorei e recomendo.",
+    "verificado": true
+  },
+  {
+    "id": 4,
+    "nome": "Katia Placiano",
+    "meta": "4 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Excelente profissional. Muito atualizada. Explica os procedimentos com clareza. Inspira muita confiança. Resultados excelentes. Eu a recomendo.",
+    "verificado": true
+  },
+  {
+    "id": 5,
+    "nome": "LarissaBreezy Santos",
+    "meta": "3 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Serviço excelente! Recomendo muito. A Dra. Fabi está muito atualizada sobre as tendências do mercado e tem ótimas dicas e procedimentos.",
+    "verificado": true
+  },
+  {
+    "id": 6,
+    "nome": "Cristiane Costa Lima",
+    "meta": "2 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Uma profissional competente e muito atenciosa. Obrigada, Dra. Fabiana, adorei tudo!",
+    "verificado": true
+  },
+  {
+    "id": 7,
+    "nome": "Vilma Sobral",
+    "meta": "2 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Lugar muito agradável, os procedimentos são realizados com muita segurança e a profissional explica tudo com muita clareza.",
+    "verificado": true
+  },
+  {
+    "id": 8,
+    "nome": "Leticia Alfinete",
+    "meta": "4 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Serviço impecável! A Dra. Fabiana é extremamente cuidadosa e inspira total confiança. Uma profissional em quem confio 100%!",
+    "verificado": true
+  },
+  {
+    "id": 9,
+    "nome": "Renato Cecin",
+    "meta": "4 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "A Dra. Fabiana é sempre atenciosa e demonstra claramente o antes e o depois dos procedimentos. Uma profissional competente e atualizada.",
+    "verificado": true
+  },
+  {
+    "id": 10,
+    "nome": "Camisa de Gomes",
+    "meta": "5 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "A Fabi me entendeu tão bem, me fez perguntas e me ajudou a compreender cada uma das minhas dúvidas. Fiz o procedimento com ela e percebi que o melhor investimento que fiz foi na Fabi, porque já havia feito procedimentos em 4 clínicas diferentes antes dela e ninguém me entendeu tão bem e me fez sentir tão incrivelmente confiante.",
+    "verificado": true
+  },
+  {
+    "id": 11,
+    "nome": "Rita Jirschik",
+    "meta": "2 avaliações",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Espetacular! Eu já havia feito Botox em outro lugar; nada contra, mas a Dra. Fabiana Sobral superou todas as minhas expectativas. Começando pelas instalações da clínica. Tudo é perfeito e muito organizado, com fácil acesso e atendimento impecável.",
+    "verificado": true
+  },
+  {
+    "id": 12,
+    "nome": "Renan Marson",
+    "meta": "9 avaliações · 2 fotos",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Profissional competente e atualizada, com excelentes procedimentos e resultados de alto padrão.",
+    "verificado": true
+  },
+  {
+    "id": 13,
+    "nome": "Evelyn Lima",
+    "meta": "1 avaliação",
+    "quando": "8 meses atrás",
+    "nota": 5,
+    "texto": "Excelente serviço, ótimo trabalho. Muito satisfeita com os resultados e com o cuidado.",
+    "verificado": true
+  }
+]
