@@ -7,17 +7,17 @@ import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { CTABanner } from '@/components/ui/CTABanner';
 import { getWhatsAppUrl } from '@/lib/utils';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Camera } from 'lucide-react';
 
 const FILTERS = ['Todos', 'Harmonização', 'Pele', 'Colágeno', 'Contorno', 'Corporal'];
 
 const RESULTS = [
-  { id: 1, category: 'Harmonização', before: '/galeria-2.jpg', after: '/galeria-3.jpg', label: 'Harmonização Facial Estratégica' },
-  { id: 2, category: 'Pele', before: '/galeria-4.jpg', after: '/galeria-5.jpg', label: 'Revitalização e Qualidade Cutânea' },
-  { id: 3, category: 'Colágeno', before: '/galeria-6.jpg', after: '/galeria-7.jpg', label: 'Bioestimulador de Colágeno' },
-  { id: 4, category: 'Contorno', before: '/galeria-8.jpg', after: '/galeria-9.jpg', label: 'Contorno e Sustentação Mandibular' },
-  { id: 5, category: 'Harmonização', before: '/galeria-10.png', after: '/galeria-11.jpg', label: 'Preenchimento e Proporção Labial' },
-  { id: 6, category: 'Corporal', before: '/galeria-2.jpg', after: '/galeria-4.jpg', label: 'Bioestimuladores & Firmeza Corporal' },
+  { id: 1, category: 'Harmonização', label: 'Harmonização Facial Estratégica', desc: 'Reestruturação e proporção anatômica individualizada' },
+  { id: 2, category: 'Pele', label: 'Revitalização e Qualidade Cutânea', desc: 'Protocolo de hidratação profunda e viço tecidual' },
+  { id: 3, category: 'Colágeno', label: 'Bioestimulador de Colágeno Facial', desc: 'Neocolagênese progressiva e sustentação natural' },
+  { id: 4, category: 'Contorno', label: 'Contorno e Sustentação Mandibular', desc: 'Definição sutil sem aspecto masculinizado ou exagerado' },
+  { id: 5, category: 'Harmonização', label: 'Preenchimento e Proporção Labial', desc: 'Hidratação e desenho labial com naturalidade' },
+  { id: 6, category: 'Corporal', label: 'Bioestimuladores & Firmeza Corporal', desc: 'Tratamento de flacidez e refinamento de contorno' },
 ];
 
 const MASONRY_GALLERY = [
@@ -47,19 +47,19 @@ export default function ResultadosPage() {
           <div className="container-uniq">
             <AnimatedSection>
               <span className="eyebrow mb-3 block">Clínica FS · Fabiana Sobral</span>
-              <h1 className="text-display-sm max-w-2xl">Resultados & Evolução</h1>
+              <h1 className="text-display-sm max-w-2xl">Resultados & Casos Clínicos</h1>
               <p className="text-sm sm:text-base text-[#6B635B] max-w-xl mt-3 leading-relaxed font-light">
-                Resultados que valorizam a naturalidade e preservam a identidade. Cada caso é único — assim como o plano de tratamento individual.
+                Resultados que valorizam a naturalidade e preservam a identidade. Cada caso é único — assim como o planejamento individualizado de cada paciente.
               </p>
             </AnimatedSection>
           </div>
         </section>
 
         {/* Clinical Notice */}
-        <div className="bg-[rgba(107,30,46,0.05)] border-b border-[rgba(107,30,46,0.1)]">
+        <div className="bg-[rgba(107,30,46,0.04)] border-b border-[rgba(107,30,46,0.08)]">
           <div className="container-uniq py-3.5">
             <p className="text-xs text-[#6B1E2E] font-medium leading-relaxed">
-              As imagens ilustram a evolução de protocolos individualizados. Os resultados variam de acordo com as características biológicas, anatomia e resposta tecidual de cada paciente.
+              Em respeito às diretrizes éticas biomédicas e à privacidade dos pacientes, registros fotográficos comparativos são apresentados detalhadamente durante a consulta presencial de avaliação na clínica.
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function ResultadosPage() {
           </div>
         </section>
 
-        {/* Before / Evolution Cases */}
+        {/* Subtle Placeholders Section */}
         <section className="section bg-[#FAFAF8]">
           <div className="container-uniq">
 
@@ -118,43 +118,60 @@ export default function ResultadosPage() {
               ))}
             </div>
 
-            {/* Before/After Grid */}
+            {/* Grid with subtle camera placeholders */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((result, idx) => (
                 <AnimatedSection key={result.id} delay={idx * 0.05}>
-                  <article className="card-uniq overflow-hidden group hover:shadow-lg transition-all duration-300 bg-white">
-                    <div className="grid grid-cols-2 gap-1 bg-[#EAE7E0] p-1">
-                      <div className="relative aspect-square overflow-hidden rounded-lg bg-[#EAE7E0]">
-                        <img
-                          src={result.before}
-                          alt={`${result.label} - Antes`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          loading="lazy"
-                        />
-                        <div className="absolute bottom-2 left-2">
-                          <span className="text-[0.55rem] font-semibold tracking-wide uppercase bg-[#1E1B18]/70 backdrop-blur-sm text-[#FAFAF8] px-2 py-0.5 rounded-full">
+                  <article className="card-uniq overflow-hidden bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full">
+                    
+                    {/* Subtle Camera Placeholder Box */}
+                    <div className="p-4 bg-[#F5F3EF]">
+                      <div className="grid grid-cols-2 gap-3">
+                        {/* Antes placeholder */}
+                        <div className="aspect-[4/3] rounded-xl border border-dashed border-[#DCD7CD] bg-[#FAFAF8] flex flex-col items-center justify-center p-3 text-center gap-1.5">
+                          <div className="w-7 h-7 rounded-full bg-white border border-[#EAE7E0] flex items-center justify-center shadow-xs">
+                            <Camera className="w-3.5 h-3.5 text-[#9A9188]" />
+                          </div>
+                          <span className="text-[0.6rem] font-semibold uppercase tracking-wider text-[#9A9188]">
                             Antes
                           </span>
+                          <span className="text-[0.55rem] text-[#B0A89F] font-light">
+                            Caso Clínico
+                          </span>
                         </div>
-                      </div>
-                      <div className="relative aspect-square overflow-hidden rounded-lg bg-[#EAE7E0]">
-                        <img
-                          src={result.after}
-                          alt={`${result.label} - Depois`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          loading="lazy"
-                        />
-                        <div className="absolute bottom-2 left-2">
-                          <span className="text-[0.55rem] font-semibold tracking-wide uppercase bg-[#6B1E2E]/90 backdrop-blur-sm text-[#FAFAF8] px-2 py-0.5 rounded-full">
+
+                        {/* Evolução placeholder */}
+                        <div className="aspect-[4/3] rounded-xl border border-dashed border-[#6B1E2E]/20 bg-[#6B1E2E]/[0.02] flex flex-col items-center justify-center p-3 text-center gap-1.5">
+                          <div className="w-7 h-7 rounded-full bg-white border border-[#6B1E2E]/20 flex items-center justify-center shadow-xs">
+                            <Camera className="w-3.5 h-3.5 text-[#6B1E2E]" />
+                          </div>
+                          <span className="text-[0.6rem] font-semibold uppercase tracking-wider text-[#6B1E2E]">
                             Evolução
+                          </span>
+                          <span className="text-[0.55rem] text-[#6B1E2E]/70 font-light">
+                            Quiet Beauty FS
                           </span>
                         </div>
                       </div>
                     </div>
-                    <div className="p-5 flex items-center justify-between">
+
+                    {/* Card Content */}
+                    <div className="p-5 flex-1 flex flex-col justify-between">
                       <div>
-                        <p className="text-sm font-medium text-[#1E1B18] font-heading">{result.label}</p>
-                        <span className="pill-label mt-2 inline-block text-[0.6rem]">{result.category}</span>
+                        <span className="pill-label mb-2 inline-block text-[0.6rem]">{result.category}</span>
+                        <h3 className="text-base font-medium text-[#1E1B18] font-heading">{result.label}</h3>
+                        <p className="text-xs text-[#6B635B] mt-1 font-light leading-relaxed">{result.desc}</p>
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-[#EAE7E0] flex items-center justify-between">
+                        <span className="text-[0.65rem] text-[#9A9188] font-light">Apresentado em consulta</span>
+                        <a
+                          href={whatsappUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[0.6875rem] font-semibold text-[#6B1E2E] hover:underline"
+                        >
+                          Agendar Análise →
+                        </a>
                       </div>
                     </div>
                   </article>
@@ -170,9 +187,9 @@ export default function ResultadosPage() {
           <div className="container-uniq">
             <AnimatedSection>
               <CTABanner
-                eyebrow="Seu planejamento"
+                eyebrow="Seu planejamento individualizado"
                 title="Pronta para começar sua jornada?"
-                subtitle="Agende sua avaliação presencial com Fabiana Sobral e descubra o plano de tratamento facial ou corporal ideal para o seu momento."
+                subtitle="Agende sua avaliação presencial com Fabiana Sobral na Oscar Freire e descubra o plano de tratamento facial ou corporal ideal para o seu momento."
                 primaryLabel="Agendar Avaliação"
                 primaryHref={whatsappUrl}
                 variant="wine"

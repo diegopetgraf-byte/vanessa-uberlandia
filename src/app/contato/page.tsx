@@ -158,44 +158,35 @@ export default function ContatoPage() {
                 </div>
               </AnimatedSection>
 
-              {/* Clinic Images and Map preview */}
-              <AnimatedSection delay={0.15} className="lg:col-span-6 space-y-6">
-                <div className="card-uniq overflow-hidden">
-                  <div className="aspect-[16/10] overflow-hidden bg-[#EAE7E0] relative">
+              {/* Single Clinic Photo and Map Preview */}
+              <AnimatedSection delay={0.15} className="lg:col-span-6">
+                <div className="card-uniq overflow-hidden shadow-md">
+                  <div className="aspect-[4/3] sm:aspect-[16/11] overflow-hidden bg-[#EAE7E0] relative group">
                     <img
-                      src="/gallery-3.png"
-                      alt="Clínica FS Fabiana Sobral na Rua Oscar Freire"
-                      className="w-full h-full object-cover"
+                      src="/gallery-4.png"
+                      alt="Clínica FS Fabiana Sobral — Rua Oscar Freire, 2249"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1E1B18]/70 via-transparent to-transparent flex items-end p-6">
                       <div>
-                        <p className="text-white font-heading text-xl">Rua Oscar Freire, 2249</p>
-                        <p className="text-white/80 text-xs font-light">Pinheiros / Jardins — São Paulo, SP</p>
+                        <p className="text-white font-heading text-xl sm:text-2xl">Rua Oscar Freire, 2249</p>
+                        <p className="text-white/85 text-xs sm:text-sm font-light mt-0.5">Pinheiros / Jardins — São Paulo, SP</p>
                       </div>
                     </div>
                   </div>
-                  <div className="p-5 flex items-center justify-between bg-white">
+                  <div className="p-5 flex items-center justify-between bg-white border-t border-[#EAE7E0]">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-[#6B1E2E]" />
-                      <span className="text-xs text-[#3C3833] font-medium">Ver rota no mapa</span>
+                      <span className="text-xs sm:text-sm text-[#3C3833] font-medium">Ver localização no mapa</span>
                     </div>
                     <a
                       href="https://share.google/nf9qa9srGi9KlmysN"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-[#6B1E2E] font-medium hover:underline inline-flex items-center gap-1"
+                      className="text-xs sm:text-sm text-[#6B1E2E] font-medium hover:underline inline-flex items-center gap-1"
                     >
-                      Google Maps <ArrowRight className="w-3 h-3" />
+                      Google Maps <ArrowRight className="w-3.5 h-3.5" />
                     </a>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-[#EAE7E0] shadow-sm">
-                    <img src="/gallery-4.png" alt="Ambiente Clínica FS" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
-                  </div>
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-[#EAE7E0] shadow-sm">
-                    <img src="/gallery-2.png" alt="Consultório e Atendimento Clínica FS" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
                   </div>
                 </div>
               </AnimatedSection>
