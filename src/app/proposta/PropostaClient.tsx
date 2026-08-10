@@ -29,6 +29,11 @@ const Logo = () => (
 );
 
 export default function PropostaClient() {
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div
       className="min-h-screen flex flex-col"
@@ -37,7 +42,7 @@ export default function PropostaClient() {
       {/* ── Top Bar ── */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#FAFAF8]/95 backdrop-blur-sm shadow-[0_1px_0_0_#EAE7E0]">
         <div className="container-uniq flex items-center justify-between h-16 md:h-20">
-          <Link href="/" aria-label="Fabiana Sobral Home">
+          <Link href="/" onClick={handleLogoClick} className="cursor-pointer" aria-label="Fabiana Sobral Home">
             <Logo />
           </Link>
           <span className="text-[0.65rem] font-semibold tracking-[0.18em] uppercase text-[#9A9188]">
@@ -647,9 +652,11 @@ export default function PropostaClient() {
       {/* ── Minimal Footer ── */}
       <footer className="bg-[#F5F3EF] border-t border-[#EAE7E0] py-6">
         <div className="container-uniq flex flex-col sm:flex-row items-center justify-between gap-4">
-          <Logo />
+          <Link href="/" onClick={handleLogoClick} className="cursor-pointer" aria-label="Ir para o topo">
+            <Logo />
+          </Link>
           <p className="text-[0.6875rem] text-[#9A9188]">
-            Proposta de desenvolvimento web · {new Date().getFullYear()}
+            Desenvolvido por Med Logos
           </p>
         </div>
       </footer>

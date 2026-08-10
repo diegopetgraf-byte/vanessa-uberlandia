@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { getWhatsAppUrl, WHATSAPP_DISPLAY } from '@/lib/utils';
 import { Instagram, Facebook, MapPin } from 'lucide-react';
 
@@ -28,10 +29,18 @@ const treatmentLinks = [
 ];
 
 export const Footer = () => {
+  const pathname = usePathname();
   const whatsappUrl = getWhatsAppUrl();
   const instagramUrl = 'https://www.instagram.com/drafabisobral/';
   const facebookUrl = 'https://www.facebook.com/drafabisobral/';
   const mapUrl = 'https://share.google/nf9qa9srGi9KlmysN';
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="bg-[#F5F3EF] border-t border-[#EAE7E0]" aria-label="Rodapé">
@@ -41,14 +50,18 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-6 lg:col-span-5 space-y-4">
             <div>
-              <img
-                src="/logo-fabi.svg"
-                alt="Dra. Fabiana Sobral — Quiet Beauty FS"
-                className="h-9 md:h-11 w-auto object-contain mb-2"
-              />
-              <p className="text-[0.6875rem] font-medium tracking-[0.14em] uppercase text-[#9A9188]">
-                Quiet Beauty FS · Estética Avançada
-              </p>
+              <Link
+                href="/"
+                onClick={handleLogoClick}
+                className="inline-block cursor-pointer"
+                aria-label="Ir para o topo"
+              >
+                <img
+                  src="/logo-fabi.svg"
+                  alt="Dra. Fabiana Sobral — Quiet Beauty FS"
+                  className="h-9 md:h-11 w-auto object-contain"
+                />
+              </Link>
             </div>
 
             <p className="text-sm text-[#6B635B] leading-relaxed max-w-md font-light">
@@ -110,7 +123,7 @@ export const Footer = () => {
             </h3>
             <ul className="space-y-2" role="list">
               {navLinks.map((link) => (
-                <li key={link.href + link.label}>
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-xs text-[#9A9188] hover:text-[#6B1E2E] transition-colors"
@@ -129,7 +142,7 @@ export const Footer = () => {
             </h3>
             <ul className="space-y-2" role="list">
               {treatmentLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-xs text-[#9A9188] hover:text-[#6B1E2E] transition-colors"
@@ -143,10 +156,10 @@ export const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-[#EAE7E0] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <p className="text-[0.6875rem] text-[#9A9188] tracking-wide">
-            © {new Date().getFullYear()} Clínica FS Fabiana Sobral · Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Clínica FS Fabiana Sobral · Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/#quiet-beauty" className="text-[0.6875rem] text-[#9A9188] hover:text-[#6B1E2E] transition-colors tracking-wide">

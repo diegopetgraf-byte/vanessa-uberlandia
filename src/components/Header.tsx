@@ -53,6 +53,14 @@ export const Header = () => {
 
   const closeMenu = () => setIsMobileMenuOpen(false);
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    closeMenu();
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
     if (href.startsWith('/#')) return false;
@@ -74,8 +82,8 @@ export const Header = () => {
             {/* Logo */}
             <Link
               href="/"
-              onClick={closeMenu}
-              className="flex-shrink-0"
+              onClick={handleLogoClick}
+              className="flex-shrink-0 cursor-pointer"
               aria-label="Clínica FS Fabiana Sobral — Página Inicial"
             >
               <Logo />
@@ -152,7 +160,7 @@ export const Header = () => {
             >
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between p-6 border-b border-[#EAE7E0]">
-                <Link href="/" onClick={closeMenu}>
+                <Link href="/" onClick={handleLogoClick} className="cursor-pointer">
                   <Logo />
                 </Link>
                 <button
