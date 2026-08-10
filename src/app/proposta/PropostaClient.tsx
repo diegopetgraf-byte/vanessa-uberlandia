@@ -48,7 +48,7 @@ export default function PropostaClient() {
               href={WA_ACCEPT}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-wine py-2 px-5 text-xs inline-flex items-center gap-1.5"
+              className="btn btn-wine py-2 px-5 text-xs hidden sm:inline-flex items-center gap-1.5"
             >
               Aceitar Proposta
               <ArrowRight className="w-3.5 h-3.5" />
