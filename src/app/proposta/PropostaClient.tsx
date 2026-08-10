@@ -600,22 +600,21 @@ export default function PropostaClient() {
         ═══════════════════════════════════════ */}
         <section className="section bg-[#6B1E2E] text-[#FAFAF8]">
           <div className="container-uniq">
-            <div className="max-w-2xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <AnimatedBlock>
                 <span className="text-[0.625rem] font-semibold tracking-[0.2em] uppercase text-[#C9A96E] mb-4 block">
                   Contato Direto do Desenvolvedor
                 </span>
                 <h2
-                  className="font-heading text-[#FAFAF8] mb-5"
+                  className="font-heading text-[#FAFAF8] mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] whitespace-normal lg:whitespace-nowrap"
                   style={{
-                    fontSize: "clamp(2rem, 4vw, 3.25rem)",
-                    letterSpacing: "-0.025em",
-                    lineHeight: 1.15,
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1.2,
                   }}
                 >
-                  Vamos dar início ao site da Dra. Fabiana Sobral?
+                  Vamos dar os retoques finais e colocar o site no ar?
                 </h2>
-                <p className="text-sm text-[rgba(250,250,248,0.75)] leading-relaxed max-w-md mx-auto mb-8 font-light">
+                <p className="text-sm text-[rgba(250,250,248,0.8)] leading-relaxed max-w-xl mx-auto mb-8 font-light">
                   Envie uma mensagem direta no WhatsApp para aprovar a proposta ou esclarecer qualquer ponto do projeto.
                 </p>
               </AnimatedBlock>
