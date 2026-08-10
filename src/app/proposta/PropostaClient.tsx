@@ -40,20 +40,9 @@ export default function PropostaClient() {
           <Link href="/" aria-label="Fabiana Sobral Home">
             <Logo />
           </Link>
-          <div className="hidden md:flex items-center gap-4">
-            <span className="text-[0.65rem] font-semibold tracking-[0.18em] uppercase text-[#9A9188]">
-              Proposta Estratégica
-            </span>
-            <a
-              href={WA_ACCEPT}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-wine py-2 px-5 text-xs inline-flex items-center gap-1.5"
-            >
-              Aceitar Proposta
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
+          <span className="text-[0.65rem] font-semibold tracking-[0.18em] uppercase text-[#9A9188]">
+            Proposta Estratégica
+          </span>
         </div>
       </header>
       <div className="h-16 md:h-20" aria-hidden="true" />
