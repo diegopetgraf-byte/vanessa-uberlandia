@@ -17,19 +17,19 @@ const OG_IMAGE = `${SITE_URL}/og.png`;
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#FAFAF8',
+  themeColor: '#F7F3EC',
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Clínica FS Fabiana Sobral | Estética Avançada em Jardins, São Paulo',
-    template: '%s | Clínica FS Fabiana Sobral',
+    default: 'Oni Face · Facial Boutique | Dra. Vanessa Sanabria · Uberlândia, MG',
+    template: '%s | Oni Face · Facial Boutique',
   },
-  description: 'Fabiana Sobral — Biomédica, especialista em estética avançada e criadora do método Quiet Beauty FS. Reestruturação facial com propósito. Jardins — São Paulo, SP.',
-  authors: [{ name: 'Clínica FS Fabiana Sobral', url: SITE_URL }],
-  creator: 'Clínica FS Fabiana Sobral',
-  publisher: 'Clínica FS Fabiana Sobral',
+  description: 'Dra. Vanessa Sanabria Bevilaqua — Cirurgiã-Dentista, especialista em harmonização facial e gerenciamento do envelhecimento. A face dos seus sonhos ainda deve parecer sua. Uberlândia, MG.',
+  authors: [{ name: 'Oni Face · Facial Boutique', url: SITE_URL }],
+  creator: 'Oni Face · Facial Boutique',
+  publisher: 'Oni Face · Facial Boutique',
   alternates: { canonical: SITE_URL },
   robots: {
     index: true,
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Clínica FS Fabiana Sobral | Quiet Beauty FS — Estética Avançada SP',
-    description: 'Harmonização Facial, Bioestimuladores de Colágeno e Estética Corporal. Método Quiet Beauty FS — Rejuvenescer sem deixar de ser você. Jardins, São Paulo.',
+    title: 'Oni Face · Facial Boutique | Dra. Vanessa Sanabria — Uberlândia, MG',
+    description: 'Harmonização facial personalizada, protocolos faciais completos e blefaroplastia. A transformação que ainda parece você. Dra. Vanessa Sanabria Bevilaqua · CRO-76320 MG.',
     url: SITE_URL,
-    siteName: 'Clínica FS Fabiana Sobral',
+    siteName: 'Oni Face · Facial Boutique',
     locale: 'pt_BR',
     type: 'website',
     images: [
@@ -54,21 +54,21 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Clínica FS Fabiana Sobral — Quiet Beauty FS — Jardins, São Paulo',
+        alt: 'Oni Face · Facial Boutique — Dra. Vanessa Sanabria Bevilaqua — Uberlândia, MG',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Clínica FS Fabiana Sobral | Quiet Beauty FS',
-    description: 'Biomédica especialista em estética avançada. Reestruturação facial com propósito. Jardins — São Paulo, SP.',
-    images: [{ url: OG_IMAGE, alt: 'Clínica FS Fabiana Sobral' }],
+    title: 'Oni Face · Facial Boutique | Dra. Vanessa Sanabria',
+    description: 'Cirurgiã-Dentista especialista em harmonização facial. A face dos seus sonhos ainda deve parecer sua. Uberlândia, MG.',
+    images: [{ url: OG_IMAGE, alt: 'Oni Face · Facial Boutique' }],
   },
   manifest: '/site.webmanifest',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Clínica FS',
+    title: 'Oni Face',
   },
 };
 

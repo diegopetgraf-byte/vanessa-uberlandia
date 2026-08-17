@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Globe, Search, Shield, Server, Lock, BarChart3, CheckCircle2, Sparkles, MessageCircle, AlertCircle, TrendingUp, Layers, Check } from "lucide-react";
+import { ArrowRight, Search, Shield, MapPin, Check, MessageCircle, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import { DIEGO_WHATSAPP_DISPLAY, getDiegoWhatsAppUrl } from "@/lib/utils";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
@@ -21,8 +21,8 @@ const WA_QUESTIONS = getDiegoWhatsAppUrl('duvidas');
 const Logo = () => (
   <div className="flex items-center">
     <img
-      src="/logo-fabi.svg"
-      alt="Dra. Fabiana Sobral — Quiet Beauty FS"
+      src="/header-logo.svg"
+      alt="Oni Face · Facial Boutique"
       className="h-8 md:h-10 w-auto object-contain"
     />
   </div>
@@ -37,34 +37,59 @@ export default function PropostaClient() {
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ backgroundColor: "#FAFAF8" }}
+      style={{ backgroundColor: "#F7F3EC" }}
     >
-      {/* ── Top Bar ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#FAFAF8]/95 backdrop-blur-sm shadow-[0_1px_0_0_#EAE7E0]">
+      {/* ── Top Bar (Inspired by saudeplena-df/proposta) ── */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#FAF9F6]/95 backdrop-blur-md shadow-[0_1px_0_0_#D9D2C4]">
         <div className="container-uniq flex items-center justify-between h-16 md:h-20">
-          <Link href="/" onClick={handleLogoClick} className="cursor-pointer" aria-label="Fabiana Sobral Home">
+          <Link href="/" onClick={handleLogoClick} className="cursor-pointer" aria-label="Oni Face Home">
             <Logo />
           </Link>
-          <span className="text-[0.65rem] font-semibold tracking-[0.18em] uppercase text-[#9A9188]">
-            Proposta Estratégica
-          </span>
+          <div className="flex items-center gap-4 sm:gap-6">
+            <span className="hidden text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-[#8A8278] sm:inline">
+              Proposta Estratégica
+            </span>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 border-l border-[#D9D2C4] pl-4 text-xs font-semibold text-[#1B3A6B] hover:text-[#B8965A] transition-colors sm:pl-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-3.5 h-3.5"
+                aria-hidden="true"
+              >
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Ver o site
+            </Link>
+          </div>
         </div>
       </header>
       <div className="h-16 md:h-20" aria-hidden="true" />
 
       <main className="flex-1">
-        {/* ═══════════════════════════════════════
-            HERO
-        ═══════════════════════════════════════ */}
+        
+        {/* ── HERO SECTION ── */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="/hero.png"
-              alt="Clínica FS Fabiana Sobral"
+              src="/heroproposta.png"
+              alt="Oni Face"
               className="w-full h-full object-cover"
               fetchPriority="high"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#1E1B18]/70 via-[#1E1B18]/60 to-[#1E1B18]/80" />
+            {/* Soft gradient overlay representing the gold & dark palette theme */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1A1714]/85 via-[#1A1714]/65 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/90 via-transparent to-[#1A1714]/20" />
           </div>
 
           <div className="relative z-10 container-uniq w-full py-20 md:py-28">
@@ -74,9 +99,9 @@ export default function PropostaClient() {
                 initial="hidden"
                 animate="visible"
                 custom={0}
-                className="inline-block text-[0.625rem] font-semibold tracking-[0.2em] uppercase text-[#C9A96E] mb-6"
+                className="inline-block text-[0.625rem] font-semibold tracking-[0.2em] uppercase text-[#B8965A] mb-6"
               >
-                Proposta de Posicionamento & Ativo Digital · Fabiana Sobral
+                PROPOSTA ESTRATÉGICA E ATIVO DIGITAL: ONI FACE
               </motion.span>
 
               <motion.h1
@@ -84,13 +109,13 @@ export default function PropostaClient() {
                 initial="hidden"
                 animate="visible"
                 custom={1}
-                className="font-heading font-light text-[#FAFAF8] leading-[1.08] mb-6"
+                className="font-heading font-light text-[#F7F3EC] leading-[1.08] mb-6"
                 style={{
-                  fontSize: "clamp(2.4rem, 5vw, 4.5rem)",
+                  fontSize: "clamp(2.2rem, 5vw, 4.25rem)",
                   letterSpacing: "-0.03em",
                 }}
               >
-                Um posicionamento digital à altura do método Quiet Beauty FS.
+                Sua presença digital de alta autoridade, construída com elegância e propósito.
               </motion.h1>
 
               <motion.p
@@ -98,9 +123,9 @@ export default function PropostaClient() {
                 initial="hidden"
                 animate="visible"
                 custom={2}
-                className="text-base sm:text-lg text-[rgba(250,250,248,0.88)] leading-relaxed mb-8 max-w-2xl font-light"
+                className="text-base sm:text-lg text-[rgba(247,243,236,0.88)] leading-relaxed mb-8 max-w-2xl font-light"
               >
-                Construir presença orgânica consistente para que a Clínica FS seja encontrada em diferentes momentos da jornada de decisão de quem busca procedimentos estéticos de alto padrão em São Paulo.
+                Uma estrutura digital própria para transformar a reputação e a técnica da Dra. Vanessa Sanabria em posicionamento premium, permitindo ser encontrada por quem procura exatamente o seu trabalho, mesmo antes de conhecer o seu nome.
               </motion.p>
 
               <motion.div
@@ -111,19 +136,17 @@ export default function PropostaClient() {
                 className="flex flex-wrap items-center gap-4"
               >
                 <a
-                  href={WA_ACCEPT}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#investimento"
                   className="btn btn-wine"
                 >
-                  Aceitar Proposta
+                  Conhecer a Proposta
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </a>
                 <a
                   href={WA_QUESTIONS}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline border-[rgba(250,250,248,0.5)] text-[#FAFAF8] hover:border-[#FAFAF8] hover:bg-white/10"
+                  className="btn btn-outline border-[rgba(247,243,236,0.5)] text-[#F7F3EC] hover:border-[#F7F3EC] hover:bg-white/10"
                 >
                   Tirar Dúvidas
                 </a>
@@ -132,561 +155,456 @@ export default function PropostaClient() {
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════
-            O PROBLEMA INVISÍVEL
-        ═══════════════════════════════════════ */}
-        <section className="section bg-[#FAFAF8] border-b border-[#EAE7E0]">
+        {/* ── PROBLEMA 01: FRAGMENTAÇÃO ── */}
+        <section className="section bg-[#F7F3EC] border-b border-[#D9D2C4]">
           <div className="container-uniq">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <AnimatedBlock>
-                <span className="eyebrow mb-3 block">Diagnóstico Estratégico</span>
-                <h2 className="text-headline text-2xl sm:text-3xl md:text-4xl mb-4">
-                  O "Problema Invisível" da Presença Digital
-                </h2>
-              </AnimatedBlock>
-            </div>
-
-            {/* Central Insight Box */}
-            <AnimatedBlock delay={0.1}>
-              <div className="max-w-4xl mx-auto card-uniq p-8 sm:p-12 bg-white border-[#6B1E2E]/20 shadow-sm relative overflow-hidden">
-                <div className="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-[rgba(107,30,46,0.03)] pointer-events-none" />
-                
-                <div className="space-y-6 text-sm sm:text-base text-[#3C3833] leading-relaxed font-light">
-                  <p className="font-heading text-xl sm:text-2xl text-[#6B1E2E] font-normal leading-snug">
-                    "O problema não é que você não tenha presença digital. Você tem."
-                  </p>
-                  <p className="text-[#6B635B]">
-                    O problema é que sua presença hoje está concentrada principalmente em canais onde a pessoa precisa <strong className="font-semibold text-[#1E1B18]">já saber quem você é</strong> (como o seu perfil do Instagram).
-                  </p>
-                  <p className="text-[#6B635B]">
-                    O Google funciona de outra maneira. No Google, a pessoa que está no momento de decisão não começa pesquisando:
-                  </p>
-
-                  <div className="p-4 bg-[#F5F3EF] rounded-xl border border-[#EAE7E0] text-xs sm:text-sm text-[#9A9188] italic">
-                    "Onde está a Dra. Fabiana Sobral?"
-                  </div>
-
-                  <p className="text-[#1E1B18] font-medium pt-2">
-                    Ela pesquisa diretamente pelas suas intenções e dores:
-                  </p>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                    {[
-                      '“Quem faz harmonização facial natural nos Jardins?”',
-                      '“Onde fazer preenchimento labial nos Jardins?”',
-                      '“Qual profissional faz bioestimulador de colágeno em São Paulo?”',
-                      '“Quero rejuvenescer sem mudar meu rosto.”',
-                    ].map((query, idx) => (
-                      <div key={idx} className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#EAE7E0] shadow-xs">
-                        <Search className="w-4 h-4 text-[#6B1E2E] flex-shrink-0" />
-                        <span className="text-xs sm:text-sm text-[#1E1B18] font-light italic">{query}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="pt-4 border-t border-[#EAE7E0]">
-                    <p className="text-sm sm:text-base font-heading text-[#1E1B18]">
-                      E é exatamente aí que existe uma demanda acontecendo no Google que hoje não está sendo capturada pela sua marca da forma que poderia.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </AnimatedBlock>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════
-            O CENÁRIO DOS CONCORRENTES & GOOGLE GAP
-        ═══════════════════════════════════════ */}
-        <section className="section bg-[#F5F3EF]">
-          <div className="container-uniq">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-center">
               
-              {/* Left Column: Contexto dos Jardins */}
-              <AnimatedSection direction="left" className="lg:col-span-6 space-y-6">
-                <div>
-                  <span className="eyebrow mb-3 block">Análise de Mercado</span>
-                  <h2 className="text-headline text-2xl sm:text-3xl">
-                    Os concorrentes da região já estão se estruturando para essa busca.
+              <div className="lg:col-span-6">
+                <AnimatedSection>
+                  <span className="eyebrow mb-4 block">PROBLEMA 01: DISPERSÃO</span>
+                  <h2 className="text-headline text-3xl sm:text-4xl text-[#1A1714] mb-6">
+                    Hoje, sua trajetória profissional existe em vários lugares. Mas ainda não existe um lugar que conte a história inteira.
                   </h2>
-                </div>
-
-                <div className="space-y-4 text-xs sm:text-sm text-[#6B635B] leading-relaxed font-light">
-                  <p>
-                    Clínicas estabelecidas na região dos Jardins e Pinheiros já utilizam arquitetura ampla de páginas por procedimento para capturar essas buscas.
+                  <p className="text-sm sm:text-base text-[#8A8278] leading-relaxed font-light mb-4">
+                    Quem procura por você encontra fragmentos: uma menção acadêmica aqui, um registro profissional ali, uma bio curta em redes sociais. Cada peça é verdadeira, mas nenhuma delas explica o conjunto do seu posicionamento.
                   </p>
-                  <p>
-                    A <strong>Skin Academy</strong>, por exemplo, possui unidade nos Jardins com uma estrutura extensa de conteúdo sobre procedimentos e temas estéticos. O <strong>IOA Jardins</strong> também possui páginas individuais dedicadas a harmonização facial, Botox, preenchimentos, lipo de papada, fios, Sculptra, Radiesse e bioestimuladores.
+                  <p className="text-sm sm:text-base text-[#8A8278] leading-relaxed font-light">
+                    Não se trata de abandonar essas plataformas. Trata-se de ter uma fonte própria que dê contexto a todas elas, permitindo à paciente entender quem é você por completo.
                   </p>
-                  <p>
-                    Mais do que palavras-chave genéricas, o mercado está capturando buscas por <em>problemas específicos</em> e <em>conceitos de naturalidade</em>.
-                  </p>
-                </div>
-              </AnimatedSection>
+                </AnimatedSection>
+              </div>
 
-              {/* Right Column: Google Gap Card */}
-              <AnimatedSection delay={0.15} className="lg:col-span-6">
-                <div className="card-uniq p-8 sm:p-10 bg-[#6B1E2E] text-white shadow-xl">
-                  <span className="text-[0.625rem] font-semibold tracking-[0.2em] uppercase text-[#C9A96E] mb-3 block">
-                    Vantagem Competitiva Real
-                  </span>
-                  
-                  <h3 className="font-heading text-2xl sm:text-3xl text-white mb-4 leading-tight">
-                    Você já tem o que o concorrente não consegue comprar.
-                  </h3>
-
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
-                    {['Autoridade', 'Método Exclusivo', 'Resultados Reais', 'Experiência', 'Personalidade'].map((pill) => (
-                      <div key={pill} className="bg-white/10 backdrop-blur-sm border border-white/15 px-3 py-2 rounded-lg text-center">
-                        <span className="text-xs font-medium text-white">{pill}</span>
-                      </div>
-                    ))}
+              <div className="lg:col-span-6">
+                <AnimatedSection delay={0.15}>
+                  <div className="card-soft p-8 md:p-10 bg-white border border-[#D9D2C4] rounded-2xl shadow-xs">
+                    <ul className="flex flex-wrap gap-2 mb-6">
+                      {['Diretórios Médicos', 'Referências Acadêmicas', 'Perfis Profissionais', 'Redes Sociais', 'Fichas do CRO'].map((item) => (
+                        <li key={item} className="rounded-full border border-[#D9D2C4] bg-[#FAF9F6] px-3.5 py-1.5 text-xs text-[#8A8278]">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="my-6 flex justify-center text-[#B8965A]" aria-hidden="true">
+                      <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+                        <path d="M12 0 V32 M4 25 L12 33 L20 25" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"></path>
+                      </svg>
+                    </div>
+                    <div className="rounded-xl border border-[#B8965A]/40 bg-[#FAF9F6] p-6 text-center">
+                      <p className="font-heading text-lg sm:text-xl text-[#1B3A6B]">Um endereço próprio</p>
+                      <p className="mt-1 text-xs text-[#8A8278]">oniface.com.br: a fonte de verdade da sua atuação</p>
+                    </div>
                   </div>
-
-                  <p className="text-xs sm:text-sm text-white/85 leading-relaxed font-light border-t border-white/20 pt-4">
-                    O que falta não é autoridade nem técnica. O que falta é transformar esses diferenciais em <strong>infraestrutura digital proprietária</strong> pronta para indexar, educar e converter.
-                  </p>
-                </div>
-              </AnimatedSection>
+                </AnimatedSection>
+              </div>
 
             </div>
           </div>
         </section>
 
-        {/* ═══════════════════════════════════════
-            COMPARATIVO: INSTAGRAM VS. GOOGLE VS. ECOSSISTEMA
-        ═══════════════════════════════════════ */}
-        <section className="section bg-[#FAFAF8]">
+        {/* ── PROBLEMA 02: A ABORDAGEM FULL FACE ── */}
+        <section className="section bg-[#EDE7D9] border-b border-[#D9D2C4]">
           <div className="container-uniq">
-            <AnimatedSection className="mb-12 text-center max-w-3xl mx-auto">
-              <span className="eyebrow mb-3 block">Papel de Cada Canal</span>
-              <h2 className="text-headline text-2xl sm:text-3xl md:text-4xl">
-                O Ecossistema Digital Completo
-              </h2>
-              <p className="text-sm sm:text-base text-[#6B635B] mt-2 font-light">
-                Cada canal cumpre uma função essencial na jornada de decisão do paciente.
-              </p>
-            </AnimatedSection>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              
-              {/* Instagram */}
-              <AnimatedSection delay={0.05}>
-                <div className="card-uniq p-7 h-full flex flex-col justify-between bg-white">
-                  <div>
-                    <span className="text-[0.65rem] font-bold tracking-widest uppercase text-[#9A9188] bg-[#F5F3EF] px-3 py-1 rounded-full mb-4 inline-block">
-                      Instagram
-                    </span>
-                    <h3 className="font-heading text-xl text-[#1E1B18] mb-2">Relacionamento & Prova</h3>
-                    <p className="text-xs sm:text-sm text-[#6B635B] leading-relaxed font-light">
-                      Excelente para quem <strong>já conhece</strong> a Fabiana. Nutre a comunidade atual com rotina, autoridade diária e conexão pessoal.
-                    </p>
-                  </div>
-                  <div className="pt-4 border-t border-[#EAE7E0] mt-6">
-                    <span className="text-[0.6875rem] text-[#9A9188]">Limite: Depende de algoritmo e audiência prévia.</span>
-                  </div>
-                </div>
+            <div className="max-w-3xl mb-12">
+              <AnimatedSection>
+                <span className="eyebrow mb-4 block">PROBLEMA 02: A ABORDAGEM</span>
+                <h2 className="text-headline text-3xl sm:text-4xl text-[#1A1714] mb-6">
+                  Protocolos Full Face ainda precisam ser explicados antes de serem escolhidos.
+                </h2>
+                <p className="text-sm sm:text-base text-[#8A8278] leading-relaxed font-light">
+                  A maioria das pacientes sabe o que esperar de procedimentos isolados (como preenchimentos pontuais), mas desconhecem a abordagem integrada (Full Face). O site educa a paciente antes da consulta, de forma elegante e sutil, economizando tempo clínico e aumentando a aceitação dos planos de tratamento integrados.
+                </p>
               </AnimatedSection>
-
-              {/* Google */}
-              <AnimatedSection delay={0.1}>
-                <div className="card-uniq p-7 h-full flex flex-col justify-between bg-white">
-                  <div>
-                    <span className="text-[0.65rem] font-bold tracking-widest uppercase text-[#6B1E2E] bg-[rgba(107,30,46,0.08)] px-3 py-1 rounded-full mb-4 inline-block">
-                      Google
-                    </span>
-                    <h3 className="font-heading text-xl text-[#1E1B18] mb-2">Descoberta & Intenção</h3>
-                    <p className="text-xs sm:text-sm text-[#6B635B] leading-relaxed font-light">
-                      Estruturado para quem <strong>ainda não conhece</strong> a Fabiana, mas está ativamente buscando procedimentos na região dos Jardins.
-                    </p>
-                  </div>
-                  <div className="pt-4 border-t border-[#EAE7E0] mt-6">
-                    <span className="text-[0.6875rem] text-[#6B1E2E] font-medium">Oportunidade: Pacientes em momento de compra.</span>
-                  </div>
-                </div>
-              </AnimatedSection>
-
-              {/* Novo Site */}
-              <AnimatedSection delay={0.15}>
-                <div className="card-uniq p-7 h-full flex flex-col justify-between bg-white border-[#6B1E2E]">
-                  <div>
-                    <span className="text-[0.65rem] font-bold tracking-widest uppercase text-[#FAFAF8] bg-[#6B1E2E] px-3 py-1 rounded-full mb-4 inline-block">
-                      Novo Ecossistema Digital
-                    </span>
-                    <h3 className="font-heading text-xl text-[#1E1B18] mb-2">Autoridade & Conversão</h3>
-                    <p className="text-xs sm:text-sm text-[#6B635B] leading-relaxed font-light">
-                      <strong>Apresenta + Explica + É encontrado + Prova + Converte.</strong> Transforma buscas em agendamentos no WhatsApp.
-                    </p>
-                  </div>
-                  <div className="pt-4 border-t border-[#EAE7E0] mt-6">
-                    <span className="text-[0.6875rem] text-[#1E7B48] font-medium">Resultado: Ativo proprietário perpétuo.</span>
-                  </div>
-                </div>
-              </AnimatedSection>
-
             </div>
-          </div>
-        </section>
 
-        {/* ═══════════════════════════════════════
-            ARQUITETURA INTELIGENTE DO SITE
-        ═══════════════════════════════════════ */}
-        <section className="section bg-[#F5F3EF]">
-          <div className="container-uniq">
-            <AnimatedSection className="mb-12 text-center max-w-3xl mx-auto">
-              <span className="eyebrow mb-3 block">Arquitetura de Conversão</span>
-              <h2 className="text-headline text-2xl sm:text-3xl md:text-4xl">
-                A Função Estratégica de Cada Seção
-              </h2>
-              <p className="text-sm sm:text-base text-[#6B635B] mt-2 font-light">
-                Não é apenas um layout bonito. Cada página cumpre uma etapa precisa de conversão e SEO.
-              </p>
-            </AnimatedSection>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid gap-px overflow-hidden rounded-2xl border border-[#D9D2C4] bg-[#D9D2C4] sm:grid-cols-2 lg:grid-cols-3">
               {[
-                { title: 'Home', badge: 'Posicionamento', desc: 'Primeira impressão de sofisticação, credibilidade e elegância nos Jardins.' },
-                { title: 'Quiet Beauty FS', badge: 'Propriedade de Marca', desc: 'Apresentação do método autoral, fugindo da harmonização padronizada.' },
-                { title: 'Tratamentos', badge: 'Captura de Intenção', desc: 'Catálogo segmentado entre estética facial e protocolos corporais.' },
-                { title: 'Páginas Individuais', badge: 'SEO & Google', desc: '12 páginas com profundidade clínica para rankeamento orgânico por procedimento.' },
-                { title: 'Resultados', badge: 'Prova & Confiança', desc: 'Galeria de evolução e atmosfera que valida a naturalidade na prática.' },
-                { title: 'Fabiana Sobral', badge: 'Autoridade Pessoal', desc: 'Apresentação da trajetória biomédica e visão humana do rejuvenescimento.' },
-                { title: 'Instituto FS', badge: 'Autoridade & Cursos', desc: 'Vertente educacional para capturar profissionais e médicos para mentorias.' },
-                { title: 'Contato & WhatsApp', badge: 'Conversão', desc: 'Roteamento com mensagens contextuais prontas para cada tipo de interesse.' },
+                {
+                  title: "O que é um Protocolo Full Face?",
+                  desc: "Explicação clara do conceito de rejuvenescimento e reestruturação integrada."
+                },
+                {
+                  title: "Por que tratar o rosto de forma global?",
+                  desc: "Apresentação dos benefícios de proporção e harmonia dinâmica em vez de perseguir rugas isoladas."
+                },
+                {
+                  title: "Como funciona a consulta?",
+                  desc: "O passo a passo da avaliação de alta performance, gerando segurança e alinhamento de expectativas."
+                },
+                {
+                  title: "O que é avaliado dinamicamente?",
+                  desc: "A análise dos vetores de envelhecimento e compartimentos de gordura profunda."
+                },
+                {
+                  title: "Qual o papel do estímulo de colágeno?",
+                  desc: "A base de sustentação tecidual que sustenta qualquer refinamento com injetáveis."
+                },
+                {
+                  title: "Como os resultados são mantidos?",
+                  desc: "Cronograma de acompanhamento e gerenciamento de longo prazo para prolongar a naturalidade."
+                }
               ].map((item, idx) => (
-                <AnimatedSection key={item.title} delay={idx * 0.04}>
-                  <div className="card-uniq p-5 h-full bg-white flex flex-col justify-between">
+                <AnimatedSection key={idx} className="bg-[#FAF9F6] p-6 sm:p-8 flex flex-col justify-between" delay={idx * 0.05}>
+                  <div>
+                    <span className="font-heading text-xs text-[#B8965A] font-bold block mb-2">{(idx + 1).toString().padStart(2, '0')}</span>
+                    <h3 className="font-heading text-lg text-[#1A1714] mb-3">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-[#8A8278] leading-relaxed font-light">{item.desc}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── PROBLEMA 03: DESCOBERTA ── */}
+        <section className="section bg-[#F7F3EC] border-b border-[#D9D2C4]">
+          <div className="container-uniq">
+            <div className="max-w-3xl mb-12">
+              <AnimatedSection>
+                <span className="eyebrow mb-4 block">PROBLEMA 03: DESCOBERTA</span>
+                <h2 className="text-headline text-3xl sm:text-4xl text-[#1A1714] mb-6">
+                  Ninguém pesquisa um nome que ainda não conhece.
+                </h2>
+                <p className="text-sm sm:text-base text-[#8A8278] leading-relaxed font-light">
+                  Quem precisa de você hoje não digita o seu nome no buscador. Digita o problema que quer resolver ou a técnica que ouviu falar. Criamos páginas dedicadas para capturar essas buscas dinâmicas em Uberlândia, abrindo novas portas de entrada.
+                </p>
+              </AnimatedSection>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  category: "Quem busca a solução",
+                  intro: "Sabe exatamente o que quer, mas não sabe com quem realizar:",
+                  queries: [
+                    "harmonização facial natural uberlândia",
+                    "especialista em full face uberlândia",
+                    "blefaroplastia sem cortes uberlândia",
+                    "bioestimuladores de colágeno uberlândia"
+                  ]
+                },
+                {
+                  category: "Quem busca o problema",
+                  intro: "Sente o incômodo, mas desconhece os tratamentos disponíveis:",
+                  queries: [
+                    "como tratar olhar cansado e flacidez",
+                    "rugas ao redor dos olhos o que fazer",
+                    "perda de volume no rosto com a idade",
+                    "flacidez na pele do rosto tratamento"
+                  ]
+                },
+                {
+                  category: "Quem já ouviu falar",
+                  intro: "Recebeu uma indicação, viu no Instagram e busca confirmação técnica:",
+                  queries: [
+                    "dra vanessa sanabria",
+                    "oni face boutique uberlândia",
+                    "clinica vanessa sanabria uberlandia",
+                    "cro mg vanessa sanabria"
+                  ]
+                }
+              ].map((column, colIdx) => (
+                <AnimatedSection key={colIdx} className="card-uniq p-6 sm:p-8 bg-white border border-[#D9D2C4] flex flex-col justify-between" delay={colIdx * 0.05}>
+                  <div>
+                    <span className="text-[0.625rem] font-semibold tracking-wider text-[#B8965A] uppercase block mb-2">{column.category}</span>
+                    <p className="text-xs text-[#8A8278] mb-4 font-light">{column.intro}</p>
+                    <ul className="space-y-2">
+                      {column.queries.map((q, qIdx) => (
+                        <li key={qIdx} className="flex items-center gap-2 p-2.5 rounded-lg bg-[#F7F3EC] border border-[#D9D2C4]/60">
+                          <Search className="w-3.5 h-3.5 text-[#1B3A6B] flex-shrink-0" />
+                          <span className="text-xs text-[#1A1714] font-light italic">{q}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── A SOLUÇÃO ── */}
+        <section className="section bg-[#EDE7D9] border-b border-[#D9D2C4]">
+          <div className="container-uniq">
+            <div className="max-w-3xl mb-12">
+              <AnimatedSection>
+                <span className="eyebrow mb-4 block">A SOLUÇÃO</span>
+                <h2 className="text-headline text-3xl sm:text-4xl text-[#1A1714] mb-6">
+                  Um site construído para ser encontrado e para converter desde o primeiro contato.
+                </h2>
+                <p className="text-sm sm:text-base text-[#8A8278] leading-relaxed font-light">
+                  Nosso desenvolvimento não se limita a um layout genérico. Construímos código limpo e arquitetura de dados otimizada para buscadores.
+                </p>
+              </AnimatedSection>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  title: "Página por Procedimento",
+                  desc: "Mecanismos de busca preferem páginas focadas. Criamos páginas individuais para Blefaroplastia, Toxina, Bioestimuladores e Fios."
+                },
+                {
+                  title: "Dados Estruturados",
+                  desc: "Marcação JSON-LD em Schema.org descrevendo sua especialidade, CRM e CRO, permitindo que o Google entenda seus dados de forma inteligível."
+                },
+                {
+                  title: "Identidade Oni Face",
+                  desc: "Estética refinada em tons de ouro fosco e azul royal, usando a tipografia elegante e os padrões de marca d'água no fundo das seções."
+                },
+                {
+                  title: "SEO Técnico Impecável",
+                  desc: "HTML semântico de verdade, sitemaps dinâmicos, canonical tags automáticas e ausência de travamentos de scripts."
+                },
+                {
+                  title: "Otimização Mobile",
+                  desc: "Velocidade de carregamento instantânea nos smartphones, onde ocorre mais de 80% das buscas de estética."
+                },
+                {
+                  title: "Foco em Conversão",
+                  desc: "Textos redigidos de forma fluida, livres de placeholders ou jargões agressivos, direcionando o fluxo ao agendamento no WhatsApp."
+                }
+              ].map((item, idx) => (
+                <AnimatedSection key={idx} className="card-uniq p-6 bg-white border border-[#D9D2C4]" delay={idx * 0.05}>
+                  <h3 className="font-heading text-lg text-[#1A1714] mb-2">{item.title}</h3>
+                  <p className="text-xs sm:text-sm text-[#8A8278] leading-relaxed font-light">{item.desc}</p>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── O DIFERENCIAL ── */}
+        <section className="section bg-[#F7F3EC] border-b border-[#D9D2C4]">
+          <div className="container-uniq text-center">
+            <AnimatedSection>
+              <span className="eyebrow mb-4 block">O DIFERENCIAL</span>
+              <h2 className="text-headline text-3xl sm:text-4xl text-[#1A1714] mb-6">
+                A matéria-prima já existe.
+              </h2>
+              <p className="text-sm sm:text-base text-[#8A8278] leading-relaxed font-light max-w-xl mx-auto mb-10">
+                Não estamos inventando um posicionamento. Estamos reunindo suas credenciais clínicas reais em uma única narrativa digital coerente de alta autoridade.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto mb-8">
+                {['Especialista em Full Face', 'Clínica de Estética Avançada', 'Gerenciamento do Envelhecimento', 'Consciência e Identidade Facial', 'Atendimento Boutique Exclusivo'].map((tag) => (
+                  <span key={tag} className="inline-block rounded-full border border-[#D9D2C4] bg-white px-5 py-2.5 text-xs sm:text-sm text-[#3C3831] font-medium shadow-xs">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <p className="font-heading text-xl sm:text-2xl text-[#1B3A6B] italic max-w-xl mx-auto">
+                "Uma face dos seus sonhos ainda deve parecer sua."
+              </p>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* ── O QUE MUDA ── */}
+        <section className="section bg-[#EDE7D9] border-b border-[#D9D2C4]">
+          <div className="container-uniq">
+            <div className="max-w-2xl mb-12">
+              <AnimatedSection>
+                <span className="eyebrow mb-4 block">CRONOGRAMA & MUDANÇA</span>
+                <h2 className="text-headline text-3xl sm:text-4xl text-[#1A1714]">
+                  Seis problemas concretos, seis mudanças reais.
+                </h2>
+              </AnimatedSection>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  title: "Fragmentação",
+                  today: "Informações espalhadas em diferentes fichas online.",
+                  after: "Um hub único centralizado no seu próprio domínio profissional."
+                },
+                {
+                  title: "Propriedade",
+                  today: "Dados e biografias limitados aos templates de terceiros.",
+                  after: "Domínio e servidor próprios: total controle sobre o texto e imagem."
+                },
+                {
+                  title: "Complexidade",
+                  today: "Pacientes confusos ou pedindo apenas procedimentos avulsos.",
+                  after: "Exposição didática e conceitual do método de tratamento integrado."
+                },
+                {
+                  title: "Descoberta",
+                  today: "Paciente precisa necessariamente digitar o seu nome para te achar.",
+                  after: "Captura de buscas dinâmicas focadas em pálpebras, colágeno e volume."
+                },
+                {
+                  title: "Autoridade",
+                  today: "Qualificação técnica valiosa diluída no Instagram.",
+                  after: "Uma presença profissional limpa, livre de dancinhas ou postagens descartáveis."
+                },
+                {
+                  title: "Conversão",
+                  today: "Tráfego disperso e sem caminho claro até o WhatsApp.",
+                  after: "Design focado: descoberta, entendimento e canal direto de agendamento."
+                }
+              ].map((item, idx) => (
+                <AnimatedSection key={idx} className="card-uniq p-6 sm:p-8 bg-white border border-[#D9D2C4]" delay={idx * 0.05}>
+                  <h3 className="font-heading text-lg text-[#1A1714] mb-4">{item.title}</h3>
+                  <div className="space-y-4">
                     <div>
-                      <span className="text-[0.6rem] font-bold uppercase tracking-wider text-[#6B1E2E] bg-[rgba(107,30,46,0.08)] px-2.5 py-0.5 rounded-full mb-3 inline-block">
-                        {item.badge}
-                      </span>
-                      <h3 className="font-heading text-lg text-[#1E1B18] mb-1.5">{item.title}</h3>
-                      <p className="text-xs text-[#6B635B] leading-relaxed font-light">{item.desc}</p>
+                      <p className="text-[0.6rem] font-bold uppercase tracking-wider text-[#8A8278]">Hoje</p>
+                      <p className="mt-1 text-xs sm:text-sm text-[#8A8278]/90 font-light">{item.today}</p>
+                    </div>
+                    <div className="border-t border-[#D9D2C4]/60 pt-3">
+                      <p className="text-[0.6rem] font-bold uppercase tracking-wider text-[#1B3A6B]">Com o site</p>
+                      <p className="mt-1 text-xs sm:text-sm text-[#3C3831] font-medium">{item.after}</p>
                     </div>
                   </div>
                 </AnimatedSection>
               ))}
             </div>
+          </div>
+        </section>
 
-            {/* Domain Availability Highlight */}
-            <AnimatedSection delay={0.2} className="mt-10 max-w-xl mx-auto">
-              <div className="card-uniq p-6 flex items-center gap-4 bg-white border-[#2E8B3E]/30 shadow-sm">
-                <div className="w-11 h-11 rounded-full bg-[rgba(34,139,34,0.1)] flex items-center justify-center flex-shrink-0">
-                  <div className="w-3 h-3 rounded-full bg-[#2E8B3E] animate-pulse" />
+        {/* ── VISÃO DE CONJUNTO ── */}
+        <section className="section bg-[#F7F3EC] border-b border-[#D9D2C4]">
+          <div className="container-uniq">
+            <div className="max-w-2xl mx-auto text-center mb-12">
+              <AnimatedSection>
+                <span className="eyebrow mb-4 block">VISÃO DE CONJUNTO</span>
+                <h2 className="text-headline text-2xl sm:text-3xl md:text-4xl text-[#1A1714]">
+                  O fluxo de captação digital Oni Face
+                </h2>
+              </AnimatedSection>
+            </div>
+
+            <ol className="max-w-2xl mx-auto space-y-6">
+              {[
+                { step: "01", title: "Busca Dinâmica", subtitle: "Descoberta", desc: "A paciente busca por uma solução para a pálpebra ou rejuvenescimento facial no Google." },
+                { step: "02", title: "Pouso no Site", subtitle: "Entendimento", desc: "Chega em uma página boutique de alta velocidade que explica a abordagem da Dra. Vanessa." },
+                { step: "03", title: "Leitura de Procedimentos", subtitle: "Profundidade", desc: "A paciente compreende por que o Protocolo Full Face e a blefaroplastia sem cortes trazem naturalidade." },
+                { step: "04", title: "Trajetória Profissional", subtitle: "Confiança", desc: "A página institucional do perfil da doutora valida seu currículo, CRO e excelência anatômica." },
+                { step: "05", title: "Clique no WhatsApp", subtitle: "Agendamento", desc: "Redirecionamento automático com mensagens pré-formatadas diretamente para a equipe." }
+              ].map((item, idx) => (
+                <AnimatedSection key={idx} className="flex gap-4 p-5 rounded-2xl border border-[#D9D2C4] bg-white items-start" delay={idx * 0.05}>
+                  <span className="font-heading text-2xl leading-none text-[#B8965A] font-bold shrink-0">{item.step}</span>
+                  <div>
+                    <h3 className="font-heading text-lg text-[#1A1714]">{item.title}</h3>
+                    <p className="text-[0.65rem] font-bold text-[#1B3A6B] uppercase tracking-wider mb-2">{item.subtitle}</p>
+                    <p className="text-xs sm:text-sm text-[#8A8278] leading-relaxed font-light">{item.desc}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* ── INVESTIMENTO ── */}
+        <section id="investimento" className="section bg-[#EDE7D9]">
+          <div className="container-uniq">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <AnimatedSection>
+                <span className="eyebrow mb-4 block">INVESTIMENTO</span>
+                <h2 className="text-headline text-3xl sm:text-4xl text-[#1A1714] mb-4">Condições Comerciais</h2>
+              </AnimatedSection>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+              
+              {/* Card 1: Setup & Launch */}
+              <AnimatedSection className="card-uniq p-8 bg-white border border-[#D9D2C4] flex flex-col justify-between" delay={0.05}>
+                <div>
+                  <span className="eyebrow mb-4 block">Setup & Lançamento</span>
+                  <p className="font-heading text-3xl sm:text-4xl text-[#1A1714] mb-2">6x R$ 597,90</p>
+                  <p className="text-xs sm:text-sm text-[#1B3A6B] font-medium mb-6">ou R$ 3.199,00 à vista</p>
+                  
+                  <span className="divider border-[#D9D2C4]/60 mb-6 block" />
+                  
+                  <ul className="space-y-3 mb-8">
+                    {[
+                      "Desenvolvimento do site completo (Next.js & Tailwind CSS)",
+                      "Design responsivo sob medida para celulares e tablets",
+                      "Criação das páginas dedicadas de procedimentos faciais",
+                      "Implementação dos dados estruturados (Schemas SEO)",
+                      "Configuração e publicação final sob domínio oficial",
+                      "Primeiros 6 meses de manutenção inclusos gratuitamente"
+                    ].map((bullet, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#3C3831]">
+                        <Check className="w-4 h-4 text-[#B8965A] mt-0.5 flex-shrink-0" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <a
+                  href={WA_ACCEPT}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-wine w-full justify-center"
+                >
+                  Aceitar Proposta
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </a>
+              </AnimatedSection>
+
+              {/* Card 2: Maintenance */}
+              <AnimatedSection className="card-uniq p-8 bg-white border border-[#D9D2C4] flex flex-col justify-between relative" delay={0.15}>
+                <div className="absolute right-0 top-0 rounded-bl-2xl rounded-tr-none bg-[#B8965A]/10 px-4 py-2 text-[0.625rem] font-semibold uppercase tracking-wider text-[#B8965A] border-b border-l border-[#D9D2C4]">
+                  6 Primeiros Meses Inclusos
                 </div>
                 <div>
-                  <div className="flex items-center gap-2">
-                    <p className="text-base font-semibold text-[#1E1B18]">
-                      harmonizacao-jardins.com.br
-                    </p>
-                    <span className="text-[0.6rem] bg-[#E8F5E9] text-[#1E7B48] font-bold px-2 py-0.5 rounded-full">
-                      Disponível
-                    </span>
-                  </div>
-                  <p className="text-xs text-[#6B635B] mt-0.5 font-light">
-                    Domínio premium disponível para registro imediato no projeto da Clínica FS.
+                  <span className="eyebrow mb-4 block">Manutenção Mensal</span>
+                  <p className="font-heading text-3xl sm:text-4xl text-[#1A1714] mb-2">
+                    R$ 197,90<span className="text-xs sm:text-sm text-[#8A8278] font-light"> /mês</span>
                   </p>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════
-            INVESTIMENTO — PRICING
-        ═══════════════════════════════════════ */}
-        <section id="investimento" className="section bg-[#FAFAF8]">
-          <div className="container-uniq">
-            <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-              <AnimatedBlock>
-                <span className="eyebrow mb-3 block">Condições Comerciais</span>
-                <h2 className="text-headline text-2xl sm:text-3xl md:text-4xl mb-4">
-                  Investimento Transparente
-                </h2>
-                <p className="text-sm text-[#6B635B] leading-relaxed max-w-xl mx-auto font-light">
-                  Compare o valor de um plano de tratamento na clínica com o retorno perpétuo de um ecossistema digital posicionado na Oscar Freire.
-                </p>
-              </AnimatedBlock>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-              
-              {/* Implementation Card */}
-              <AnimatedBlock delay={0.1}>
-                <div className="card-uniq p-8 md:p-10 h-full flex flex-col bg-white">
-                  <span className="eyebrow mb-4">Implementação</span>
+                  <p className="text-xs sm:text-sm text-[#8A8278] mb-6">Inicia a partir do 7º mês</p>
                   
-                  <div className="mb-2">
-                    <span
-                      className="font-heading text-[#1E1B18]"
-                      style={{
-                        fontSize: "clamp(2.4rem, 4vw, 3.25rem)",
-                        letterSpacing: "-0.03em",
-                        lineHeight: 1.1,
-                      }}
-                    >
-                      6x R$ 597,90
-                    </span>
-                  </div>
-                  <p className="text-sm text-[#6B1E2E] font-medium mb-6">
-                    ou R$ 3.199,00 à vista
-                  </p>
+                  <span className="divider border-[#D9D2C4]/60 mb-6 block" />
                   
-                  <span className="divider mb-6" />
-                  
-                  <p className="text-xs sm:text-sm text-[#6B635B] leading-relaxed mb-6 font-light">
-                    Valor único para desenvolvimento, estruturação completa de conteúdo, imagens profissionais, 12 páginas de tratamentos, registro do domínio e publicação.
-                  </p>
-
-                  <ul className="space-y-3 mb-8 flex-1">
+                  <ul className="space-y-3 mb-8">
                     {[
-                      "Design exclusivo com identidade Quiet Beauty FS",
-                      "12 páginas individuais completas de procedimentos",
-                      "Registro do domínio harmonizacao-jardins.com.br",
-                      "Estruturação de SEO e schemas para o Google",
-                      "Carrossel com avaliações oficiais do Google",
-                      "Primeiros 6 meses de manutenção inclusos gratuitamente",
-                    ].map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-2.5 text-xs sm:text-sm text-[#3C3833]"
-                      >
-                        <CheckCircle2 className="w-4 h-4 text-[#6B1E2E] mt-0.5 flex-shrink-0" />
-                        <span>{item}</span>
+                      "Hospedagem em nuvem de alta performance",
+                      "Certificado de segurança SSL (HTTPS) renovado ativo",
+                      "Gestão anual do registro de domínio",
+                      "Monitoramento de segurança e backups periódicos",
+                      "Atualizações pontuais de fotos ou textos de serviços",
+                      "Suporte direto no WhatsApp com tempo de resposta ágil"
+                    ].map((bullet, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#3C3831]">
+                        <Check className="w-4 h-4 text-[#1B3A6B] mt-0.5 flex-shrink-0" />
+                        <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
-
-                  <a
-                    href={WA_ACCEPT}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-wine w-full justify-center"
-                  >
-                    Aceitar Proposta
-                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                  </a>
                 </div>
-              </AnimatedBlock>
 
-              {/* Monthly Card */}
-              <AnimatedBlock delay={0.2}>
-                <div className="relative card-uniq p-8 md:p-10 h-full flex flex-col overflow-hidden border-[#6B1E2E] bg-white">
-                  <div className="absolute top-0 right-0 bg-[#6B1E2E] text-[#FAFAF8] text-[0.625rem] font-semibold tracking-[0.14em] uppercase px-4 py-1.5 rounded-bl-xl">
-                    6 Meses Inclusos
-                  </div>
-
-                  <span className="eyebrow mb-4">Manutenção Mensal</span>
-                  <div className="mb-2">
-                    <span
-                      className="font-heading text-[#1E1B18]"
-                      style={{
-                        fontSize: "clamp(2.4rem, 4vw, 3.25rem)",
-                        letterSpacing: "-0.03em",
-                        lineHeight: 1.1,
-                      }}
-                    >
-                      R$ 197,90
-                    </span>
-                    <span className="text-sm text-[#9A9188] ml-2">/mês</span>
-                  </div>
-                  <p className="text-sm text-[#6B1E2E] font-medium mb-6">
-                    A partir do 7º mês
-                  </p>
-                  <span className="divider mb-6" />
-                  <p className="text-xs sm:text-sm text-[#6B635B] leading-relaxed mb-6 font-light">
-                    Tudo o que seu consultório precisa para manter a presença digital ativa, rápida, segura e atualizada, sem nenhuma preocupação técnica.
-                  </p>
-
-                  <ul className="space-y-3 mb-8 flex-1">
-                    {[
-                      "Hospedagem cloud de alta velocidade inclusa",
-                      "Renovação anual do domínio gerenciada",
-                      "Certificado SSL (HTTPS) mantido ativo",
-                      "Monitoramento de disponibilidade e segurança",
-                      "Otimização contínua de indexação no Google",
-                      "Suporte e atualizações mensais de conteúdo e fotos",
-                    ].map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-2.5 text-xs sm:text-sm text-[#3C3833]"
-                      >
-                        <CheckCircle2 className="w-4 h-4 text-[#6B1E2E] mt-0.5 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <a
-                    href={WA_QUESTIONS}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-outline border-[#6B1E2E] text-[#6B1E2E] w-full justify-center hover:bg-[#6B1E2E] hover:text-[#FAFAF8]"
-                  >
-                    Tirar Dúvidas
-                    <MessageCircle className="w-4 h-4" aria-hidden="true" />
-                  </a>
-                </div>
-              </AnimatedBlock>
-            </div>
-
-            {/* Timeline */}
-            <AnimatedBlock delay={0.3}>
-              <div className="max-w-xl mx-auto mt-14">
-                <p className="text-[0.65rem] font-semibold tracking-[0.16em] uppercase text-[#6B1E2E] mb-6 text-center">
-                  Cronograma de Pagamento
-                </p>
-
-                <div className="relative pl-12 sm:pl-14">
-                  <div
-                    className="absolute left-[1.15rem] top-5 bottom-5 w-px bg-[#EAE7E0]"
-                    aria-hidden="true"
-                  />
-
-                  <div className="flex flex-col gap-5">
-                    {/* Step 1 */}
-                    <div className="relative">
-                      <div className="absolute -left-12 sm:-left-14 top-4 z-10 w-9 h-9 rounded-full border-2 border-[#6B1E2E] bg-[#FAFAF8] flex items-center justify-center">
-                        <span className="font-heading text-xs text-[#6B1E2E]">1</span>
-                      </div>
-                      <div className="card-uniq p-4 sm:p-5 bg-white">
-                        <span className="text-[0.6rem] font-semibold tracking-[0.14em] uppercase text-[#9A9188]">Contratação</span>
-                        <h4 className="font-heading text-base text-[#1E1B18] mt-0.5">Implementação</h4>
-                        <p className="text-base font-heading text-[#6B1E2E] font-medium mt-0.5">6x de R$ 597,90 <span className="text-xs font-sans text-[#6B635B]">(ou R$ 3.199 à vista)</span></p>
-                        <p className="text-xs text-[#9A9188] mt-0.5">Desenvolvimento e publicação completa do site</p>
-                      </div>
-                    </div>
-
-                    {/* Step 2 */}
-                    <div className="relative">
-                      <div className="absolute -left-12 sm:-left-14 top-4 z-10 w-9 h-9 rounded-full border-2 border-[#6B1E2E] bg-[#6B1E2E] flex items-center justify-center">
-                        <span className="font-heading text-xs text-[#FAFAF8]">2</span>
-                      </div>
-                      <div className="card-uniq p-4 sm:p-5 border-[#6B1E2E] bg-[rgba(107,30,46,0.03)]">
-                        <span className="text-[0.6rem] font-semibold tracking-[0.14em] uppercase text-[#6B1E2E]">Meses 1 a 6</span>
-                        <h4 className="font-heading text-base text-[#1E1B18] mt-0.5">Manutenção & Hospedagem</h4>
-                        <p className="text-base font-heading text-[#6B1E2E] font-semibold mt-0.5">Gratuito (Incluso)</p>
-                        <p className="text-xs text-[#9A9188] mt-0.5">Hospedagem, domínio, SSL e suporte 100% cobertos</p>
-                      </div>
-                    </div>
-
-                    {/* Step 3 */}
-                    <div className="relative">
-                      <div className="absolute -left-12 sm:-left-14 top-4 z-10 w-9 h-9 rounded-full border-2 border-[#6B1E2E] bg-[#FAFAF8] flex items-center justify-center">
-                        <span className="font-heading text-xs text-[#6B1E2E]">3</span>
-                      </div>
-                      <div className="card-uniq p-4 sm:p-5 bg-white">
-                        <span className="text-[0.6rem] font-semibold tracking-[0.14em] uppercase text-[#9A9188]">A partir do 7º mês</span>
-                        <h4 className="font-heading text-base text-[#1E1B18] mt-0.5">Manutenção Mensal Contínua</h4>
-                        <p className="text-base font-heading text-[#1E1B18] font-medium mt-0.5">R$ 197,90<span className="text-xs text-[#9A9188] font-sans font-normal">/mês</span></p>
-                        <p className="text-xs text-[#9A9188] mt-0.5">Renovações, segurança, atualizações e suporte técnico</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </AnimatedBlock>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════
-            DIRECT CONTACT — DIEGO
-        ═══════════════════════════════════════ */}
-        <section className="section bg-[#6B1E2E] text-[#FAFAF8]">
-          <div className="container-uniq">
-            <div className="max-w-4xl mx-auto text-center">
-              <AnimatedBlock>
-                <span className="text-[0.625rem] font-semibold tracking-[0.2em] uppercase text-[#C9A96E] mb-4 block">
-                  Contato Direto do Desenvolvedor
-                </span>
-                <h2
-                  className="font-heading text-[#FAFAF8] mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] whitespace-normal lg:whitespace-nowrap"
-                  style={{
-                    letterSpacing: "-0.02em",
-                    lineHeight: 1.2,
-                  }}
+                <a
+                  href={WA_QUESTIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline w-full justify-center"
                 >
-                  Vamos dar os retoques finais e colocar o site no ar?
-                </h2>
-                <p className="text-sm text-[rgba(250,250,248,0.8)] leading-relaxed max-w-xl mx-auto mb-8 font-light">
-                  Envie uma mensagem direta no WhatsApp para aprovar a proposta ou esclarecer qualquer ponto do projeto.
-                </p>
-              </AnimatedBlock>
+                  Tirar Dúvidas
+                  <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                </a>
+              </AnimatedSection>
 
-              <AnimatedBlock delay={0.15}>
-                <div className="inline-flex flex-col items-center gap-4 bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/15 mb-8">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-heading text-xl text-white font-semibold">
-                    D
-                  </div>
-                  <div>
-                    <p className="text-base font-medium text-white">Diego Costa</p>
-                    <p className="text-xs text-white/70">Desenvolvimento & Arquitetura Web</p>
-                    <p className="text-sm font-semibold text-[#C9A96E] mt-1">{DIEGO_WHATSAPP_DISPLAY}</p>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-3 w-full">
-                    <a
-                      href={WA_ACCEPT}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn bg-white text-[#6B1E2E] hover:bg-[#FAFAF8] justify-center text-xs font-semibold"
-                    >
-                      Aceitar Proposta
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </a>
-                    <a
-                      href={WA_QUESTIONS}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn border border-white/40 text-white hover:bg-white/10 justify-center text-xs"
-                    >
-                      Tirar Dúvidas
-                    </a>
-                  </div>
-                </div>
-              </AnimatedBlock>
             </div>
           </div>
         </section>
+
       </main>
 
-      {/* ── Minimal Footer ── */}
-      <footer className="bg-[#F5F3EF] border-t border-[#EAE7E0] py-6">
+      {/* ── FOOTER ── */}
+      <footer className="bg-[#EDE7D9] border-t border-[#D9D2C4] py-8">
         <div className="container-uniq flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link href="/" onClick={handleLogoClick} className="cursor-pointer" aria-label="Ir para o topo">
             <Logo />
           </Link>
-          <p className="text-[0.6875rem] text-[#9A9188]">
-            Desenvolvido por Med Logos
+          <p className="text-[0.6875rem] text-[#8A8278] font-light">
+            © {new Date().getFullYear()} Oni Face. Desenvolvido por Diego Costa
           </p>
         </div>
       </footer>
     </div>
-  );
-}
-
-function AnimatedBlock({
-  children,
-  delay = 0,
-  direction = "up",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  direction?: "up" | "left" | "none";
-}) {
-  return (
-    <motion.div
-      initial={
-        direction === "up"
-          ? { opacity: 0, y: 28 }
-          : direction === "left"
-          ? { opacity: 0, x: -28 }
-          : { opacity: 0 }
-      }
-      whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay }}
-    >
-      {children}
-    </motion.div>
   );
 }

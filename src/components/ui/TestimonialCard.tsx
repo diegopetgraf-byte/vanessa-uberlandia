@@ -41,7 +41,7 @@ export const TestimonialCard = ({
   const initial = author.charAt(0).toUpperCase();
 
   return (
-    <article className="card-uniq p-6 sm:p-7 flex flex-col justify-between h-full bg-white border-[#EAE7E0] hover:border-[#6B1E2E]/30 transition-all duration-300">
+    <article className="card-uniq p-6 sm:p-7 flex flex-col justify-between h-full bg-white border-[#D9D2C4] hover:border-[#1B3A6B]/30 transition-all duration-300">
       
       <div>
         {/* Top bar: Google Logo, Stars & Verified */}
@@ -78,7 +78,7 @@ export const TestimonialCard = ({
 
       {/* Author footer */}
       <div className="flex items-center gap-3 pt-3 border-t border-[#EAE7E0]/60">
-        <div className="w-8 h-8 rounded-full bg-[#F5F3EF] border border-[#EAE7E0] flex items-center justify-center font-heading font-semibold text-sm text-[#6B1E2E] flex-shrink-0">
+        <div className="w-8 h-8 rounded-full bg-[#EDE7D9] border border-[#D9D2C4] flex items-center justify-center font-heading font-semibold text-sm text-[#1B3A6B] flex-shrink-0">
           {initial}
         </div>
         <div className="min-w-0 flex-1">

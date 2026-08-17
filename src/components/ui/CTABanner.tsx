@@ -27,13 +27,13 @@ export const CTABanner = ({
   const whatsappUrl = primaryHref || getWhatsAppUrl();
 
   const bg = variant === 'wine'
-    ? 'bg-[#6B1E2E]'
-    : 'bg-[#F5F3EF] border border-[#EAE7E0]';
-  const eyebrowColor = variant === 'wine' ? 'text-[#FAFAF8]/80' : 'text-[#6B1E2E]';
-  const titleColor = variant === 'wine' ? 'text-[#FAFAF8]' : 'text-[#1E1B18]';
-  const subtitleColor = variant === 'wine' ? 'text-[#FAFAF8]/90' : 'text-[#6B635B]';
+    ? 'bg-[#1B3A6B]'
+    : 'bg-[#EDE7D9] border border-[#D9D2C4]';
+  const eyebrowColor = variant === 'wine' ? 'text-[#B8965A]' : 'text-[#B8965A]';
+  const titleColor = variant === 'wine' ? 'text-[#F7F3EC]' : 'text-[#1A1714]';
+  const subtitleColor = variant === 'wine' ? 'text-[#F7F3EC]/88' : 'text-[#8A8278]';
   const primaryBg = variant === 'wine'
-    ? 'bg-[#FAFAF8] text-[#6B1E2E] hover:bg-white hover:shadow-lg'
+    ? 'bg-[#B8965A] text-[#F7F3EC] hover:bg-[#D4B07A] hover:shadow-lg'
     : 'btn-wine';
 
   return (

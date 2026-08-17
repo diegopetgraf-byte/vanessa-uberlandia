@@ -18,44 +18,32 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    question: 'Como funciona a avaliação?',
-    answer: 'A avaliação é uma consulta individualizada onde analisamos a estrutura facial, o histórico, os objetivos e as expectativas de cada paciente. É a partir dessa escuta e análise que o planejamento de tratamento é construído.',
+    question: 'Como funciona a avaliação na Oni Face?',
+    answer: 'A avaliação é uma consulta individualizada onde analisamos minuciosamente a estrutura facial, a dinâmica muscular, o histórico e os objetivos de cada paciente. A partir dessa análise profunda, estruturamos um plano personalizado para que você se reconheça e se sinta ainda mais confiante.',
   },
   {
-    question: 'Os tratamentos são definidos na primeira consulta?',
-    answer: 'Nem sempre. Em alguns casos, o planejamento é apresentado na avaliação inicial. Em outros, pode ser necessário um acompanhamento mais detalhado antes de definir a melhor estratégia para cada paciente.',
+    question: 'Qual é o carro-chefe da Oni Face?',
+    answer: 'Nosso grande diferencial são os Protocolos Faciais Completos (Full Face). Em vez de focar em rugas isoladas, tratamos a face de forma integrada para devolver sustentação, contorno e equilíbrio com total naturalidade.',
   },
   {
     question: 'Como saber qual procedimento é indicado para mim?',
-    answer: 'A indicação é feita exclusivamente após avaliação presencial, com análise individual das suas características, objetivos e momento. Não existe protocolo padrão — cada tratamento é planejado para cada pessoa.',
+    answer: 'A indicação é feita exclusivamente após a avaliação presencial na Oni Face. Analisamos suas características anatômicas únicas e seus objetivos estéticos para recomendar o planejamento ideal.',
   },
   {
-    question: 'O resultado fica natural?',
-    answer: 'A naturalidade é um princípio central do método Quiet Beauty FS. O objetivo não é criar um novo rosto, mas compreender, valorizar e reestruturar o que já existe — de forma elegante, progressiva e respeitosa à identidade de cada paciente.',
+    question: 'O resultado dos procedimentos fica natural?',
+    answer: 'A naturalidade e a elegância são nossos pilares absolutos. Acreditamos que a transformação certa não deve descaracterizar sua identidade, mas sim revelar a melhor versão de você mesma.',
   },
   {
-    question: 'É possível combinar diferentes tratamentos?',
-    answer: 'Sim. A combinação de procedimentos é frequentemente parte do planejamento estratégico individualizado, sempre definida com base na avaliação e nos objetivos de cada paciente.',
+    question: 'A Oni Face realiza tratamentos corporais?',
+    answer: 'Não. A Oni Face é uma boutique dedicada exclusivamente a procedimentos e estética facial, garantindo máxima especialização e foco absoluto no rejuvenescimento e contorno da face.',
   },
   {
-    question: 'Como funciona o planejamento de rejuvenescimento?',
-    answer: 'O planejamento parte de uma avaliação da estrutura facial, identificando o que mudou com o tempo e qual estratégia é mais adequada para recuperar equilíbrio, sustentação e vitalidade — de forma progressiva e natural.',
+    question: 'Onde está localizada a Oni Face?',
+    answer: 'A Oni Face está localizada em Uberlândia, MG. O atendimento é feito de forma exclusiva e com hora marcada em um ambiente boutique acolhedor.',
   },
   {
-    question: 'A Clínica FS realiza tratamentos corporais?',
-    answer: 'Sim. Além dos tratamentos faciais, a Clínica FS oferece protocolos corporais para firmeza, flacidez, celulite e gordura localizada, sempre mediante avaliação e indicação profissional.',
-  },
-  {
-    question: 'Onde fica a Clínica FS?',
-    answer: 'A Clínica FS está localizada no bairro Jardins, em São Paulo, SP. Entre em contato pelo WhatsApp para confirmar o endereço e os horários disponíveis.',
-  },
-  {
-    question: 'Como agendar uma avaliação?',
-    answer: 'O agendamento é feito pelo WhatsApp. Entre em contato e retornaremos para confirmar o melhor horário para você.',
-  },
-  {
-    question: 'A Fabiana Sobral oferece cursos para profissionais?',
-    answer: 'Sim. Através do Instituto FS, Fabiana ministra cursos, imersões e treinamentos voltados para médicos, biomédicos, dentistas e profissionais habilitados na área da estética.',
+    question: 'Dra. Vanessa Sanabria oferece cursos para profissionais?',
+    answer: 'Sim. Dra. Vanessa ministra aulas, cursos práticos e mentorias individuais para profissionais habilitados que desejam dominar o raciocínio clínico de tratamentos faciais completos.',
   },
 ];
 

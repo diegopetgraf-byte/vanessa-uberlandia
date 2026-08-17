@@ -6,13 +6,13 @@ export type TreatmentCategory =
 export const CATEGORY_LABELS: Record<TreatmentCategory, string> = {
   'facial': 'Estética Facial',
   'corporal': 'Estética Corporal',
-  'instituto-fs': 'Instituto FS',
+  'instituto-fs': 'Mentoria',
 };
 
 export const CATEGORY_DESCRIPTIONS: Record<TreatmentCategory, string> = {
   'facial': 'Planejamento individualizado para reestruturação, sustentação e rejuvenescimento dos traços faciais com naturalidade e preservação da identidade.',
-  'corporal': 'Protocolos avançados voltados à melhora da firmeza, estímulo de colágeno, refinamento de contorno e qualidade tecidual.',
-  'instituto-fs': 'Capacitação de alto nível para profissionais da estética que buscam excelência técnica, raciocínio clínico e domínio do método Quiet Beauty FS.',
+  'corporal': 'Protocolos avançados voltados à melhora da firmeza, estímulo de colágeno e qualidade tecidual.',
+  'instituto-fs': 'Capacitação de alto nível para profissionais da estética que buscam excelência técnica, raciocínio clínico e domínio da estética facial.',
 };
 
 export interface TreatmentStep {
@@ -52,8 +52,8 @@ export const TREATMENTS: Treatment[] = [
     id: 'harmonizacao-facial',
     name: 'Harmonização Facial',
     category: 'facial',
-    subtitle: 'Equilíbrio, proporção e sustentação com o método Quiet Beauty FS',
-    description: 'A Harmonização Facial na Clínica FS é um planejamento integrado de alta precisão que combina técnicas injetáveis para restaurar vetores de sustentação, proporção e harmonia facial. Afastando-se de modismos e rostos padronizados, Fabiana Sobral analisa minuciosamente a anatomia individual, dinâmica muscular e perda de volume tecidual para entregar um rejuvenescimento elegante, seguro e imperceptível aos olhos desavisados.',
+    subtitle: 'Equilíbrio, proporção e sustentação em estética facial avançada',
+    description: 'A Harmonização Facial na Oni Face é um planejamento integrado de alta precisão que combina técnicas injetáveis para restaurar vetores de sustentação, proporção e harmonia facial. Afastando-se de modismos e rostos padronizados, Dra. Vanessa Sanabria analisa minuciosamente a anatomia individual, dinâmica muscular e perda de volume tecidual para entregar um rejuvenescimento elegante, seguro e imperceptível aos olhos desavisados.',
     benefits: [
       'Restauração dos vetores de sustentação facial perdidos com o tempo',
       'Harmonia e simetria proporcional entre terços superior, médio e inferior',
@@ -92,7 +92,7 @@ export const TREATMENTS: Treatment[] = [
     faqs: [
       {
         question: 'O procedimento vai mudar minha fisionomia?',
-        answer: 'Não. O princípio central do Quiet Beauty FS é justamente o oposto: revelar a sua melhor versão sem descaracterizar sua identidade. O foco é reposicionar o que o tempo alterou, e não inventar traços que nunca foram seus.'
+        answer: 'Não. O princípio central da Oni Face é justamente o oposto: revelar a sua melhor versão sem descaracterizar sua identidade. O foco é reposicionar o que o tempo alterou, e não inventar traços que nunca foram seus.'
       },
       {
         question: 'Qual o tempo de recuperação?',
@@ -114,7 +114,7 @@ export const TREATMENTS: Treatment[] = [
     name: 'Toxina Botulínica',
     category: 'facial',
     subtitle: 'Suavização natural de linhas de expressão e descanso do olhar',
-    description: 'A aplicação de toxina botulínica na Clínica FS vai além de paralisar músculos: trata-se de um refinamento dinâmico que relaxa seletivamente as tensões faciais responsáveis por rugas na testa, glabela e olhos (pés de galinha). A dosagem estratégica e a precisão nos pontos de injeção garantem uma expressão leve, descansada e comunicativa — livre do aspecto congelado.',
+    description: 'A aplicação de toxina botulínica na Oni Face vai além de paralisar músculos: trata-se de um refinamento dinâmico que relaxa seletivamente as tensões faciais responsáveis por rugas na testa, glabela e olhos (pés de galinha). A dosagem estratégica e a precisão nos pontos de injeção garantem uma expressão leve, descansada e comunicativa — livre do aspecto congelado.',
     benefits: [
       'Suavização eficaz de rugas dinâmicas na fronte, glabela e área periocular',
       'Prevenção inteligente da formação de vincos estáticos profundos',
@@ -153,7 +153,7 @@ export const TREATMENTS: Treatment[] = [
     faqs: [
       {
         question: 'Vou ficar com a expressão congelada ou artificial?',
-        answer: 'Absolutamente não. Na Clínica FS utilizamos técnicas modernas de microdosagem (Baby Botox / Botox Estratégico), preservando totalmente o movimento natural do rosto.'
+        answer: 'Absolutamente não. Na Oni Face utilizamos técnicas modernas de microdosagem (Baby Botox / Botox Estratégico), preservando totalmente o movimento natural do rosto.'
       },
       {
         question: 'Quando começo a ver o resultado?',
@@ -167,54 +167,54 @@ export const TREATMENTS: Treatment[] = [
   },
 
   {
-    id: 'preenchimento-facial',
-    name: 'Preenchimento Facial',
+    id: 'blefaroplastia',
+    name: 'Blefaroplastia Não-Cirúrgica',
     category: 'facial',
-    subtitle: 'Restauração de volume, contornos e suporte estrutural',
-    description: 'Com o processo natural de envelhecimento, ocorre reabsorção óssea e deslocamento dos compartimentos profundos de gordura facial. O Preenchimento Facial com ácido hialurônico atua repondo essas perdas nas camadas corretas, restabelecendo a projeção do queixo, a sustentação malar e o contorno da mandíbula com máxima naturalidade e biossegurança.',
+    subtitle: 'Rejuvenescimento do olhar com retração de pálpebras e estímulo de colágeno',
+    description: 'A Blefaroplastia Não-Cirúrgica (através de tecnologia de plasma ou laser fracionado) é o padrão-ouro não invasivo para o tratamento da flacidez palpebral. Sem cortes, pontos ou cicatrizes cirúrgicas, o procedimento gera uma retração tecidual imediata e progressiva, estimulando intensamente o colágeno na região periocular para suavizar rugas finas, reduzir bolsas e levantar o olhar.',
     benefits: [
-      'Reposição de volume anatômico nas regiões malar e zigomática',
-      'Definição da linha mandibular e correção de retrognatismo leve (queixo retraído)',
-      'Suavização do sulco nasogeniano ("bigode chinês") e linhas de marionete',
-      'Efeito lifting mecânico através do suporte em pontos de ancoragem'
+      'Retração imediata e progressiva da pele excedente das pálpebras',
+      'Suavização de bolsas de gordura leves e rugas perioculares ("pés de galinha")',
+      'Abertura natural do olhar, reduzindo o aspecto triste ou cansado',
+      'Estímulo duradouro de novo colágeno na área ocular'
     ],
     indications: [
-      'Perda de volume facial decorrente de idade ou perda de peso',
-      'Sulcos profundos e sombras faciais que transmitem cansaço',
-      'Falta de projeção no mento ou mandíbula indefinida',
-      'Busca por estruturação sem necessidade de cirurgias plásticas'
+      'Flacidez leve a moderada nas pálpebras superiores e inferiores',
+      'Olhar cansado ou pálpebras pesadas que comprometem a harmonia facial',
+      'Presença de rugas e linhas finas ao redor dos olhos',
+      'Desejo de rejuvenescimento do terço superior sem cirurgia convencional'
     ],
     duration: '40 a 60 minutos',
-    recovery: 'Retorno imediato às atividades normais',
-    durability: '12 a 18 meses',
+    recovery: '3 a 7 dias (vermelhidão e crostas pontuais transitórias)',
+    durability: '12 a 24 meses (dependendo da resposta fisiológica)',
     featured: true,
-    imageSrc: '/card_face_profile.png',
+    imageSrc: '',
     howItWorks: [
       {
-        title: '1. Estudo Vetorial e Proporção',
-        desc: 'Mapeamento tridimensional das áreas de deficiência volumétrica e planejamento dos pontos de injeção supraóssea ou subcutânea.'
+        title: '1. Avaliação Dinâmica do Olhar',
+        desc: 'Mapeamento detalhado do excesso de pele e das linhas dinâmicas ao redor dos olhos para um vetoramento preciso.'
       },
       {
-        title: '2. Escolha do Reológico Adequado',
-        desc: 'Seleção do gel de ácido hialurônico com viscoelasticidade (G-prime) ideal para sustentação, transição ou refinamento.'
+        title: '2. Aplicação de Anestésico Tópico',
+        desc: 'Para garantir conforto absoluto, aplicamos um anestésico de alta potência na região sensível das pálpebras.'
       },
       {
-        title: '3. Aplicação Segura e Confortável',
-        desc: 'Inserção cuidadosa do biomaterial com cânulas que preservam vasos sanguíneos e estruturas nobres da face.'
+        title: '3. Disparo Fracionado / Plasma',
+        desc: 'Aplicação pontual da tecnologia criando microlesões térmicas controladas que ativam a retração imediata da pele.'
       },
       {
-        title: '4. Modelagem e Validação Imediata',
-        desc: 'Avaliação dinâmica em espelho junto ao paciente para conferir a naturalidade dos contornos.'
+        title: '4. Protocolo de Regeneração',
+        desc: 'Aplicação de ativos calmantes e regeneradores específicos para acelerar a cicatrização e proteger a nova pele.'
       }
     ],
     faqs: [
       {
-        question: 'O ácido hialurônico pode migrar ou ficar empelotado?',
-        answer: 'Quando aplicado no plano anatômico correto (plano profundo junto ao osso ou subcutâneo adequado) e por uma profissional especialista, o ácido hialurônico se integra harmoniosamente aos tecidos, sem risco de migração.'
+        question: 'Dói para realizar o procedimento?',
+        answer: 'Com a aplicação prévia do anestésico tópico de alta potência, o desconforto é perfeitamente tolerável, sendo descrito apenas como um leve aquecimento.'
       },
       {
-        question: 'E se eu não gostar do resultado?',
-        answer: 'O ácido hialurônico é 100% reversível através da enzima hialuronidase, proporcionando total segurança e tranquilidade ao paciente.'
+        question: 'Quando vejo o resultado final?',
+        answer: 'Parte da retração é imediata, mas o resultado final se consolida entre 30 a 60 dias, acompanhando o tempo de maturação do novo colágeno estimulado.'
       }
     ]
   },
@@ -224,7 +224,7 @@ export const TREATMENTS: Treatment[] = [
     name: 'Preenchimento Labial',
     category: 'facial',
     subtitle: 'Contorno refinado, hidratação profunda e proporção labial perfeita',
-    description: 'O Preenchimento Labial com a técnica Quiet Beauty FS tem como assinatura a elegância e o respeito à proporção áurea da boca em relação ao restante do rosto. Utilizamos ácidos hialurônicos ultraflexíveis e específicos para a mucosa labial, entregando definição do arco do cupido, hidratação e volume delicado sem efeito "bico de pato" ou perda da textura natural dos lábios.',
+    description: 'O Preenchimento Labial na Oni Face tem como assinatura a elegância e o respeito à proporção áurea da boca em relação ao restante do rosto. Utilizamos ácidos hialurônicos ultraflexíveis e específicos para a mucosa labial, entregando definição do arco do cupido, hidratação e volume delicado sem efeito "bico de pato" ou perda da textura natural dos lábios.',
     benefits: [
       'Definição nítida e elegante do contorno labial e arco do cupido',
       'Volume equilibrado e proporcional ao formato dos dentes e queixo',
@@ -263,7 +263,7 @@ export const TREATMENTS: Treatment[] = [
     faqs: [
       {
         question: 'Meus lábios vão ficar com aspecto exagerado ou artificial?',
-        answer: 'De forma alguma. Fabiana Sobral trabalha sob o princípio de que um bom preenchimento labial não é identificado como procedimento — as pessoas apenas notarão que seus lábios estão mais bonitos, hidratados e desenhados.'
+        answer: 'De forma alguma. Dra. Vanessa Sanabria trabalha sob o princípio de que um bom preenchimento labial não é identificado como procedimento — as pessoas apenas notarão que seus lábios estão mais bonitos, hidratados e desenhados.'
       },
       {
         question: 'Dói para fazer preenchimento labial?',
@@ -460,7 +460,7 @@ export const TREATMENTS: Treatment[] = [
     recovery: '3 a 5 dias para redução do inchaço natural',
     durability: 'Resultados duradouros com peso estável',
     featured: false,
-    imageSrc: '/card_face_profile.png',
+    imageSrc: '',
     howItWorks: [
       {
         title: '1. Mapeamento da Gordura Localizada',
@@ -601,7 +601,7 @@ export const TREATMENTS: Treatment[] = [
     name: 'Protocolos para Celulite',
     category: 'corporal',
     subtitle: 'Tratamento das causas reais: microcirculação, fibroses e flacidez',
-    description: 'A celulite não é apenas gordura: é uma alteração multifatorial que envolve retenção hídrica, trave fibrosa repuxando a pele e flacidez de sustentação. Na Clínica FS, tratamos a celulite em sua raiz através de protocolos integrados que desfazem as fibroses profundas, estimulam a microcirculação e promovem a firmeza do tecido, alisando o relevo da pele.',
+    description: 'A celulite não é apenas gordura: é uma alteração multifatorial que envolve retenção hídrica, trave fibrosa repuxando a pele e flacidez de sustentação. Na Oni Face, tratamos a celulite em sua raiz através de protocolos integrados que desfazem as fibroses profundas, estimulam a microcirculação e promovem a firmeza do tecido, alisando o relevo da pele.',
     benefits: [
       'Alisamento visível do relevo cutâneo e atenuação do aspecto "casca de laranja"',
       'Liberação de traves fibróticas que causam os furinhos profundos',
@@ -713,11 +713,15 @@ export const INDICATIONS: { concern: string; treatments: string[] }[] = [
   },
   {
     concern: 'Perda de volume e sustentação',
-    treatments: ['preenchimento-facial', 'bioestimuladores-de-colageno', 'fios-de-sustentacao'],
+    treatments: ['harmonizacao-facial', 'bioestimuladores-de-colageno', 'fios-de-sustentacao'],
   },
   {
     concern: 'Definição de contornos faciais',
-    treatments: ['harmonizacao-facial', 'preenchimento-facial', 'lipo-de-papada'],
+    treatments: ['harmonizacao-facial', 'lipo-de-papada'],
+  },
+  {
+    concern: 'Flacidez e excesso nas pálpebras',
+    treatments: ['blefaroplastia', 'fios-de-sustentacao'],
   },
   {
     concern: 'Lábios — proporção e definição',

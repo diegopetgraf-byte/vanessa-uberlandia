@@ -4,47 +4,60 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ─────────────────────────────────────────────
-   THEME TOKENS
+   ONI FACE — THEME TOKENS
+   Muted Gold + Royal Blue palette
+   Typography: Cormorant Garamond (headings) + DM Sans (body)
 ───────────────────────────────────────────── */
 @theme {
   --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
   --font-heading: 'Cormorant Garamond', Georgia, serif;
 
-  --color-marble: #FAFAF8;
-  --color-marble-warm: #F5F3EF;
-  --color-stone: #EAE7E0;
-  --color-stone-dark: #D6D0C4;
-  --color-sand: #C8C0B4;
-  --color-oak: #9A9188;
-  --color-charcoal: #3C3833;
-  --color-ink: #1E1B18;
-  --color-wine: #6B1E2E;
-  --color-wine-light: #8B3045;
-  --color-champagne: #C9A96E;
+  /* ── Oni Face palette ── */
+  --color-cream: #F7F3EC;
+  --color-cream-deep: #EDE7D9;
+  --color-cream-warm: #E8E0D0;
+  --color-stone: #D9D2C4;
+  --color-stone-dark: #C4BAA8;
+  --color-sand: #A89D8C;
+  --color-mist: #8A8278;
+  --color-charcoal: #3C3831;
+  --color-ink: #1A1714;
 
-  --color-background: #FAFAF8;
-  --color-foreground: #3C3833;
-  --color-border: #EAE7E0;
-  --color-input: #EAE7E0;
-  --color-ring: #6B1E2E;
+  /* ── Royal Blue ── */
+  --color-blue: #1B3A6B;
+  --color-blue-mid: #2C4F8A;
+  --color-blue-light: #3D6299;
+  --color-blue-pale: #EEF2F9;
 
-  --color-primary: #6B1E2E;
-  --color-primary-foreground: #FAFAF8;
+  /* ── Muted Gold ── */
+  --color-gold: #B8965A;
+  --color-gold-light: #D4B07A;
+  --color-gold-pale: #F5EDD8;
 
-  --color-secondary: #F5F3EF;
-  --color-secondary-foreground: #3C3833;
+  /* ── Semantic ── */
+  --color-background: #F7F3EC;
+  --color-foreground: #3C3831;
+  --color-border: #D9D2C4;
+  --color-input: #D9D2C4;
+  --color-ring: #1B3A6B;
 
-  --color-muted: #EAE7E0;
-  --color-muted-foreground: #9A9188;
+  --color-primary: #1B3A6B;
+  --color-primary-foreground: #F7F3EC;
 
-  --color-accent: #C9A96E;
-  --color-accent-foreground: #1E1B18;
+  --color-secondary: #EDE7D9;
+  --color-secondary-foreground: #3C3831;
+
+  --color-muted: #D9D2C4;
+  --color-muted-foreground: #8A8278;
+
+  --color-accent: #B8965A;
+  --color-accent-foreground: #1A1714;
 
   --color-card: #FFFFFF;
-  --color-card-foreground: #3C3833;
+  --color-card-foreground: #3C3831;
 
   --color-popover: #FFFFFF;
-  --color-popover-foreground: #3C3833;
+  --color-popover-foreground: #3C3831;
 
   --color-destructive: hsl(0 65% 55%);
   --color-destructive-foreground: #FFFFFF;
@@ -80,6 +93,11 @@
     from { height: var(--radix-accordion-content-height); }
     to   { height: 0; }
   }
+
+  @keyframes butterfly-float {
+    0%, 100% { transform: translateY(0px) rotate(-2deg); opacity: 0.04; }
+    50%       { transform: translateY(-12px) rotate(2deg); opacity: 0.07; }
+  }
 }
 
 /* ─────────────────────────────────────────────
@@ -99,8 +117,8 @@
   }
 
   body {
-    background-color: #FAFAF8;
-    color: #3C3833;
+    background-color: #F7F3EC;
+    color: #3C3831;
     font-family: var(--font-sans);
     overflow-x: hidden;
     line-height: 1.6;
@@ -112,7 +130,7 @@
     font-weight: 400;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: #1E1B18;
+    color: #1A1714;
   }
 
   p { line-height: 1.65; }
@@ -122,8 +140,8 @@
   img { display: block; max-width: 100%; }
 
   ::selection {
-    background: rgba(107, 30, 46, 0.12);
-    color: #6B1E2E;
+    background: rgba(27, 58, 107, 0.12);
+    color: #1B3A6B;
   }
 }
 
@@ -154,36 +172,38 @@
   .divider {
     width: 40px;
     height: 1px;
-    background-color: #6B1E2E;
+    background: linear-gradient(90deg, #B8965A 0%, #1B3A6B 100%);
     display: block;
   }
 
   .divider-full {
     width: 100%;
     height: 1px;
-    background-color: #EAE7E0;
+    background-color: #D9D2C4;
     display: block;
   }
 
   .card-uniq {
     background: #FFFFFF;
-    border: 1px solid #EAE7E0;
+    border: 1px solid #D9D2C4;
     border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(30,27,24,0.04);
+    box-shadow: 0 2px 8px rgba(27,58,107,0.04);
     transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   }
 
   .card-uniq:hover {
-    box-shadow: 0 8px 24px rgba(30,27,24,0.08);
+    box-shadow: 0 8px 24px rgba(27,58,107,0.08);
     transform: translateY(-2px);
+    border-color: rgba(27,58,107,0.2);
   }
 
   .card-stone {
-    background: #F5F3EF;
-    border: 1px solid #EAE7E0;
+    background: #EDE7D9;
+    border: 1px solid #D9D2C4;
     border-radius: 16px;
   }
 
+  /* Primary blue CTA */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -202,35 +222,49 @@
     white-space: nowrap;
   }
 
+  /* btn-wine now becomes royal blue for Oni Face */
   .btn-wine {
-    background: #6B1E2E;
-    color: #FAFAF8;
-    box-shadow: 0 4px 16px rgba(107, 30, 46, 0.2);
+    background: #1B3A6B;
+    color: #F7F3EC;
+    box-shadow: 0 4px 16px rgba(27, 58, 107, 0.25);
   }
 
   .btn-wine:hover {
-    background: #8B3045;
-    box-shadow: 0 6px 20px rgba(107, 30, 46, 0.3);
+    background: #2C4F8A;
+    box-shadow: 0 6px 20px rgba(27, 58, 107, 0.35);
     transform: translateY(-1px);
   }
 
   .btn-wine:active { transform: translateY(0); }
 
+  /* Gold accent button */
+  .btn-gold {
+    background: #B8965A;
+    color: #F7F3EC;
+    box-shadow: 0 4px 16px rgba(184, 150, 90, 0.25);
+  }
+
+  .btn-gold:hover {
+    background: #D4B07A;
+    box-shadow: 0 6px 20px rgba(184, 150, 90, 0.35);
+    transform: translateY(-1px);
+  }
+
   .btn-outline {
     background: transparent;
-    color: #3C3833;
-    border: 1px solid #D6D0C4;
+    color: #3C3831;
+    border: 1px solid #C4BAA8;
   }
 
   .btn-outline:hover {
-    border-color: #6B1E2E;
-    color: #6B1E2E;
+    border-color: #1B3A6B;
+    color: #1B3A6B;
     transform: translateY(-1px);
   }
 
   .btn-ghost {
     background: transparent;
-    color: #3C3833;
+    color: #3C3831;
     padding-left: 0;
     padding-right: 0;
     border-radius: 0;
@@ -238,8 +272,8 @@
   }
 
   .btn-ghost:hover {
-    border-bottom-color: #6B1E2E;
-    color: #6B1E2E;
+    border-bottom-color: #B8965A;
+    color: #1B3A6B;
   }
 
   .nav-link {
@@ -248,13 +282,13 @@
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #3C3833;
+    color: #3C3831;
     transition: color 0.2s ease;
   }
 
   .nav-link:hover,
   .nav-link.active {
-    color: #6B1E2E;
+    color: #1B3A6B;
   }
 
   .pill-label {
@@ -264,8 +298,8 @@
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #6B1E2E;
-    background: rgba(107, 30, 46, 0.08);
+    color: #1B3A6B;
+    background: rgba(27, 58, 107, 0.08);
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
   }
@@ -276,21 +310,28 @@
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #6B1E2E;
+    color: #B8965A;
   }
 
   .timeline-number {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 9999px;
-    border: 1px solid #6B1E2E;
+    border: 1px solid #1B3A6B;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
     font-size: 1rem;
-    color: #6B1E2E;
+    color: #1B3A6B;
     flex-shrink: 0;
+  }
+
+  /* Butterfly watermark animation */
+  .butterfly-watermark {
+    animation: butterfly-float 8s ease-in-out infinite;
+    pointer-events: none;
+    user-select: none;
   }
 }
 
@@ -340,16 +381,30 @@
     letter-spacing: -0.01em;
   }
 
-  .text-wine { color: #6B1E2E; }
-  .text-ink  { color: #1E1B18; }
-  .text-muted { color: #9A9188; }
-  .bg-marble { background-color: #FAFAF8; }
-  .bg-marble-warm { background-color: #F5F3EF; }
-  .bg-stone  { background-color: #EAE7E0; }
-  .bg-wine   { background-color: #6B1E2E; }
-  .border-stone { border-color: #EAE7E0; }
-  .border-wine  { border-color: #6B1E2E; }
+  .text-blue  { color: #1B3A6B; }
+  .text-gold  { color: #B8965A; }
+  .text-ink   { color: #1A1714; }
+  .text-muted { color: #8A8278; }
+  .bg-cream   { background-color: #F7F3EC; }
+  .bg-cream-deep { background-color: #EDE7D9; }
+  .bg-stone   { background-color: #D9D2C4; }
+  .bg-blue    { background-color: #1B3A6B; }
+  .bg-gold    { background-color: #B8965A; }
+  .border-stone { border-color: #D9D2C4; }
+  .border-blue  { border-color: #1B3A6B; }
+  .border-gold  { border-color: #B8965A; }
 
+  .bg-pattern {
+    background-image: url('/pattern.svg');
+    background-size: 600px;
+    background-repeat: repeat;
+  }
+  .bg-pattern-subtle {
+    background-image: url('/pattern.svg');
+    background-size: 600px;
+    background-repeat: repeat;
+    opacity: 0.04;
+  }
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;

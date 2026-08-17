@@ -11,34 +11,34 @@ import { TECHNOLOGIES } from '@/data/technologies';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
 
 export const metadata: Metadata = {
-  title: 'Tecnologias | Clínica FS Fabiana Sobral',
-  description: 'Conheça as tecnologias utilizadas na Clínica FS Fabiana Sobral para tratamentos faciais e corporais. Selecionadas com base em evidência clínica, segurança e eficácia — Jardins, São Paulo.',
+  title: 'Tecnologias | Oni Face · Facial Boutique',
+  description: 'Conheça as tecnologias de ponta utilizadas na Oni Face pela Dra. Vanessa Sanabria para estética facial em Uberlândia, MG. Segurança, precisão e eficácia.',
   alternates: { canonical: `${SITE_URL}/tecnologias` },
   openGraph: { url: `${SITE_URL}/tecnologias`, type: 'website' },
 };
 
 export default function TecnologiasPage() {
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#FAFAF8' }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F7F3EC' }}>
       <Header />
       <FloatingWhatsApp />
       <main className="flex-1">
 
         {/* Page Header */}
-        <section className="section-sm bg-[#F5F3EF] border-b border-[#EAE7E0]">
+        <section className="section-sm bg-[#EDE7D9] border-b border-[#D9D2C4]">
           <div className="container-uniq">
             <AnimatedSection>
-              <span className="eyebrow mb-4 block">Clínica FS Fabiana Sobral</span>
-              <h1 className="text-display-sm max-w-2xl">Tecnologias</h1>
-              <p className="text-sm text-[#9A9188] max-w-xl mt-4 leading-relaxed">
-                Equipamentos selecionados com base em evidências clínicas, segurança e eficácia comprovada para os melhores resultados.
+              <span className="eyebrow mb-4 block">Oni Face · Facial Boutique</span>
+              <h1 className="text-display-sm max-w-2xl text-[#1A1714]">Tecnologias</h1>
+              <p className="text-sm text-[#8A8278] max-w-xl mt-4 leading-relaxed font-light">
+                Equipamentos selecionados com base em evidências clínicas, segurança e eficácia comprovada para os melhores resultados faciais.
               </p>
             </AnimatedSection>
           </div>
         </section>
 
         {/* Technology Cards */}
-        <section className="section bg-[#FAFAF8]">
+        <section className="section bg-[#F7F3EC]">
           <div className="container-uniq">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {TECHNOLOGIES.map((tech, idx) => (
@@ -57,26 +57,26 @@ export default function TecnologiasPage() {
         </section>
 
         {/* Criteria */}
-        <section className="section bg-[#F5F3EF]">
+        <section className="section bg-[#EDE7D9]">
           <div className="container-uniq">
             <AnimatedSection className="mb-14">
               <SectionTitle
                 eyebrow="Nossa Seleção"
                 title="Como escolhemos nossas tecnologias"
-                subtitle="Cada equipamento na UNIQ. passa por uma seleção rigorosa baseada em critérios clínicos e de segurança."
+                subtitle="Cada equipamento na Oni Face passa por uma seleção rigorosa baseada em critérios clínicos de alta performance e segurança."
               />
             </AnimatedSection>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {[
-                { title: 'Evidência Clínica', text: 'Apenas equipamentos com estudos clínicos publicados e resultados comprovados são adotados na UNIQ.' },
-                { title: 'Segurança', text: 'A segurança do paciente é inegociável. Todos os parâmetros são calibrados por profissional especializada.' },
+                { title: 'Evidência Clínica', text: 'Apenas equipamentos com estudos clínicos publicados e resultados comprovados para rejuvenescimento e pele são adotados na Oni Face.' },
+                { title: 'Segurança', text: 'A segurança da sua face é inegociável. Todos os parâmetros são calibrados especificamente para a anatomia de cada paciente.' },
                 { title: 'Eficácia Real', text: 'Os resultados clínicos na nossa prática confirmam a escolha. Acompanhamos a evolução de cada paciente.' },
               ].map((item, idx) => (
                 <AnimatedSection key={item.title} delay={idx * 0.08}>
                   <div className="flex flex-col gap-4">
-                    <span className="divider" aria-hidden="true" />
-                    <h3 className="font-heading text-xl text-[#1E1B18]">{item.title}</h3>
-                    <p className="text-sm text-[#9A9188] leading-relaxed">{item.text}</p>
+                    <span className="divider border-[#D9D2C4]" aria-hidden="true" />
+                    <h3 className="font-heading text-xl text-[#1A1714]">{item.title}</h3>
+                    <p className="text-sm text-[#8A8278] leading-relaxed font-light">{item.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -85,14 +85,15 @@ export default function TecnologiasPage() {
         </section>
 
         {/* CTA */}
-        <section className="section bg-[#FAFAF8]">
+        <section className="section bg-[#F7F3EC]">
           <div className="container-uniq">
             <AnimatedSection>
               <CTABanner
                 eyebrow="Próximo passo"
                 title="Saiba qual tecnologia é ideal para você"
-                subtitle="Na avaliação com Fabiana Sobral, definimos os equipamentos mais adequados ao seu caso, seus objetivos e o momento atual da sua pele."
+                subtitle="Na avaliação com a Dra. Vanessa Sanabria, definimos os equipamentos mais adequados ao seu caso, seus objetivos e o momento atual da sua pele."
                 primaryLabel="Agendar Avaliação"
+                variant="wine"
               />
             </AnimatedSection>
           </div>

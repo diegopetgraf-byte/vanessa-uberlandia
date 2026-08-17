@@ -1,16 +1,14 @@
 /**
- * JSON-LD Schema generators for Clínica FS Fabiana Sobral
+ * JSON-LD Schema generators for Oni Face · Facial Boutique
  * SEO structured data for Google rich snippets
  */
 
 import React from 'react';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
-const SITE_NAME = 'Clínica FS Fabiana Sobral';
-const INSTAGRAM_URL = 'https://www.instagram.com/drafabisobral/';
-const FACEBOOK_URL = 'https://www.facebook.com/drafabisobral/';
-const GOOGLE_MAP_URL = 'https://share.google/nf9qa9srGi9KlmysN';
-const WHATSAPP = '+5511934678424';
+const SITE_NAME = 'Oni Face · Facial Boutique';
+const INSTAGRAM_URL = 'https://www.instagram.com/dravansanabria/';
+const WHATSAPP = '+5534998031777';
 
 function toAbsoluteUrl(path: string): string {
   if (path.startsWith('http')) return path;
@@ -28,7 +26,7 @@ export interface BreadcrumbItem {
 }
 
 /**
- * Organization schema for Clínica FS Fabiana Sobral
+ * Organization schema for Oni Face · Facial Boutique
  */
 export function generateOrganizationSchema(): object {
   return {
@@ -43,8 +41,8 @@ export function generateOrganizationSchema(): object {
       width: 1200,
       height: 630,
     },
-    description: 'Fabiana Sobral — Biomédica, especialista em estética avançada e criadora do método Quiet Beauty FS. Reestruturação facial com propósito. R. Oscar Freire, 2249 - Pinheiros, São Paulo, SP.',
-    sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
+    description: 'Dra. Vanessa Sanabria — Especialista em Full Face e gerenciamento do envelhecimento. Oni Face · Facial Boutique em Uberlândia, MG.',
+    sameAs: [INSTAGRAM_URL],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: WHATSAPP,
@@ -53,13 +51,13 @@ export function generateOrganizationSchema(): object {
     },
     founders: [{
       '@type': 'Person',
-      name: 'Fabiana Sobral',
-      jobTitle: 'Biomédica, Especialista em Estética Avançada',
-      image: toAbsoluteUrl('/fabiana-sobral.png'),
-      sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
+      name: 'Dra. Vanessa Sanabria',
+      jobTitle: 'Especialista em Full Face',
+      image: toAbsoluteUrl('/professional.jpg'),
+      sameAs: [INSTAGRAM_URL],
     }],
     areaServed: [
-      { '@type': 'City', name: 'São Paulo', containedInPlace: { '@type': 'State', name: 'São Paulo' } },
+      { '@type': 'City', name: 'Uberlândia', containedInPlace: { '@type': 'State', name: 'Minas Gerais' } },
     ],
   };
 }
@@ -85,7 +83,7 @@ export function generateWebSiteSchema(): object {
 }
 
 /**
- * LocalBusiness + HealthAndBeautyBusiness schema — Pinheiros / Jardins, São Paulo
+ * LocalBusiness + HealthAndBeautyBusiness schema — Uberlândia, MG
  */
 export function generateLocalBusinessSchema(): object {
   return {
@@ -94,30 +92,23 @@ export function generateLocalBusinessSchema(): object {
     '@id': `${SITE_URL}/#localbusiness`,
     name: SITE_NAME,
     url: SITE_URL,
-    description: 'Clínica de estética avançada especializada em Harmonização Facial, Bioestimuladores de Colágeno e Estética Corporal. Método Quiet Beauty FS. Fabiana Sobral — R. Oscar Freire, 2249 - Pinheiros, São Paulo, SP.',
-    image: toAbsoluteUrl('/fabiana-sobral.png'),
+    description: 'Clínica boutique de estética avançada especializada em Harmonização Facial, Preenchimentos e Bioestimuladores de Colágeno em Uberlândia, MG.',
+    image: toAbsoluteUrl('/professional.jpg'),
     telephone: WHATSAPP,
     priceRange: '$$$$',
     currenciesAccepted: 'BRL',
     paymentAccepted: 'Dinheiro, Cartão de crédito, Cartão de débito, PIX',
-    sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
-    hasMap: GOOGLE_MAP_URL,
+    sameAs: [INSTAGRAM_URL],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'R. Oscar Freire, 2249',
-      addressLocality: 'São Paulo',
-      addressRegion: 'SP',
-      postalCode: '05409-011',
-      neighborhood: 'Pinheiros',
+      addressLocality: 'Uberlândia',
+      addressRegion: 'MG',
+      postalCode: '38400-000',
+      neighborhood: 'Centro',
       addressCountry: 'BR',
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: -23.5558,
-      longitude: -46.6811,
-    },
     areaServed: [
-      { '@type': 'City', name: 'São Paulo' },
+      { '@type': 'City', name: 'Uberlândia' },
     ],
     availableService: [
       { '@type': 'MedicalProcedure', name: 'Harmonização Facial' },
@@ -128,31 +119,30 @@ export function generateLocalBusinessSchema(): object {
       { '@type': 'MedicalProcedure', name: 'Fios de Sustentação' },
       { '@type': 'MedicalProcedure', name: 'Skinbooster' },
       { '@type': 'MedicalProcedure', name: 'Lipo de Papada' },
-      { '@type': 'MedicalProcedure', name: 'Bioestimuladores Corporais' },
     ],
   };
 }
 
 /**
- * Person schema for Fabiana Sobral
+ * Person schema for Vanessa Sanabria
  */
 export function generatePersonSchema(): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': `${SITE_URL}/#fabiana-sobral`,
-    name: 'Fabiana Sobral',
-    givenName: 'Fabiana',
-    familyName: 'Sobral',
-    jobTitle: 'Biomédica, Especialista em Estética Avançada',
+    '@id': `${SITE_URL}/#vanessa-sanabria`,
+    name: 'Dra. Vanessa Sanabria',
+    givenName: 'Vanessa',
+    familyName: 'Sanabria',
+    jobTitle: 'Especialista em Full Face',
     url: `${SITE_URL}`,
-    image: toAbsoluteUrl('/fabiana-sobral.png'),
-    sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
+    image: toAbsoluteUrl('/professional.jpg'),
+    sameAs: [INSTAGRAM_URL],
     worksFor: { '@id': `${SITE_URL}/#organization` },
     hasOccupation: {
       '@type': 'Occupation',
-      name: 'Biomédica Especialista em Estética Avançada',
-      description: 'Criadora do método Quiet Beauty FS — abordagem de rejuvenescimento natural que preserva a identidade facial.',
+      name: 'Especialista em Full Face',
+      description: 'Foco em gerenciamento do envelhecimento, harmonização e blefaroplastia com naturalidade.',
     },
   };
 }

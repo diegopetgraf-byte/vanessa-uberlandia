@@ -4,13 +4,13 @@ import { Footer } from '@/components/Footer';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { getWhatsAppUrl, WHATSAPP_DISPLAY } from '@/lib/utils';
-import { Instagram, Facebook, MapPin, Clock, MessageCircle, ArrowRight } from 'lucide-react';
+import { Instagram, MapPin, Clock, MessageCircle, ArrowRight } from 'lucide-react';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
 
 export const metadata: Metadata = {
-  title: 'Contato | Clínica FS Fabiana Sobral | Pinheiros / Jardins — São Paulo',
-  description: 'Entre em contato com a Clínica FS Fabiana Sobral. Atendimento personalizado na R. Oscar Freire, 2249 - Pinheiros, São Paulo - SP. WhatsApp: +55 11 93467-8424.',
+  title: 'Contato | Oni Face · Facial Boutique | Uberlândia — MG',
+  description: 'Fale com a Oni Face e a Dra. Vanessa Sanabria. Agende sua avaliação de estética facial exclusiva em Uberlândia, MG. WhatsApp: +55 34 99803-1777.',
   alternates: { canonical: `${SITE_URL}/contato` },
   openGraph: { url: `${SITE_URL}/contato`, type: 'website' },
 };
@@ -25,26 +25,26 @@ export default function ContatoPage() {
   const whatsappUrl = getWhatsAppUrl();
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#FAFAF8' }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F7F3EC' }}>
       <Header />
       <FloatingWhatsApp />
       <main className="flex-1">
 
         {/* Page Header */}
-        <section className="section-sm bg-[#F5F3EF] border-b border-[#EAE7E0]">
+        <section className="section-sm bg-[#EDE7D9] border-b border-[#D9D2C4]">
           <div className="container-uniq">
             <AnimatedSection>
-              <span className="eyebrow mb-3 block">Clínica FS · Fabiana Sobral</span>
-              <h1 className="text-display-sm max-w-3xl">Contato & Localização</h1>
-              <p className="text-sm sm:text-base text-[#6B635B] max-w-2xl mt-3 leading-relaxed font-light">
-                Estamos localizados na icônica Rua Oscar Freire em São Paulo. Agende sua avaliação individualizada com Fabiana Sobral.
+              <span className="eyebrow mb-3 block">Oni Face · Facial Boutique</span>
+              <h1 className="text-display-sm max-w-3xl text-[#1A1714]">Contato & Localização</h1>
+              <p className="text-sm sm:text-base text-[#8A8278] max-w-2xl mt-3 leading-relaxed font-light">
+                Agende sua consulta individualizada e comece a desenhar o seu melhor planejamento de estética facial com a Dra. Vanessa Sanabria.
               </p>
             </AnimatedSection>
           </div>
         </section>
 
         {/* Contact Actions Bar */}
-        <section className="py-6 bg-[#FAFAF8] border-b border-[#EAE7E0]">
+        <section className="py-6 bg-[#F7F3EC] border-b border-[#D9D2C4]">
           <div className="container-uniq">
             <div className="flex flex-wrap gap-4 justify-center items-center">
               <a
@@ -58,77 +58,67 @@ export default function ContatoPage() {
                 WhatsApp {WHATSAPP_DISPLAY}
               </a>
               <a
-                href="https://www.instagram.com/drafabisobral/"
+                href="https://www.instagram.com/dravansanabria/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline"
-                aria-label="Instagram @drafabisobral"
+                aria-label="Instagram @dravansanabria"
               >
                 <Instagram className="w-4 h-4" aria-hidden="true" />
-                @drafabisobral
-              </a>
-              <a
-                href="https://www.facebook.com/drafabisobral/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline"
-                aria-label="Facebook Dra. Fabiana Sobral"
-              >
-                <Facebook className="w-4 h-4" aria-hidden="true" />
-                Facebook
+                @dravansanabria
               </a>
             </div>
           </div>
         </section>
 
         {/* Main Location & Info Card */}
-        <section className="section bg-[#F5F3EF]">
+        <section className="section bg-[#EDE7D9]">
           <div className="container-uniq">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               
               {/* Info Column */}
               <AnimatedSection className="lg:col-span-6">
-                <div className="card-uniq p-8 sm:p-10 flex flex-col gap-6">
+                <div className="card-uniq p-8 sm:p-10 flex flex-col gap-6 bg-white border-[#D9D2C4]">
                   <div>
-                    <span className="pill-label mb-3 inline-block">Consultório</span>
-                    <h2 className="font-heading text-3xl text-[#1E1B18]">São Paulo</h2>
-                    <p className="text-xs text-[#9A9188] tracking-wide mt-1">Pinheiros / Jardins</p>
+                    <span className="pill-label mb-3 inline-block bg-[rgba(27,58,107,0.08)] text-[#1B3A6B]">Facial Boutique</span>
+                    <h2 className="font-heading text-3xl text-[#1A1714]">Uberlândia, MG</h2>
+                    <p className="text-xs text-[#8A8278] tracking-wide mt-1">Atendimento Exclusivo com Hora Marcada</p>
                   </div>
 
                   <div className="space-y-5">
                     <div className="flex items-start gap-3.5">
-                      <div className="w-9 h-9 rounded-full bg-[#6B1E2E]/10 flex items-center justify-center flex-shrink-0 text-[#6B1E2E]">
+                      <div className="w-9 h-9 rounded-full bg-[#1B3A6B]/10 flex items-center justify-center flex-shrink-0 text-[#1B3A6B]">
                         <MapPin className="w-4 h-4" />
                       </div>
                       <div>
-                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#9A9188] mb-1">Endereço</p>
-                        <p className="text-sm sm:text-base text-[#1E1B18] font-medium">R. Oscar Freire, 2249</p>
-                        <p className="text-xs text-[#6B635B]">Pinheiros, São Paulo - SP, 05409-011</p>
+                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Localização</p>
+                        <p className="text-sm sm:text-base text-[#1A1714] font-medium">Uberlândia, MG</p>
+                        <p className="text-xs text-[#8A8278]">Para sua privacidade e exclusividade, o endereço completo é fornecido no momento do agendamento.</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="w-9 h-9 rounded-full bg-[#6B1E2E]/10 flex items-center justify-center flex-shrink-0 text-[#6B1E2E]">
+                      <div className="w-9 h-9 rounded-full bg-[#1B3A6B]/10 flex items-center justify-center flex-shrink-0 text-[#1B3A6B]">
                         <Clock className="w-4 h-4" />
                       </div>
                       <div>
-                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#9A9188] mb-1">Horário de Atendimento</p>
-                        <p className="text-xs sm:text-sm text-[#3C3833]">Segunda a Sexta: 09h às 19h</p>
-                        <p className="text-xs text-[#9A9188]">Sábado: 09h às 14h (com agendamento prévio)</p>
+                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Horário de Funcionamento</p>
+                        <p className="text-xs sm:text-sm text-[#3C3831]">Segunda a Sexta: 09h às 19h</p>
+                        <p className="text-xs text-[#8A8278]">Sábado: 09h às 13h (conforme disponibilidade e agendamento prévio)</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3.5">
-                      <div className="w-9 h-9 rounded-full bg-[#6B1E2E]/10 flex items-center justify-center flex-shrink-0 text-[#6B1E2E]">
+                      <div className="w-9 h-9 rounded-full bg-[#1B3A6B]/10 flex items-center justify-center flex-shrink-0 text-[#1B3A6B]">
                         <MessageCircle className="w-4 h-4" />
                       </div>
                       <div>
-                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#9A9188] mb-1">Agendamentos & Dúvidas</p>
+                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Agendamentos & Informações</p>
                         <a
                           href={whatsappUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm font-semibold text-[#6B1E2E] hover:text-[#8B3045] transition-colors"
+                          className="text-sm font-semibold text-[#1B3A6B] hover:text-[#2C4F8A] transition-colors"
                         >
                           {WHATSAPP_DISPLAY}
                         </a>
@@ -146,47 +136,31 @@ export default function ContatoPage() {
                       Agendar Avaliação
                       <ArrowRight className="w-4 h-4" />
                     </a>
-                    <a
-                      href="https://share.google/nf9qa9srGi9KlmysN"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-outline justify-center"
-                    >
-                      Abrir no Google Maps
-                    </a>
                   </div>
                 </div>
               </AnimatedSection>
 
-              {/* Single Clinic Photo and Map Preview */}
+              {/* Single Clinic Photo */}
               <AnimatedSection delay={0.15} className="lg:col-span-6">
-                <div className="card-uniq overflow-hidden shadow-md">
-                  <div className="aspect-[4/3] sm:aspect-[16/11] overflow-hidden bg-[#EAE7E0] relative group">
+                <div className="card-uniq overflow-hidden shadow-md border-[#D9D2C4]">
+                  <div className="aspect-[4/3] sm:aspect-[16/11] overflow-hidden bg-[#D9D2C4] relative group">
                     <img
-                      src="/gallery-4.png"
-                      alt="Clínica FS Fabiana Sobral — Rua Oscar Freire, 2249"
+                      src="/2.jpg"
+                      alt="Oni Face · Facial Boutique — Uberlândia, MG"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1E1B18]/70 via-transparent to-transparent flex items-end p-6">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/75 via-transparent to-transparent flex items-end p-6">
                       <div>
-                        <p className="text-white font-heading text-xl sm:text-2xl">Rua Oscar Freire, 2249</p>
-                        <p className="text-white/85 text-xs sm:text-sm font-light mt-0.5">Pinheiros / Jardins — São Paulo, SP</p>
+                        <p className="text-[#F7F3EC] font-heading text-xl sm:text-2xl">Oni Face Boutique</p>
+                        <p className="text-[#F7F3EC]/85 text-xs sm:text-sm font-light mt-0.5">Uberlândia, MG</p>
                       </div>
                     </div>
                   </div>
-                  <div className="p-5 flex items-center justify-between bg-white border-t border-[#EAE7E0]">
+                  <div className="p-5 flex items-center justify-between bg-white border-t border-[#D9D2C4]">
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-[#6B1E2E]" />
-                      <span className="text-xs sm:text-sm text-[#3C3833] font-medium">Ver localização no mapa</span>
+                      <MapPin className="w-4 h-4 text-[#1B3A6B]" />
+                      <span className="text-xs sm:text-sm text-[#3C3831] font-medium">Quiet Beauty · Exclusividade no atendimento</span>
                     </div>
-                    <a
-                      href="https://share.google/nf9qa9srGi9KlmysN"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs sm:text-sm text-[#6B1E2E] font-medium hover:underline inline-flex items-center gap-1"
-                    >
-                      Google Maps <ArrowRight className="w-3.5 h-3.5" />
-                    </a>
                   </div>
                 </div>
               </AnimatedSection>
@@ -196,11 +170,11 @@ export default function ContatoPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="section bg-[#FAFAF8]">
+        <section className="section bg-[#F7F3EC]">
           <div className="container-uniq">
             <AnimatedSection className="mb-10 text-center max-w-2xl mx-auto">
               <span className="eyebrow mb-2 block">Dúvidas Frequentes</span>
-              <h2 className="text-headline">Informações sobre sua consulta</h2>
+              <h2 className="text-headline text-[#1A1714]">Informações sobre sua consulta</h2>
             </AnimatedSection>
 
             <div className="max-w-3xl mx-auto space-y-4">
@@ -210,22 +184,18 @@ export default function ContatoPage() {
                   a: `O agendamento é realizado diretamente pelo nosso WhatsApp oficial (${WHATSAPP_DISPLAY}). Nossa equipe responderá prontamente para encontrar o melhor dia e horário para o seu atendimento.`,
                 },
                 {
-                  q: 'Onde fica localizada a clínica?',
-                  a: 'Estamos na Rua Oscar Freire, 2249 - Pinheiros, São Paulo - SP, com fácil acesso pelas principais vias e proximidade com estações de metrô.',
+                  q: 'O endereço é fornecido no agendamento?',
+                  a: 'Sim. Para garantir total privacidade, exclusividade e segurança a cada paciente atendido na Oni Face, o endereço e instruções de acesso são fornecidos no momento da confirmação do agendamento.',
                 },
                 {
                   q: 'Posso ir à consulta sem saber exatamente qual procedimento realizar?',
-                  a: 'Com certeza. A consulta de avaliação com Fabiana Sobral é justamente o momento de escuta diagnóstica, onde analisamos as proporções do seu rosto, compreendemos seus objetivos e traçamos juntas o planejamento ideal.',
-                },
-                {
-                  q: 'Quais são as formas de pagamento disponíveis?',
-                  a: 'Aceitamos cartões de crédito (com opções de parcelamento), débito, PIX e transferência bancária. Condições detalhadas são informadas na consulta.',
+                  a: 'Com certeza. A consulta de avaliação com a Dra. Vanessa Sanabria é justamente o momento de escuta diagnóstica, onde analisamos as proporções do seu rosto, compreendemos seus objetivos e traçamos juntas o planejamento ideal.',
                 },
               ].map((item, idx) => (
                 <AnimatedSection key={item.q} delay={idx * 0.05}>
-                  <div className="card-uniq p-6">
-                    <h3 className="font-heading text-base sm:text-lg text-[#1E1B18] mb-2">{item.q}</h3>
-                    <p className="text-xs sm:text-sm text-[#6B635B] leading-relaxed font-light">{item.a}</p>
+                  <div className="card-uniq p-6 bg-white border-[#D9D2C4]">
+                    <h3 className="font-heading text-base sm:text-lg text-[#1A1714] mb-2">{item.q}</h3>
+                    <p className="text-xs sm:text-sm text-[#8A8278] leading-relaxed font-light">{item.a}</p>
                   </div>
                 </AnimatedSection>
               ))}
