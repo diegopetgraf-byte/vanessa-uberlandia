@@ -3,7 +3,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
-import { getWhatsAppUrl, WHATSAPP_DISPLAY } from '@/lib/utils';
+import { CTABanner } from '@/components/ui/CTABanner';
+import { getWhatsAppUrl } from '@/lib/utils';
 import { ArrowRight, Sparkles, Gift, Calendar, MapPin, Star } from 'lucide-react';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
@@ -23,42 +24,40 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  { src: '/clinic-inside.jpg', alt: 'Oni Face — Ambiente da clínica', span: 'row-span-2' },
-  { src: '/oni-1.jpg', alt: 'Oni Face — Detalhes do espaço', span: '' },
-  { src: '/interior.jpg', alt: 'Oni Face — Interior da boutique', span: '' },
-  { src: '/clinic_1.jpg', alt: 'Oni Face — Recepção', span: '' },
-  { src: '/interior-details.jpg', alt: 'Oni Face — Detalhes exclusivos', span: 'row-span-2' },
-  { src: '/clinic_2.jpg', alt: 'Oni Face — Área de atendimento', span: '' },
-  { src: '/clinic_3.jpg', alt: 'Oni Face — Espaço de beleza', span: '' },
-  { src: '/oni-2.jpg', alt: 'Oni Face — Boutique facial', span: '' },
-  { src: '/oni-3.jpg', alt: 'Oni Face — Tratamentos exclusivos', span: '' },
+  { src: '/oni-0.png',  alt: 'Oni Face — Dra. Vanessa Sanabria' },
+  { src: '/oni-1.jpg',  alt: 'Oni Face — Ambiente da clínica' },
+  { src: '/oni-2.jpg',  alt: 'Oni Face — Espaço exclusivo' },
+  { src: '/oni-3.jpg',  alt: 'Oni Face — Detalhes da boutique' },
+  { src: '/oni-4.jpg',  alt: 'Oni Face — Interior' },
+  { src: '/oni-5.jpg',  alt: 'Oni Face — Consultório' },
+  { src: '/oni-6.jpg',  alt: 'Oni Face — Dra. Vanessa' },
+  { src: '/oni-7.jpg',  alt: 'Oni Face — Equipamentos' },
+  { src: '/oni-8.jpg',  alt: 'Oni Face — Experiência' },
+  { src: '/oni-9.jpg',  alt: 'Oni Face — Boutique facial' },
+  { src: '/oni-10.png', alt: 'Oni Face — A transformação que ainda parece você' },
 ];
 
 const fullFaceItems = [
   {
-    icon: '◆',
     title: 'Leitura facial individualizada',
     desc: 'Cada rosto tem uma geometria única. O Full Face começa pelo diagnóstico preciso das proporções, simetrias e traços da sua identidade.',
   },
   {
-    icon: '◆',
     title: 'Protocolo de harmonização completa',
     desc: 'Combinação estratégica de toxina botulínica, preenchimentos e bioestimuladores para restaurar o equilíbrio facial com naturalidade.',
   },
   {
-    icon: '◆',
     title: 'Longevidade e preservação de identidade',
     desc: 'O objetivo não é mudar — é preservar a melhor versão do rosto que já é seu, por mais tempo e com mais qualidade.',
   },
   {
-    icon: '◆',
     title: 'Resultados progressivos e cumulativos',
     desc: 'Um planejamento de longo prazo que respeita o tempo do seu rosto e entrega transformação genuína, sessão após sessão.',
   },
 ];
 
 export default function PacienteModeloPage() {
-  const whatsappUrl = getWhatsAppUrl('Olá! Vi o convite do evento Paciente Modelo da Oni Face e gostaria de saber mais.');
+  const whatsappUrl = getWhatsAppUrl('paciente-modelo');
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F7F3EC' }}>
@@ -67,14 +66,14 @@ export default function PacienteModeloPage() {
       <main className="flex-1">
 
         {/* Hero */}
-        <section className="relative overflow-hidden bg-[#1A1714] min-h-[70vh] flex items-end">
+        <section className="relative overflow-hidden min-h-[70vh] flex items-end">
           <div className="absolute inset-0">
             <img
-              src="/clinic-inside.jpg"
-              alt="Oni Face · Facial Boutique"
-              className="w-full h-full object-cover opacity-40"
+              src="/paciente-modelo-hero.svg"
+              alt="Oni Face · Paciente Modelo"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714] via-[#1A1714]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/80 via-[#1A1714]/30 to-transparent" />
           </div>
 
           <div className="relative z-10 container-uniq pb-16 pt-32 sm:pb-20">
@@ -130,7 +129,7 @@ export default function PacienteModeloPage() {
                     O evento Paciente Modelo nasce de uma ideia simples: trazer mulheres cuidadosas para dentro da Oni Face, antes de qualquer decisão, para que possam conhecer o ambiente, a metodologia e a Dra. Vanessa de perto.
                   </p>
                   <p>
-                    É uma tarde leve — com cocktails, demonstrações ao vivo de protocolos Full Face, e conversa real sobre o que a estética médica pode (e não pode) fazer.
+                    É uma tarde leve — com cocktails, demonstrações ao vivo de protocolos Full Face e conversa real sobre o que a estética médica pode — e não pode — fazer.
                   </p>
                   <p>
                     Quem chega com o <strong className="font-semibold text-[#1A1714]">convite físico</strong> participa de um sorteio exclusivo realizado na data impressa no convite.
@@ -180,7 +179,7 @@ export default function PacienteModeloPage() {
               </p>
             </AnimatedSection>
 
-            <div className="columns-2 sm:columns-3 gap-3 sm:gap-4 space-y-0">
+            <div className="columns-2 sm:columns-3 gap-3 sm:gap-4">
               {galleryImages.map((img, i) => (
                 <AnimatedSection key={img.src} delay={i * 0.04} className="break-inside-avoid mb-3 sm:mb-4">
                   <div className="overflow-hidden rounded-lg bg-[#D9D2C4] group">
@@ -216,7 +215,7 @@ export default function PacienteModeloPage() {
               {fullFaceItems.map((item, i) => (
                 <AnimatedSection key={item.title} delay={i * 0.08}>
                   <div className="p-6 rounded-xl border border-[#2C4F8A] bg-[#1A2E55] hover:border-[#B8965A]/40 transition-colors">
-                    <span className="text-[#B8965A] text-xs font-semibold tracking-wider block mb-3">{item.icon} {`0${i + 1}`}</span>
+                    <span className="text-[#B8965A] text-xs font-semibold tracking-wider block mb-3">{`0${i + 1}`}</span>
                     <h3 className="font-heading text-base sm:text-lg text-[#F7F3EC] mb-2">{item.title}</h3>
                     <p className="text-[#A8B8D8] text-xs sm:text-sm font-light leading-relaxed">{item.desc}</p>
                   </div>
@@ -268,18 +267,15 @@ export default function PacienteModeloPage() {
                     <p className="text-[#8A8278] text-xs sm:text-sm font-light leading-relaxed mb-8">
                       O que está em jogo? Uma sessão de avaliação completa e um procedimento do protocolo Full Face. Surpresa garantida na data do convite.
                     </p>
-                    <div className="flex flex-wrap gap-4 items-center">
-                      <a
-                        href={whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-wine"
-                      >
-                        Solicitar meu convite físico
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                      <span className="text-xs text-[#8A8278] font-light">Vagas limitadas · {WHATSAPP_DISPLAY}</span>
-                    </div>
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-wine"
+                    >
+                      Solicitar meu convite físico
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>
@@ -328,34 +324,16 @@ export default function PacienteModeloPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="section bg-[#1A1714]">
-          <div className="container-uniq text-center">
-            <AnimatedSection>
-              <div className="inline-flex items-center gap-2 mb-5">
-                <span className="relative flex h-1.5 w-1.5" aria-hidden="true">
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-[#B8965A] opacity-75 animate-ping" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#B8965A]" />
-                </span>
-                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#B8965A]">
-                  Vagas limitadas
-                </span>
-              </div>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[#F7F3EC] max-w-2xl mx-auto leading-snug mb-6">
-                Pronta para conhecer a Oni Face?
-              </h2>
-              <p className="text-[#8A8278] text-sm sm:text-base font-light max-w-lg mx-auto mb-8 leading-relaxed">
-                Entre em contato pelo WhatsApp, solicite seu convite e reserve sua tarde na clínica. O sorteio acontece na data impressa — só para quem aparece.
-              </p>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-wine text-sm px-8 py-3"
-              >
-                Solicitar convite · {WHATSAPP_DISPLAY}
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </AnimatedSection>
+        <section className="section bg-[#EDE7D9]">
+          <div className="container-uniq">
+            <CTABanner
+              eyebrow="Vagas limitadas"
+              title="Pronta para conhecer a Oni Face?"
+              subtitle="Entre em contato pelo WhatsApp, solicite seu convite e reserve sua tarde na clínica. O sorteio acontece na data impressa — só para quem aparece."
+              primaryLabel="Solicitar convite"
+              primaryHref={whatsappUrl}
+              variant="wine"
+            />
           </div>
         </section>
 

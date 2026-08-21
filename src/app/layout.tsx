@@ -64,6 +64,13 @@ export const metadata: Metadata = {
     description: 'Cirurgiã-Dentista especialista em harmonização facial. A face dos seus sonhos ainda deve parecer sua. Uberlândia, MG.',
     images: [{ url: OG_IMAGE, alt: 'Oni Face · Facial Boutique' }],
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
   manifest: '/site.webmanifest',
   appleWebApp: {
     capable: true,

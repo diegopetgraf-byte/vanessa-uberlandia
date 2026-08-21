@@ -32,6 +32,11 @@ export function getWhatsAppUrl(contextOrTreatment?: WhatsAppMessageType) {
     return `${baseUrl}?text=${encodeURIComponent(text)}`;
   }
 
+  if (contextOrTreatment === 'paciente-modelo') {
+    const text = "Olá, Dra. Vanessa! Vi o convite do evento Paciente Modelo da Oni Face e gostaria de participar.";
+    return `${baseUrl}?text=${encodeURIComponent(text)}`;
+  }
+
   // Treatment specific
   const text = `Olá, Dra. Vanessa! Visitei o site da Oni Face e gostaria de agendar uma avaliação para o procedimento: ${contextOrTreatment}.`;
   return `${baseUrl}?text=${encodeURIComponent(text)}`;
