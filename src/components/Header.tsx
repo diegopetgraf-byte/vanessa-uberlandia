@@ -80,12 +80,12 @@ export const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1" aria-label="Navegação principal">
+            <nav className="hidden lg:flex items-center gap-0.5" aria-label="Navegação principal">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`nav-link px-3 py-2 rounded-md transition-colors text-sm font-medium tracking-wide ${
+                  className={`nav-link px-2.5 py-2 rounded-md transition-colors text-[0.78rem] font-medium tracking-wide ${
                     isActive(item.href)
                       ? 'text-[#1B3A6B]'
                       : 'text-[#3C3831] hover:text-[#1B3A6B]'
@@ -96,11 +96,14 @@ export const Header = () => {
                 </Link>
               ))}
               <Link
-                href="/proposta"
-                className="ml-3 inline-flex items-center gap-1.5 border-l border-[#D9D2C4] pl-4 text-xs font-semibold tracking-wider text-[#1B3A6B] hover:text-[#B8965A] transition-colors"
+                href="/paciente-modelo"
+                className="ml-3 group inline-flex items-center gap-1.5 border-l border-[#D9D2C4] pl-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#1B3A6B] hover:text-[#B8965A] transition-colors"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-[#B8965A]" aria-hidden="true" />
-                PROPOSTA
+                <span className="relative flex h-1.5 w-1.5" aria-hidden="true">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-[#B8965A] opacity-75 animate-ping" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#B8965A]" />
+                </span>
+                Paciente Modelo
               </Link>
             </nav>
 
@@ -197,12 +200,15 @@ export const Header = () => {
                   className="border-t border-[#D9D2C4] mt-2 pt-2"
                 >
                   <Link
-                    href="/proposta"
+                    href="/paciente-modelo"
                     onClick={closeMenu}
                     className="flex items-center gap-2 py-3 px-4 rounded-lg font-sans text-sm font-semibold tracking-wide text-[#1B3A6B] hover:bg-[rgba(27,58,107,0.04)]"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#B8965A]" aria-hidden="true" />
-                    Proposta Estratégica
+                    <span className="relative flex h-1.5 w-1.5" aria-hidden="true">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#B8965A] opacity-75 animate-ping" />
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#B8965A]" />
+                    </span>
+                    Paciente Modelo
                   </Link>
                 </motion.div>
               </nav>

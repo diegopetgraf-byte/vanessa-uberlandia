@@ -70,10 +70,20 @@ export const Footer = () => {
 
 
             <div className="space-y-2 text-xs sm:text-sm text-[#3C3831]">
-              <div className="inline-flex items-center gap-2 text-[#8A8278]">
-                <MapPin className="w-4 h-4 text-[#B8965A] flex-shrink-0" />
-                <span>Uberlândia, MG</span>
-              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Condom%C3%ADnio+%C3%82mbar+Health+Center+Jardim+Kara%C3%ADba+Uberl%C3%A2ndia+MG+38411-217"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-start gap-2 text-[#8A8278] hover:text-[#1B3A6B] transition-colors"
+                aria-label="Abrir endereço no Google Maps"
+              >
+                <MapPin className="w-4 h-4 text-[#B8965A] flex-shrink-0 mt-0.5" />
+                <span className="not-italic leading-relaxed">
+                  Condomínio Âmbar Health Center · Sala 38<br />
+                  Jardim Karaíba · Uberlândia, MG<br />
+                  <span className="text-[#C4BAA8]">CEP 38.411-217</span>
+                </span>
+              </a>
             </div>
 
             <div className="flex flex-wrap items-center gap-5 pt-1">

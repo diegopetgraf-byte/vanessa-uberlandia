@@ -92,8 +92,19 @@ export default function ContatoPage() {
                       </div>
                       <div>
                         <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Localização</p>
-                        <p className="text-sm sm:text-base text-[#1A1714] font-medium">Uberlândia, MG</p>
-                        <p className="text-xs text-[#8A8278]">Para sua privacidade e exclusividade, o endereço completo é fornecido no momento do agendamento.</p>
+                        <p className="text-sm sm:text-base text-[#1A1714] font-medium leading-relaxed">
+                          Condomínio Âmbar Health Center · Sala 38<br />
+                          Jardim Karaíba · Uberlândia, MG<br />
+                          <span className="text-[#8A8278] font-normal">CEP 38.411-217</span>
+                        </p>
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=Condom%C3%ADnio+%C3%82mbar+Health+Center+Jardim+Kara%C3%ADba+Uberl%C3%A2ndia+MG+38411-217"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#1B3A6B] hover:text-[#B8965A] transition-colors"
+                        >
+                          Ver no Google Maps →
+                        </a>
                       </div>
                     </div>
 
@@ -184,8 +195,8 @@ export default function ContatoPage() {
                   a: `O agendamento é realizado diretamente pelo nosso WhatsApp oficial (${WHATSAPP_DISPLAY}). Nossa equipe responderá prontamente para encontrar o melhor dia e horário para o seu atendimento.`,
                 },
                 {
-                  q: 'O endereço é fornecido no agendamento?',
-                  a: 'Sim. Para garantir total privacidade, exclusividade e segurança a cada paciente atendido na Oni Face, o endereço e instruções de acesso são fornecidos no momento da confirmação do agendamento.',
+                  q: 'Onde fica a Oni Face?',
+                  a: 'A Oni Face fica no Condomínio Âmbar Health Center, Sala 38, no Jardim Karaíba — Uberlândia, MG (CEP 38.411-217). Instruções detalhadas de acesso, estacionamento e recepção são enviadas junto com a confirmação do horário.',
                 },
                 {
                   q: 'Posso ir à consulta sem saber exatamente qual procedimento realizar?',

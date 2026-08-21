@@ -61,7 +61,7 @@ export const TECHNOLOGIES: Technology[] = [
       'Casos que necessitam de abordagem combinada',
     ],
     faq: [
-      { question: 'Qual a diferença entre o Hipro e o Ultraformer?', answer: 'O Hipro combina radiofrequência e HIFU em uma plataforma, sendo mais versátil para tratar múltiplas camadas e área corporal. A escolha do equipamento ideal é feita na avaliação com Dra. Marcelle.' },
+      { question: 'Qual a diferença entre o Hipro e o Ultraformer?', answer: 'O Hipro combina radiofrequência e HIFU em uma plataforma, sendo mais versátil para tratar múltiplas camadas e área corporal. A escolha do equipamento ideal é feita na avaliação com Dra. Vanessa.' },
       { question: 'Quantas sessões são necessárias?', answer: 'O protocolo é definido na avaliação conforme o grau de flacidez e os objetivos do paciente.' },
       { question: 'O tratamento é doloroso?', answer: 'Pode haver sensação de calor durante a aplicação. Geralmente bem tolerado sem necessidade de anestesia.' },
     ],

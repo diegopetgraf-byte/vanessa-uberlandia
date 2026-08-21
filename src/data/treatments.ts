@@ -168,53 +168,57 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'blefaroplastia',
-    name: 'Blefaroplastia Não-Cirúrgica',
+    name: 'Blefaroplastia Cirúrgica',
     category: 'facial',
-    subtitle: 'Rejuvenescimento do olhar com retração de pálpebras e estímulo de colágeno',
-    description: 'A Blefaroplastia Não-Cirúrgica (através de tecnologia de plasma ou laser fracionado) é o padrão-ouro não invasivo para o tratamento da flacidez palpebral. Sem cortes, pontos ou cicatrizes cirúrgicas, o procedimento gera uma retração tecidual imediata e progressiva, estimulando intensamente o colágeno na região periocular para suavizar rugas finas, reduzir bolsas e levantar o olhar.',
+    subtitle: 'Rejuvenescimento cirúrgico do olhar com remoção de pele excedente e bolsas',
+    description: 'A Blefaroplastia Cirúrgica é o procedimento padrão-ouro para tratar flacidez avançada das pálpebras, bolsas de gordura e o aspecto triste ou cansado do olhar. Realizada em ambiente cirúrgico apropriado, com anestesia local associada a sedação, a técnica remove a pele e a gordura em excesso das pálpebras superiores e/ou inferiores por incisões precisas — posicionadas em dobras naturais para que a cicatriz seja discreta ao longo do tempo. É um procedimento de execução cuidadosa, indicado quando a flacidez ultrapassa o que técnicas não-invasivas conseguem tratar.',
     benefits: [
-      'Retração imediata e progressiva da pele excedente das pálpebras',
-      'Suavização de bolsas de gordura leves e rugas perioculares ("pés de galinha")',
-      'Abertura natural do olhar, reduzindo o aspecto triste ou cansado',
-      'Estímulo duradouro de novo colágeno na área ocular'
+      'Remoção efetiva do excesso de pele e bolsas nas pálpebras',
+      'Abertura natural e duradoura do olhar',
+      'Correção de aspecto triste, pesado ou cansado do terço superior',
+      'Resultado consolidado que costuma se manter por muitos anos'
     ],
     indications: [
-      'Flacidez leve a moderada nas pálpebras superiores e inferiores',
-      'Olhar cansado ou pálpebras pesadas que comprometem a harmonia facial',
-      'Presença de rugas e linhas finas ao redor dos olhos',
-      'Desejo de rejuvenescimento do terço superior sem cirurgia convencional'
+      'Flacidez moderada a avançada das pálpebras superiores e/ou inferiores',
+      'Bolsas de gordura persistentes que não respondem a tratamentos tópicos',
+      'Excesso de pele que compromete o olhar ou, em casos maiores, o campo visual',
+      'Paciente clinicamente apto e ciente do caráter cirúrgico do procedimento'
     ],
-    duration: '40 a 60 minutos',
-    recovery: '3 a 7 dias (vermelhidão e crostas pontuais transitórias)',
-    durability: '12 a 24 meses (dependendo da resposta fisiológica)',
+    duration: '60 a 120 minutos, em ambiente cirúrgico',
+    recovery: 'Retorno à rotina em 7 a 14 dias · edema e equimoses regridem gradualmente',
+    durability: 'Resultado duradouro — costuma se manter por muitos anos',
     featured: true,
     imageSrc: '',
     howItWorks: [
       {
-        title: '1. Avaliação Dinâmica do Olhar',
-        desc: 'Mapeamento detalhado do excesso de pele e das linhas dinâmicas ao redor dos olhos para um vetoramento preciso.'
+        title: '1. Avaliação clínica pré-operatória',
+        desc: 'Anamnese detalhada, avaliação da anatomia palpebral, exames laboratoriais e discussão franca sobre expectativas, riscos e recuperação.'
       },
       {
-        title: '2. Aplicação de Anestésico Tópico',
-        desc: 'Para garantir conforto absoluto, aplicamos um anestésico de alta potência na região sensível das pálpebras.'
+        title: '2. Planejamento cirúrgico',
+        desc: 'Marcação precisa das incisões nas dobras naturais das pálpebras, considerando simetria, volume e a assinatura do olhar da paciente.'
       },
       {
-        title: '3. Disparo Fracionado / Plasma',
-        desc: 'Aplicação pontual da tecnologia criando microlesões térmicas controladas que ativam a retração imediata da pele.'
+        title: '3. Ato cirúrgico',
+        desc: 'Procedimento realizado em ambiente cirúrgico adequado, com anestesia local e sedação, seguindo protocolo de segurança e assepsia.'
       },
       {
-        title: '4. Protocolo de Regeneração',
-        desc: 'Aplicação de ativos calmantes e regeneradores específicos para acelerar a cicatrização e proteger a nova pele.'
+        title: '4. Pós-operatório acompanhado',
+        desc: 'Retornos programados para acompanhamento da cicatrização, orientações de cuidado com curativos, uso de compressas e proteção solar.'
       }
     ],
     faqs: [
       {
-        question: 'Dói para realizar o procedimento?',
-        answer: 'Com a aplicação prévia do anestésico tópico de alta potência, o desconforto é perfeitamente tolerável, sendo descrito apenas como um leve aquecimento.'
+        question: 'É um procedimento cirúrgico de verdade?',
+        answer: 'Sim. É uma cirurgia, realizada em ambiente cirúrgico apropriado, com anestesia local associada a sedação. Não é confundível com técnicas não-invasivas de plasma ou laser fracionado, que tratam apenas flacidez leve.'
       },
       {
-        question: 'Quando vejo o resultado final?',
-        answer: 'Parte da retração é imediata, mas o resultado final se consolida entre 30 a 60 dias, acompanhando o tempo de maturação do novo colágeno estimulado.'
+        question: 'Como é a recuperação?',
+        answer: 'O retorno à rotina costuma acontecer entre 7 e 14 dias. Nos primeiros dias há edema e pequenas equimoses que regridem progressivamente. A cicatriz fica em dobra natural e vai desbotando ao longo dos meses.'
+      },
+      {
+        question: 'Quem pode fazer?',
+        answer: 'Pessoas clinicamente aptas, com flacidez ou bolsas palpebrais moderadas a avançadas, avaliadas em consulta presencial. Casos leves podem ser tratados por técnicas menos invasivas — a indicação correta é definida em avaliação.'
       }
     ]
   },
