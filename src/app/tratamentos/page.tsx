@@ -13,10 +13,16 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
 
 export const metadata: Metadata = {
-  title: 'Tratamentos | Estética Facial Personalizada | Oni Face',
-  description: 'Explore todos os procedimentos faciais da Oni Face com a Dra. Vanessa Sanabria: Harmonização Facial, Preenchimentos, Bioestimuladores de Colágeno, Fios de Sustentação e Skinbooster em Uberlândia, MG.',
+  title: 'Tratamentos Faciais em Uberlândia MG | Full Face · Oni Face · Dra. Vanessa Sanabria',
+  description: 'Botox, preenchimento labial, bioestimuladores, blefaroplastia e protocolo Full Face completo em Uberlândia MG — Dra. Vanessa Sanabria na Oni Face Boutique · Âmbar Health Center.',
+  keywords: ['Full Face Uberlândia', 'botox Uberlândia', 'preenchimento labial Uberlândia', 'harmonização facial Uberlândia MG', 'blefaroplastia Uberlândia', 'bioestimuladores Uberlândia', 'tratamentos faciais Uberlândia'],
   alternates: { canonical: `${SITE_URL}/tratamentos` },
-  openGraph: { url: `${SITE_URL}/tratamentos`, type: 'website' },
+  openGraph: {
+    url: `${SITE_URL}/tratamentos`,
+    type: 'website',
+    title: 'Tratamentos Full Face em Uberlândia MG | Oni Face · Dra. Vanessa Sanabria',
+    description: 'Botox, preenchimento, bioestimuladores e blefaroplastia. Protocolo Full Face completo com Dra. Vanessa Sanabria na Oni Face Boutique, Uberlândia MG.',
+  },
 };
 
 export default function TratamentosPage() {
@@ -80,7 +86,7 @@ export default function TratamentosPage() {
                 <div className="relative overflow-hidden rounded-2xl aspect-[3/4] max-w-sm mx-auto lg:mx-0 bg-[#D9D2C4] shadow-lg border border-white/20">
                   <img
                     src="/professional-2.png"
-                    alt="Dra. Vanessa Sanabria — Oni Face"
+                    alt="Dra. Vanessa Sanabria — especialista em Full Face, botox e preenchimento facial em Uberlândia MG"
                     className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />

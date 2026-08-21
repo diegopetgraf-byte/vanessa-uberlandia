@@ -4,22 +4,22 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-  { src: "/galeria-8.jpg",       alt: "Resultado de procedimento estético na Clínica Uniq em Santana" },
-  { src: "/clinic_1.jpg",        alt: "Espaço de atendimento da Clínica Uniq, Santana SP" },
-  { src: "/galeria-4.jpg",       alt: "Galeria de procedimentos faciais — Clínica Uniq" },
-  { src: "/galeria-10.png",      alt: "Tratamento estético realizado na Clínica Uniq" },
-  { src: "/uniq_hero.jpg", alt: "Dra. Uniq, Biomédica Esteta em Santana, São Paulo" },
-  { src: "/galeria-2.jpg",       alt: "Procedimento facial na Clínica Uniq" },
-  { src: "/galeria-9.jpg",       alt: "Imagem da galeria de resultados estéticos da Uniq" },
-  { src: "/galeria-doctor.jpg",  alt: "Equipe profissional da Clínica Uniq em Santana" },
-  { src: "/clinic_3.jpg",        alt: "Ambiente interno da Clínica Uniq, Santana, São Paulo" },
-  { src: "/galeria-1.png",       alt: "Galeria de estética facial — harmonização e injetáveis" },
-  { src: "/galeria-5.jpg",       alt: "Imagem de resultado de tratamento corporal" },
-  { src: "/galeria-11.jpg",      alt: "Resultado visual de procedimento estético — Clínica Uniq" },
-  { src: "/galeria-7.jpg",       alt: "Foto de galeria de procedimentos faciais em Santana" },
-  { src: "/clinic_2.jpg",        alt: "Sala de procedimentos da Clínica Uniq" },
-  { src: "/galeria-6.jpg",       alt: "Galeria de tratamentos a laser e injetáveis" },
-  { src: "/galeria-3.jpg",       alt: "Resultado de estética facial — Uniq, Santana SP" },
+  { src: "/galeria-8.jpg",       alt: "Resultado de harmonização facial Full Face — Oni Face, Uberlândia MG" },
+  { src: "/clinic_1.jpg",        alt: "Oni Face · Facial Boutique — espaço exclusivo em Uberlândia, MG" },
+  { src: "/galeria-4.jpg",       alt: "Protocolo facial completo com toxina botulínica e preenchimento — Dra. Vanessa Sanabria" },
+  { src: "/galeria-10.png",      alt: "Tratamento Full Face: botox e preenchimento labial — Oni Face Uberlândia" },
+  { src: "/professional.jpg",    alt: "Dra. Vanessa Sanabria Bevilaqua — Especialista em Full Face, Uberlândia MG" },
+  { src: "/galeria-2.jpg",       alt: "Harmonização facial com bioestimuladores de colágeno — Oni Face" },
+  { src: "/galeria-9.jpg",       alt: "Resultado de protocolo facial — rejuvenescimento natural, Uberlândia MG" },
+  { src: "/galeria-doctor.jpg",  alt: "Dra. Vanessa Sanabria — Cirurgiã-Dentista especialista em estética facial Uberlândia" },
+  { src: "/clinic_3.jpg",        alt: "Ambiente da Oni Face Boutique — Âmbar Health Center, Uberlândia MG" },
+  { src: "/galeria-1.png",       alt: "Galeria de resultados — harmonização facial e injetáveis Full Face Uberlândia" },
+  { src: "/galeria-5.jpg",       alt: "Preenchimento facial com ácido hialurônico — Oni Face, Uberlândia MG" },
+  { src: "/galeria-11.jpg",      alt: "Resultado de botox e preenchimento labial — Dra. Vanessa Sanabria" },
+  { src: "/galeria-7.jpg",       alt: "Protocolo Full Face — toxina botulínica, preenchimento e bioestimuladores" },
+  { src: "/clinic_2.jpg",        alt: "Sala de procedimentos Oni Face — boutique de estética facial Uberlândia" },
+  { src: "/galeria-6.jpg",       alt: "Tratamentos injetáveis faciais — blefaroplastia e harmonização, Uberlândia MG" },
+  { src: "/galeria-3.jpg",       alt: "Resultado de estética facial Full Face — Oni Face · Dra. Vanessa Sanabria" },
 ];
 
 export default function GalleryCarousel() {

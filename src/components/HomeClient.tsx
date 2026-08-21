@@ -122,7 +122,7 @@ export function HomeClient() {
           <div className="absolute inset-0 z-0">
             <img
               src="/newhero.png"
-              alt="Oni Face · Facial Boutique — Dra. Vanessa Sanabria Bevilaqua"
+              alt="Oni Face · Facial Boutique — Full Face e harmonização facial em Uberlândia MG · Dra. Vanessa Sanabria Bevilaqua"
               className="w-full h-full object-cover object-center"
               fetchPriority="high"
               decoding="async"
@@ -349,7 +349,7 @@ export function HomeClient() {
                 <div className="relative overflow-hidden rounded-2xl aspect-[3/4] max-w-md mx-auto lg:mx-0 bg-[#D9D2C4] shadow-md">
                   <img
                     src="/professional.jpg"
-                    alt="Dra. Vanessa Sanabria Bevilaqua — Especialista em Estética Facial"
+                    alt="Dra. Vanessa Sanabria Bevilaqua — Cirurgiã-Dentista especialista em Full Face, botox e preenchimento facial em Uberlândia MG"
                     className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
@@ -582,71 +582,71 @@ export function HomeClient() {
               {/* Row 1 — large hero spanning 2 cols */}
               <AnimatedSection delay={0} className="col-span-2 row-span-2">
                 <div className="relative overflow-hidden rounded-2xl aspect-[16/11] bg-[#D9D2C4] shadow-md h-full group">
-                  <img src="/oni-0.png" alt="Dra. Vanessa Sanabria — Oni Face" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-0.png" alt="Dra. Vanessa Sanabria Bevilaqua — Full Face e harmonização facial Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.05}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-1.jpg" alt="Oni Face — Ambiente" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-1.jpg" alt="Oni Face Boutique — ambiente exclusivo de estética facial em Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.08}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-2.jpg" alt="Oni Face — Espaço" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                </div>
+                  <img src="/oni-2.jpg" alt="Clínica de harmonização facial Full Face — Oni Face, Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+</div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.1}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-3.jpg" alt="Oni Face — Detalhes" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-3.jpg" alt="Detalhes da Oni Face Boutique — protocolos de botox e preenchimento facial Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.13}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-4.jpg" alt="Oni Face — Interior" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-4.jpg" alt="Interior da Oni Face — clínica de estética Full Face em Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               {/* Second large block spanning 2 cols */}
               <AnimatedSection delay={0.15} className="col-span-2">
                 <div className="relative overflow-hidden rounded-2xl aspect-[16/9] bg-[#D9D2C4] shadow-md group">
-                  <img src="/oni-5.jpg" alt="Oni Face — Consultório" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-5.jpg" alt="Consultório Oni Face — tratamento facial com toxina botulínica e preenchimento, Uberlândia" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.18}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-6.jpg" alt="Oni Face — Dra. Vanessa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-6.jpg" alt="Dra. Vanessa Sanabria — especialista em Full Face e blefaroplastia Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.2}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-7.jpg" alt="Oni Face — Equipamentos" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-7.jpg" alt="Equipamentos de estética facial avançada — bioestimuladores e skinbooster Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.22}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-8.jpg" alt="Oni Face — Experiência" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-8.jpg" alt="Experiência Full Face na Oni Face — harmonização completa em Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.24}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-9.jpg" alt="Oni Face — Boutique" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-9.jpg" alt="Oni Face Boutique — protocolo de rejuvenescimento facial com fillers e botox Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               {/* Last vertical image */}
               <AnimatedSection delay={0.26} className="col-span-2 md:col-span-1">
                 <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-10.png" alt="Oni Face — A transformação que ainda parece você" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-10.png" alt="Resultado Full Face Oni Face — tratamento facial que preserva sua identidade, Uberlândia MG" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   {/* Quote overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A6B]/80 via-[#1B3A6B]/20 to-transparent flex items-end p-5">
                     <p className="font-heading italic text-[#F7F3EC] text-base md:text-lg leading-snug" style={{ letterSpacing: '-0.01em' }}>

@@ -28,12 +28,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!treatment) return { title: 'Tratamento não encontrado' };
 
   return {
-    title: `${treatment.name} | ${CATEGORY_LABELS[treatment.category]} | Oni Face`,
-    description: treatment.description.slice(0, 155),
+    title: `${treatment.name} em Uberlândia MG | Oni Face · Dra. Vanessa Sanabria`,
+    description: `${treatment.description.slice(0, 120)} Dra. Vanessa Sanabria — Full Face em Uberlândia MG.`,
+    keywords: [treatment.name, 'Full Face Uberlândia', 'harmonização facial Uberlândia', 'botox Uberlândia', 'preenchimento Uberlândia', 'Dra Vanessa Sanabria', 'Oni Face'],
     alternates: { canonical: `${SITE_URL}/tratamentos/${id}` },
     openGraph: {
-      title: `${treatment.name} | Oni Face · Facial Boutique`,
-      description: treatment.subtitle,
+      title: `${treatment.name} em Uberlândia | Oni Face · Dra. Vanessa Sanabria`,
+      description: `${treatment.subtitle} — Oni Face Boutique, Uberlândia MG.`,
       url: `${SITE_URL}/tratamentos/${id}`,
       type: 'article',
       images: [
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: treatment.imageSrc.startsWith('http') ? treatment.imageSrc : `${SITE_URL}${treatment.imageSrc}`,
           width: 1200,
           height: 630,
-          alt: `${treatment.name} — Oni Face · Facial Boutique`,
+          alt: `${treatment.name} em Uberlândia MG — Oni Face · Dra. Vanessa Sanabria`,
         },
       ],
     },

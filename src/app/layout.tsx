@@ -26,7 +26,8 @@ export const metadata: Metadata = {
     default: 'Oni Face · Facial Boutique | Dra. Vanessa Sanabria · Uberlândia, MG',
     template: '%s | Oni Face · Facial Boutique',
   },
-  description: 'Dra. Vanessa Sanabria Bevilaqua — Cirurgiã-Dentista, especialista em harmonização facial e gerenciamento do envelhecimento. A face dos seus sonhos ainda deve parecer sua. Uberlândia, MG.',
+  description: 'Dra. Vanessa Sanabria Bevilaqua — especialista em Full Face, harmonização facial, botox, preenchimento e blefaroplastia em Uberlândia MG. Oni Face Boutique · Âmbar Health Center.',
+  keywords: ['Full Face Uberlândia', 'harmonização facial Uberlândia', 'botox Uberlândia MG', 'preenchimento labial Uberlândia', 'blefaroplastia Uberlândia', 'bioestimuladores de colágeno Uberlândia', 'tratamentos faciais Uberlândia', 'estética facial Uberlândia', 'Dra Vanessa Sanabria', 'Oni Face', 'protocolo facial completo', 'fillers Uberlândia', 'toxina botulínica Uberlândia'],
   authors: [{ name: 'Oni Face · Facial Boutique', url: SITE_URL }],
   creator: 'Oni Face · Facial Boutique',
   publisher: 'Oni Face · Facial Boutique',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Oni Face · Facial Boutique | Dra. Vanessa Sanabria — Uberlândia, MG',
-    description: 'Harmonização facial personalizada, protocolos faciais completos e blefaroplastia. A transformação que ainda parece você. Dra. Vanessa Sanabria Bevilaqua · CRO-76320 MG.',
+    description: 'Especialista em Full Face em Uberlândia MG — botox, preenchimento, bioestimuladores e blefaroplastia. Oni Face Boutique · Dra. Vanessa Sanabria Bevilaqua · CRO-76320 MG.',
     url: SITE_URL,
     siteName: 'Oni Face · Facial Boutique',
     locale: 'pt_BR',
