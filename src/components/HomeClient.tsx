@@ -88,9 +88,9 @@ export function HomeClient() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#142C52] via-[#1B3A6B]/80 to-transparent pointer-events-none" aria-hidden="true" />
 
-          <div className="relative z-10 container-uniq w-full py-14 sm:py-20 lg:py-24 lg:min-h-[calc(100vh-5rem)] flex items-center">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
-              <div className="lg:col-span-7">
+          <div className="relative z-10 container-uniq w-full pt-8 pb-12 sm:py-20 lg:py-24 lg:min-h-[calc(100vh-5rem)] flex items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center w-full">
+              <div className="lg:col-span-7 order-2 lg:order-1">
                 {/* Eyebrow */}
                 <motion.div
                   initial={false}
@@ -156,13 +156,13 @@ export function HomeClient() {
                 initial={false}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.25 }}
-                className="lg:col-span-5 relative max-w-sm sm:max-w-md mx-auto lg:max-w-none w-full"
+                className="lg:col-span-5 order-1 lg:order-2 relative max-w-[15rem] sm:max-w-sm mx-auto lg:max-w-none w-full"
               >
                 <img
                   src="/marca/forma-dourada.webp"
                   alt=""
                   aria-hidden="true"
-                  className="absolute -left-8 -bottom-8 w-2/3 opacity-90 pointer-events-none select-none"
+                  className="absolute -left-5 -bottom-5 lg:-left-8 lg:-bottom-8 w-2/3 opacity-90 pointer-events-none select-none"
                 />
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-[#142C52] shadow-[0_30px_70px_-30px_rgba(0,0,0,0.6)] ring-1 ring-[#B8965A]/40">
                   <img
