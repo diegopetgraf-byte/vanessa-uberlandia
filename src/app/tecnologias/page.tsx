@@ -8,7 +8,7 @@ import { CTABanner } from '@/components/ui/CTABanner';
 import { TreatmentCard } from '@/components/ui/TreatmentCard';
 import { TECHNOLOGIES } from '@/data/technologies';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 export const metadata: Metadata = {
   title: 'Tecnologias | Oni Face · Facial Boutique',

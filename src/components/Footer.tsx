@@ -13,9 +13,9 @@ const WhatsAppIcon = () => (
 
 const navLinks = [
   { label: 'Oni Face', href: '/#oni-face' },
+  { label: 'Full Face', href: '/full-face' },
   { label: 'Tratamentos', href: '/tratamentos' },
-  { label: 'Resultados', href: '/resultados' },
-  { label: 'Dra. Vanessa', href: '/#dra-vanessa' },
+  { label: 'Sobre', href: '/sobre' },
   { label: 'Mentoria', href: '/#mentoria' },
   { label: 'Contato', href: '/contato' },
 ];
@@ -65,7 +65,7 @@ export const Footer = () => {
             </div>
 
             <p className="text-sm sm:text-base text-[#8A8278] leading-relaxed max-w-md font-light">
-              Dra. Vanessa Sanabria Bevilaqua — Cirurgiã-Dentista, especialista em Full Face e gerenciamento do envelhecimento. A transformação que ainda parece você.
+              Dra. Vanessa Sanabria Bevilaqua, cirurgiã-dentista. Full Face e gerenciamento do envelhecimento. A transformação que ainda parece você.
             </p>
 
 

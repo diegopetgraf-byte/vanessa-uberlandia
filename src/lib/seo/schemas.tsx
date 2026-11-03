@@ -1,19 +1,23 @@
 /**
- * JSON-LD Schema generators for Oni Face · Facial Boutique
- * SEO structured data for Google rich snippets
+ * JSON-LD do Instituto Oni Face.
+ * Entidades globais (Organization, WebSite, Dentist, Person) saem em um único @graph no layout.
+ * Nada de aggregateRating nem Review: só dados reais de src/data/clinic.ts e de site.ts.
  */
 
 import React from 'react';
+import { CLINIC } from '@/data/clinic';
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_ALTERNATE_NAMES,
+  PROFESSIONAL,
+  GEO,
+  GOOGLE_MAPS_URL,
+  ENTITY_IDS,
+  absoluteUrl,
+} from './site';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
-const SITE_NAME = 'Oni Face · Facial Boutique';
-const INSTAGRAM_URL = 'https://www.instagram.com/dravansanabria/';
-const WHATSAPP = '+5534998031777';
-
-function toAbsoluteUrl(path: string): string {
-  if (path.startsWith('http')) return path;
-  return `${SITE_URL}${path.startsWith('/') ? '' : '/'}${path}`;
-}
+type Json = Record<string, unknown>;
 
 export interface FAQItem {
   question: string;
@@ -25,150 +29,196 @@ export interface BreadcrumbItem {
   url: string;
 }
 
-/**
- * Organization schema for Oni Face · Facial Boutique
- */
-export function generateOrganizationSchema(): object {
+const PHONE = `+${CLINIC.whatsapp}`;
+const SAME_AS = [CLINIC.instagram];
+
+/** "Segunda a Sexta: 09h às 19h" -> ["09:00", "19:00"] */
+function parseHours(text: string): [string, string] | null {
+  const m = text.match(/(\d{1,2})h(\d{2})?\s*às\s*(\d{1,2})h(\d{2})?/);
+  if (!m) return null;
+  const pad = (h: string, min?: string) => `${h.padStart(2, '0')}:${min ?? '00'}`;
+  return [pad(m[1], m[2]), pad(m[3], m[4])];
+}
+
+function openingHours(): Json[] {
+  const out: Json[] = [];
+  const week = parseHours(CLINIC.hours.weekdays);
+  if (week) {
+    out.push({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: week[0],
+      closes: week[1],
+    });
+  }
+  const sat = parseHours(CLINIC.hours.saturday);
+  if (sat) {
+    out.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: sat[0], closes: sat[1] });
+  }
+  return out;
+}
+
+function postalAddress(): Json {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': `${SITE_URL}/#organization`,
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: {
-      '@type': 'ImageObject',
-      url: toAbsoluteUrl('/og.png'),
-      width: 1200,
-      height: 630,
-    },
-    description: 'Dra. Vanessa Sanabria — Especialista em Full Face e gerenciamento do envelhecimento. Oni Face · Facial Boutique em Uberlândia, MG.',
-    sameAs: [INSTAGRAM_URL],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: WHATSAPP,
-      contactType: 'customer service',
-      availableLanguage: 'Portuguese',
-    },
-    founders: [{
-      '@type': 'Person',
-      name: 'Dra. Vanessa Sanabria',
-      jobTitle: 'Especialista em Full Face',
-      image: toAbsoluteUrl('/professional.jpg'),
-      sameAs: [INSTAGRAM_URL],
-    }],
-    areaServed: [
-      { '@type': 'City', name: 'Uberlândia', containedInPlace: { '@type': 'State', name: 'Minas Gerais' } },
-    ],
+    '@type': 'PostalAddress',
+    streetAddress: CLINIC.street,
+    addressLocality: CLINIC.city,
+    addressRegion: CLINIC.state,
+    postalCode: CLINIC.zipCode.replace(/\./g, ''),
+    addressCountry: 'BR',
   };
 }
 
-/**
- * WebSite schema
- */
-export function generateWebSiteSchema(): object {
+const CRO_IDENTIFIER = {
+  '@type': 'PropertyValue',
+  propertyID: PROFESSIONAL.cro.council,
+  value: PROFESSIONAL.cro.number,
+  name: PROFESSIONAL.cro.display,
+};
+
+/** Procedimentos faciais com página própria no site. */
+const FACIAL_SERVICES = [
+  'Full Face',
+  'Harmonização facial',
+  'Toxina botulínica',
+  'Preenchimento facial com ácido hialurônico',
+  'Preenchimento labial',
+  'Bioestimuladores de colágeno',
+  'Fios de sustentação',
+  'Skinbooster',
+];
+
+export function generateOrganizationSchema(): Json {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': ENTITY_IDS.organization,
+    name: SITE_NAME,
+    alternateName: SITE_ALTERNATE_NAMES,
+    url: absoluteUrl('/'),
+    logo: { '@type': 'ImageObject', url: absoluteUrl('/og.png'), width: 1200, height: 630 },
+    image: absoluteUrl('/og.png'),
+    description:
+      'Instituto Oni Face, da cirurgiã-dentista Dra. Vanessa Sanabria Bevilaqua (CRO-76320 MG): Full Face e harmonização facial em Uberlândia, MG.',
+    sameAs: SAME_AS,
+    founder: { '@id': ENTITY_IDS.professional },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: PHONE,
+      contactType: 'customer service',
+      availableLanguage: 'Portuguese',
+      areaServed: 'BR',
+    },
+  };
+}
+
+export function generateWebSiteSchema(): Json {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': `${SITE_URL}/#website`,
+    '@id': ENTITY_IDS.website,
     name: SITE_NAME,
-    url: SITE_URL,
-    publisher: { '@id': `${SITE_URL}/#organization` },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/tratamentos` },
-      'query-input': 'required name=search_term_string',
-    },
+    alternateName: SITE_ALTERNATE_NAMES,
+    url: absoluteUrl('/'),
+    publisher: { '@id': ENTITY_IDS.organization },
     inLanguage: 'pt-BR',
   };
 }
 
-/**
- * LocalBusiness + HealthAndBeautyBusiness schema — Uberlândia, MG
- */
-export function generateLocalBusinessSchema(): object {
+/** Clínica: Dentist (subtipo de MedicalBusiness e LocalBusiness). */
+export function generateLocalBusinessSchema(): Json {
   return {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'HealthAndBeautyBusiness'],
-    '@id': `${SITE_URL}/#localbusiness`,
+    '@type': ['Dentist', 'MedicalBusiness'],
+    '@id': ENTITY_IDS.clinic,
     name: SITE_NAME,
-    url: SITE_URL,
-    description: 'Clínica boutique de estética avançada especializada em Harmonização Facial, Preenchimentos e Bioestimuladores de Colágeno em Uberlândia, MG.',
-    image: toAbsoluteUrl('/professional.jpg'),
-    telephone: WHATSAPP,
-    priceRange: '$$$$',
-    currenciesAccepted: 'BRL',
-    paymentAccepted: 'Dinheiro, Cartão de crédito, Cartão de débito, PIX',
-    sameAs: [INSTAGRAM_URL],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Uberlândia',
-      addressRegion: 'MG',
-      postalCode: '38400-000',
-      neighborhood: 'Centro',
-      addressCountry: 'BR',
+    alternateName: SITE_ALTERNATE_NAMES,
+    url: absoluteUrl('/'),
+    description:
+      'Consultório da cirurgiã-dentista Dra. Vanessa Sanabria Bevilaqua (CRO-76320 MG) para Full Face, harmonização facial, bioestimuladores, preenchimento e toxina botulínica em Uberlândia, MG.',
+    image: [absoluteUrl(PROFESSIONAL.image), absoluteUrl('/og.png')],
+    logo: absoluteUrl('/og.png'),
+    telephone: PHONE,
+    address: postalAddress(),
+    geo: { '@type': 'GeoCoordinates', latitude: GEO.latitude, longitude: GEO.longitude },
+    hasMap: GOOGLE_MAPS_URL,
+    openingHoursSpecification: openingHours(),
+    areaServed: {
+      '@type': 'City',
+      name: 'Uberlândia',
+      containedInPlace: { '@type': 'State', name: 'Minas Gerais' },
     },
-    areaServed: [
-      { '@type': 'City', name: 'Uberlândia' },
-    ],
-    availableService: [
-      { '@type': 'MedicalProcedure', name: 'Harmonização Facial' },
-      { '@type': 'MedicalProcedure', name: 'Toxina Botulínica' },
-      { '@type': 'MedicalProcedure', name: 'Preenchimento Facial' },
-      { '@type': 'MedicalProcedure', name: 'Preenchimento Labial' },
-      { '@type': 'MedicalProcedure', name: 'Bioestimuladores de Colágeno' },
-      { '@type': 'MedicalProcedure', name: 'Fios de Sustentação' },
-      { '@type': 'MedicalProcedure', name: 'Skinbooster' },
-      { '@type': 'MedicalProcedure', name: 'Lipo de Papada' },
-    ],
+    sameAs: SAME_AS,
+    parentOrganization: { '@id': ENTITY_IDS.organization },
+    employee: { '@id': ENTITY_IDS.professional },
+    founder: { '@id': ENTITY_IDS.professional },
+    medicalSpecialty: 'Dentistry',
+    availableService: FACIAL_SERVICES.map((name) => ({ '@type': 'MedicalProcedure', name })),
+    knowsAbout: FACIAL_SERVICES,
   };
 }
 
-/**
- * Person schema for Vanessa Sanabria
- */
-export function generatePersonSchema(): object {
+export function generatePersonSchema(): Json {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': `${SITE_URL}/#vanessa-sanabria`,
-    name: 'Dra. Vanessa Sanabria',
-    givenName: 'Vanessa',
-    familyName: 'Sanabria',
-    jobTitle: 'Especialista em Full Face',
-    url: `${SITE_URL}`,
-    image: toAbsoluteUrl('/professional.jpg'),
-    sameAs: [INSTAGRAM_URL],
-    worksFor: { '@id': `${SITE_URL}/#organization` },
+    '@id': ENTITY_IDS.professional,
+    name: PROFESSIONAL.name,
+    alternateName: 'Dra. Vanessa Sanabria',
+    givenName: PROFESSIONAL.givenName,
+    familyName: PROFESSIONAL.familyName,
+    honorificPrefix: 'Dra.',
+    jobTitle: PROFESSIONAL.jobTitle,
+    identifier: CRO_IDENTIFIER,
+    url: absoluteUrl('/'),
+    image: absoluteUrl(PROFESSIONAL.image),
+    sameAs: SAME_AS,
+    worksFor: { '@id': ENTITY_IDS.clinic },
+    workLocation: { '@id': ENTITY_IDS.clinic },
     hasOccupation: {
       '@type': 'Occupation',
-      name: 'Especialista em Full Face',
-      description: 'Foco em gerenciamento do envelhecimento, harmonização e blefaroplastia com naturalidade.',
+      name: 'Cirurgiã-dentista',
+      occupationLocation: { '@type': 'City', name: 'Uberlândia' },
     },
+    knowsAbout: FACIAL_SERVICES,
+  };
+}
+
+/** @graph global usado no layout (uma vez por página). */
+export function generateGlobalGraph(): Json {
+  const strip = (node: Json): Json => {
+    const { '@context': _ctx, ...rest } = node;
+    void _ctx;
+    return rest;
+  };
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      strip(generateOrganizationSchema()),
+      strip(generateWebSiteSchema()),
+      strip(generateLocalBusinessSchema()),
+      strip(generatePersonSchema()),
+    ],
   };
 }
 
 /**
- * FAQ schema
+ * FAQPage: o Google não mostra mais rich result de FAQ (maio de 2026).
+ * Mantido para as páginas que já usam; não criar novos por causa do Google.
  */
-export function generateFAQSchema(items: FAQItem[]): object {
+export function generateFAQSchema(items: FAQItem[]): Json {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: items.map((item) => ({
       '@type': 'Question',
       name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
     })),
   };
 }
 
-/**
- * BreadcrumbList schema
- */
-export function generateBreadcrumbSchema(items: BreadcrumbItem[]): object {
+export function generateBreadcrumbSchema(items: BreadcrumbItem[]): Json {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -176,26 +226,24 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]): object {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: toAbsoluteUrl(item.url),
+      item: absoluteUrl(item.url),
     })),
   };
 }
 
-/**
- * JSON-LD renderer component
- */
 export function JsonLd({ data }: { data: object | object[] }) {
   const schemas = Array.isArray(data) ? data : [data];
-
   return (
     <>
       {schemas.map((schema, index) => (
         <script
           key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
         />
       ))}
     </>
   );
 }
+
+export { SITE_URL };

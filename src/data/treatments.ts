@@ -114,7 +114,7 @@ export const TREATMENTS: Treatment[] = [
     name: 'Toxina Botulínica',
     category: 'facial',
     subtitle: 'Suavização natural de linhas de expressão e descanso do olhar',
-    description: 'A aplicação de toxina botulínica na Oni Face vai além de paralisar músculos: trata-se de um refinamento dinâmico que relaxa seletivamente as tensões faciais responsáveis por rugas na testa, glabela e olhos (pés de galinha). A dosagem estratégica e a precisão nos pontos de injeção garantem uma expressão leve, descansada e comunicativa — livre do aspecto congelado.',
+    description: 'A aplicação de toxina botulínica na Oni Face vai além de paralisar músculos: trata-se de um refinamento dinâmico que relaxa seletivamente as tensões faciais responsáveis por rugas na testa, glabela e olhos (pés de galinha). A dosagem estratégica e a precisão nos pontos de injeção garantem uma expressão leve, descansada e comunicativa, livre do aspecto congelado.',
     benefits: [
       'Suavização eficaz de rugas dinâmicas na fronte, glabela e área periocular',
       'Prevenção inteligente da formação de vincos estáticos profundos',
@@ -168,57 +168,54 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'blefaroplastia',
-    name: 'Blefaroplastia Cirúrgica',
+    name: 'Blefaroplastia',
     category: 'facial',
-    subtitle: 'Rejuvenescimento cirúrgico do olhar com remoção de pele excedente e bolsas',
-    description: 'A Blefaroplastia Cirúrgica é o procedimento padrão-ouro para tratar flacidez avançada das pálpebras, bolsas de gordura e o aspecto triste ou cansado do olhar. Realizada em ambiente cirúrgico apropriado, com anestesia local associada a sedação, a técnica remove a pele e a gordura em excesso das pálpebras superiores e/ou inferiores por incisões precisas — posicionadas em dobras naturais para que a cicatriz seja discreta ao longo do tempo. É um procedimento de execução cuidadosa, indicado quando a flacidez ultrapassa o que técnicas não-invasivas conseguem tratar.',
+    subtitle: 'Planejamento do olhar com equipe multidisciplinar',
+    description: 'A blefaroplastia é a cirurgia das pálpebras que remove pele e gordura em excesso, para tratar flacidez, bolsas e o aspecto cansado do olhar. No Instituto Oni Face ela é feita por uma equipe multidisciplinar: a Dra. Vanessa Sanabria conduz a avaliação, o planejamento do olhar e o acompanhamento, e o ato cirúrgico fica com a equipe. O olhar é planejado junto com o rosto inteiro, porque nenhum ponto é tratado sozinho.',
     benefits: [
-      'Remoção efetiva do excesso de pele e bolsas nas pálpebras',
-      'Abertura natural e duradoura do olhar',
-      'Correção de aspecto triste, pesado ou cansado do terço superior',
-      'Resultado consolidado que costuma se manter por muitos anos'
+      'Olhar planejado dentro do conjunto do rosto',
+      'Avaliação, planejamento e acompanhamento com a Dra. Vanessa',
+      'Ato cirúrgico realizado pela equipe multidisciplinar',
+      'Indicação definida em avaliação presencial'
     ],
     indications: [
-      'Flacidez moderada a avançada das pálpebras superiores e/ou inferiores',
-      'Bolsas de gordura persistentes que não respondem a tratamentos tópicos',
-      'Excesso de pele que compromete o olhar ou, em casos maiores, o campo visual',
-      'Paciente clinicamente apto e ciente do caráter cirúrgico do procedimento'
+      'Flacidez das pálpebras superiores e/ou inferiores',
+      'Bolsas de gordura nas pálpebras',
+      'Aspecto cansado ou pesado do olhar',
+      'Paciente avaliada presencialmente e ciente do caráter cirúrgico do procedimento'
     ],
-    duration: '60 a 120 minutos, em ambiente cirúrgico',
-    recovery: 'Retorno à rotina em 7 a 14 dias · edema e equimoses regridem gradualmente',
-    durability: 'Resultado duradouro — costuma se manter por muitos anos',
     featured: true,
-    imageSrc: '',
+    imageSrc: '/card_blefaroplastia.webp',
     howItWorks: [
       {
-        title: '1. Avaliação clínica pré-operatória',
-        desc: 'Anamnese detalhada, avaliação da anatomia palpebral, exames laboratoriais e discussão franca sobre expectativas, riscos e recuperação.'
+        title: '1. Avaliação',
+        desc: 'A Dra. Vanessa avalia o olhar e o rosto como um conjunto e conversa com você sobre expectativas, riscos e recuperação.'
       },
       {
-        title: '2. Planejamento cirúrgico',
-        desc: 'Marcação precisa das incisões nas dobras naturais das pálpebras, considerando simetria, volume e a assinatura do olhar da paciente.'
+        title: '2. Planejamento do olhar',
+        desc: 'A Dra. Vanessa planeja o olhar considerando simetria, volume e o desenho do seu rosto.'
       },
       {
-        title: '3. Ato cirúrgico',
-        desc: 'Procedimento realizado em ambiente cirúrgico adequado, com anestesia local e sedação, seguindo protocolo de segurança e assepsia.'
+        title: '3. Ato cirúrgico com a equipe',
+        desc: 'O ato cirúrgico é realizado pela equipe multidisciplinar, em ambiente cirúrgico adequado.'
       },
       {
-        title: '4. Pós-operatório acompanhado',
-        desc: 'Retornos programados para acompanhamento da cicatrização, orientações de cuidado com curativos, uso de compressas e proteção solar.'
+        title: '4. Acompanhamento',
+        desc: 'A Dra. Vanessa acompanha a sua recuperação nos retornos combinados com a equipe.'
       }
     ],
     faqs: [
       {
-        question: 'É um procedimento cirúrgico de verdade?',
-        answer: 'Sim. É uma cirurgia, realizada em ambiente cirúrgico apropriado, com anestesia local associada a sedação. Não é confundível com técnicas não-invasivas de plasma ou laser fracionado, que tratam apenas flacidez leve.'
+        question: 'Quem realiza a cirurgia?',
+        answer: 'O ato cirúrgico fica com a equipe multidisciplinar. A Dra. Vanessa Sanabria conduz a avaliação, o planejamento do olhar e o acompanhamento.'
       },
       {
         question: 'Como é a recuperação?',
-        answer: 'O retorno à rotina costuma acontecer entre 7 e 14 dias. Nos primeiros dias há edema e pequenas equimoses que regridem progressivamente. A cicatriz fica em dobra natural e vai desbotando ao longo dos meses.'
+        answer: 'O tempo de recuperação e os cuidados são explicados na avaliação, de acordo com o seu caso.'
       },
       {
         question: 'Quem pode fazer?',
-        answer: 'Pessoas clinicamente aptas, com flacidez ou bolsas palpebrais moderadas a avançadas, avaliadas em consulta presencial. Casos leves podem ser tratados por técnicas menos invasivas — a indicação correta é definida em avaliação.'
+        answer: 'A indicação é definida em avaliação presencial. Em alguns casos, outras abordagens podem ser mais adequadas.'
       }
     ]
   },
@@ -267,7 +264,7 @@ export const TREATMENTS: Treatment[] = [
     faqs: [
       {
         question: 'Meus lábios vão ficar com aspecto exagerado ou artificial?',
-        answer: 'De forma alguma. Dra. Vanessa Sanabria trabalha sob o princípio de que um bom preenchimento labial não é identificado como procedimento — as pessoas apenas notarão que seus lábios estão mais bonitos, hidratados e desenhados.'
+        answer: 'De forma alguma. Dra. Vanessa Sanabria trabalha sob o princípio de que um bom preenchimento labial não é identificado como procedimento, as pessoas apenas notarão que seus lábios estão mais bonitos, hidratados e desenhados.'
       },
       {
         question: 'Dói para fazer preenchimento labial?',
@@ -359,7 +356,7 @@ export const TREATMENTS: Treatment[] = [
     recovery: '3 a 7 dias com restrição de esforços intensos',
     durability: '12 a 18 meses',
     featured: false,
-    imageSrc: '/card_harmonizacao.jpg',
+    imageSrc: '/card_fios-de-sustentacao.webp',
     howItWorks: [
       {
         title: '1. Desenho Vetorial de Tração',
@@ -464,7 +461,7 @@ export const TREATMENTS: Treatment[] = [
     recovery: '3 a 5 dias para redução do inchaço natural',
     durability: 'Resultados duradouros com peso estável',
     featured: false,
-    imageSrc: '',
+    imageSrc: '/card_lipo-de-papada.webp',
     howItWorks: [
       {
         title: '1. Mapeamento da Gordura Localizada',
@@ -650,7 +647,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'protocolos-gordura-localizada',
-    name: 'Enzimas — Gordura Localizada',
+    name: 'Enzimas: Gordura Localizada',
     category: 'corporal',
     subtitle: 'Lipoenzimática de alta precisão para redução de depósitos adiposos resistentes',
     description: 'A Lipo Enzimática Corporal (intradermoterapia lipolítica) utiliza mesclas de princípios ativos consagrados capazes de emulsificar e acelerar a quebra das células adiposas em áreas onde a gordura insiste em não sair com treinos e dieta, como flancos, abdômen inferior, interno de coxas e gordurinha do sutiã.',
@@ -728,7 +725,7 @@ export const INDICATIONS: { concern: string; treatments: string[] }[] = [
     treatments: ['blefaroplastia', 'fios-de-sustentacao'],
   },
   {
-    concern: 'Lábios — proporção e definição',
+    concern: 'Lábios: proporção e definição',
     treatments: ['preenchimento-labial'],
   },
   {

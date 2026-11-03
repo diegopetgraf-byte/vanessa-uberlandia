@@ -12,7 +12,7 @@ import { getWhatsAppUrl } from '@/lib/utils';
 import { CheckCircle2, Clock, RefreshCw, Calendar, Sparkles, HelpCircle, ArrowRight } from 'lucide-react';
 import { JsonLd } from '@/lib/seo/schemas';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -28,13 +28,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!treatment) return { title: 'Tratamento não encontrado' };
 
   return {
-    title: `${treatment.name} em Uberlândia MG | Oni Face · Dra. Vanessa Sanabria`,
-    description: `${treatment.description.slice(0, 120)} Dra. Vanessa Sanabria — Full Face em Uberlândia MG.`,
+    title: { absolute: `${treatment.name} em Uberlândia | Instituto Oni Face` },
+    description: `${treatment.description.slice(0, 100).replace(/\s+\S*$/, '')}. Dra. Vanessa Sanabria, Instituto Oni Face, Uberlândia MG.`,
     keywords: [treatment.name, 'Full Face Uberlândia', 'harmonização facial Uberlândia', 'botox Uberlândia', 'preenchimento Uberlândia', 'Dra Vanessa Sanabria', 'Oni Face'],
     alternates: { canonical: `${SITE_URL}/tratamentos/${id}` },
     openGraph: {
-      title: `${treatment.name} em Uberlândia | Oni Face · Dra. Vanessa Sanabria`,
-      description: `${treatment.subtitle} — Oni Face Boutique, Uberlândia MG.`,
+      title: `${treatment.name} em Uberlândia | Instituto Oni Face`,
+      description: `${treatment.subtitle}. Instituto Oni Face, Uberlândia MG.`,
       url: `${SITE_URL}/tratamentos/${id}`,
       type: 'article',
       images: [
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: treatment.imageSrc.startsWith('http') ? treatment.imageSrc : `${SITE_URL}${treatment.imageSrc}`,
           width: 1200,
           height: 630,
-          alt: `${treatment.name} em Uberlândia MG — Oni Face · Dra. Vanessa Sanabria`,
+          alt: `${treatment.name} em Uberlândia MG, Oni Face · Dra. Vanessa Sanabria`,
         },
       ],
     },
@@ -207,10 +207,10 @@ export default async function TreatmentPage({ params }: Props) {
                 </p>
                 <div className="card-stone p-6 rounded-xl border-l-4 border-[#1B3A6B] bg-[#EDE7D9]/40">
                   <p className="text-xs sm:text-sm text-[#3C3831] leading-relaxed italic">
-                    "Na Oni Face, cada plano de tratamento é concebido sob a ótica da naturalidade consciente — entregando resultados que revelam a sua melhor versão sem que ninguém perceba que você fez um procedimento."
+                    "Na Oni Face, cada plano de tratamento é concebido sob a ótica da naturalidade consciente, entregando resultados que revelam a sua melhor versão sem que ninguém perceba que você fez um procedimento."
                   </p>
                   <p className="text-[0.65rem] text-[#8A8278] uppercase tracking-wider font-semibold mt-2">
-                    — Dra. Vanessa Sanabria
+                    Dra. Vanessa Sanabria
                   </p>
                 </div>
               </AnimatedSection>

@@ -10,13 +10,16 @@ import { TreatmentCard } from '@/components/ui/TreatmentCard';
 import { PillarCard } from '@/components/ui/PillarCard';
 import { CTABanner } from '@/components/ui/CTABanner';
 import { TREATMENTS } from '@/data/treatments';
+import { getFullFacePage, FULL_FACE_SUBPAGES } from '@/data/fullFace';
+import { MapaOniFace } from '@/components/MapaOniFace';
+import { VideoReels } from '@/components/VideoReels';
 import { getWhatsAppUrl } from '@/lib/utils';
 import { ArrowRight, ArrowDown, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
-/* ── Butterfly SVG — hero watermark ── */
+/* ── Butterfly SVG, hero watermark ── */
 const ButterflyHero = () => (
   <svg
     viewBox="0 0 200 130"
@@ -63,14 +66,11 @@ const TREATMENT_IMAGES: Record<string, string> = {
   'harmonizacao-facial': '/card_harmonizacao.jpg',
   'toxina-botulinica': '/card_facial_injectables.jpg',
   'preenchimento-labial': '/labial.jpeg',
-  'blefaroplastia': '',
   'bioestimuladores-de-colageno': '/bioestimuladores_final.jpg',
-  'fios-de-sustentacao': '',
   'skinbooster': '/skinbooster_final.jpg',
-  'lipo-de-papada': '',
 };
 
-/* Facial-only — Oni Face is a facial boutique */
+/* Facial-only, Oni Face is a facial boutique */
 const FACIAL_TREATMENT_IDS = [
   'harmonizacao-facial',
   'toxina-botulinica',
@@ -81,6 +81,8 @@ const FACIAL_TREATMENT_IDS = [
   'fios-de-sustentacao',
   'lipo-de-papada',
 ];
+
+const FULL_FACE_PILAR = getFullFacePage('full-face');
 
 export function HomeClient() {
   const whatsappGeneralUrl = getWhatsAppUrl('geral');
@@ -118,23 +120,23 @@ export function HomeClient() {
 
         {/* ── HERO ── */}
         <section id="home" className="relative min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center overflow-hidden">
-          {/* Background image — newhero.png (light toned, cream + royal blue) */}
+          {/* Background image, newhero.png (light toned, cream + royal blue) */}
           <div className="absolute inset-0 z-0">
             <img
               src="/newhero.png"
-              alt="Oni Face · Facial Boutique — Full Face e harmonização facial em Uberlândia MG · Dra. Vanessa Sanabria Bevilaqua"
+              alt="Oni Face · Facial Boutique, Full Face e harmonização facial em Uberlândia MG · Dra. Vanessa Sanabria Bevilaqua"
               className="w-full h-full object-cover object-center"
               fetchPriority="high"
               decoding="async"
             />
-            {/* Subtle gradient overlay — left side for text legibility, preserves image on right */}
+            {/* Subtle gradient overlay, left side for text legibility, preserves image on right */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#1A1714]/60 via-[#1A1714]/30 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/40 via-transparent to-transparent" />
             {/* Royal blue brand gradient tint for desktop */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A6B]/50 via-[#1B3A6B]/20 to-transparent hidden lg:block opacity-75" />
           </div>
 
-          {/* Butterfly watermark — top right, very subtle */}
+          {/* Butterfly watermark, top right, very subtle */}
           <div className="absolute top-16 right-8 md:right-16 z-10 w-32 md:w-48 opacity-[0.06] pointer-events-none" aria-hidden="true">
             <ButterflyHero />
           </div>
@@ -142,7 +144,7 @@ export function HomeClient() {
           <div className="relative z-10 container-uniq w-full flex flex-col items-start justify-end pb-10 sm:pb-14 pt-20 md:justify-center md:py-24 lg:py-28" style={{ minHeight: 'calc(100vh - 5rem)' }}>
             {/* Eyebrow */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
               className="mb-4 sm:mb-6"
@@ -155,7 +157,7 @@ export function HomeClient() {
 
             {/* Headline */}
             <motion.h1
-              initial={{ opacity: 0, y: 24 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="font-heading font-light text-[#F7F3EC] leading-[1.08] mb-4 sm:mb-6 max-w-3xl"
@@ -166,17 +168,17 @@ export function HomeClient() {
 
             {/* Subheadline */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35 }}
               className="text-base sm:text-lg text-[rgba(247,243,236,0.88)] leading-relaxed max-w-xl font-light mb-2 sm:mb-0"
             >
-              Especialistas em <strong className="font-medium text-[#B8965A]">Protocolos Full Face</strong>. Um planejamento integrado e personalizado de estética avançada que une ciência, precisão e sensibilidade para valorizar a beleza que já existe em você.
+              Dedicadas aos <strong className="font-medium text-[#B8965A]">Protocolos Full Face</strong>. Um planejamento integrado e personalizado de estética avançada que une ciência, precisão e sensibilidade para valorizar a beleza que já existe em você.
             </motion.p>
 
             {/* Gold divider */}
             <motion.div
-              initial={{ opacity: 0, scaleX: 0 }}
+              initial={false}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ duration: 0.6, delay: 0.45 }}
               className="hidden sm:block origin-left h-px w-12 bg-[#B8965A] mt-6 mb-6"
@@ -185,7 +187,7 @@ export function HomeClient() {
 
             {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
               className="hidden sm:flex flex-wrap items-center gap-4"
@@ -201,7 +203,7 @@ export function HomeClient() {
 
             {/* Scroll indicator */}
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={false}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
               className="absolute bottom-6 left-1/2 -translate-x-1/2"
@@ -228,7 +230,7 @@ export function HomeClient() {
                   "ONI significa a face dos sonhos. E transformação está no próprio nome de Vanessa. Na Oni Face, essas duas ideias se encontram."
                 </p>
                 <span className="divider mb-6" aria-hidden="true" />
-                <Link href="/#dra-vanessa" className="btn btn-ghost text-xs inline-flex items-center gap-2">
+                <Link href="/#dra-vanessa" className="btn btn-ghost text-xs inline-flex items-center gap-2 min-h-11">
                   Conheça a Dra. Vanessa Sanabria
                   <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </Link>
@@ -240,7 +242,7 @@ export function HomeClient() {
                     Não perseguimos rostos padronizados. Não buscamos transformar você em outra pessoa.
                   </p>
                   <p>
-                    Cada tratamento parte de uma leitura individual da face — das proporções, dos movimentos e, principalmente, daquilo que você deseja enxergar quando se olha no espelho.
+                    Cada tratamento parte de uma leitura individual da face: das proporções, dos movimentos e, principalmente, daquilo que você deseja enxergar quando se olha no espelho.
                   </p>
                   <p>
                     A transformação certa não apaga sua identidade. Ela a revela.
@@ -251,7 +253,7 @@ export function HomeClient() {
                       "Transformar sem descaracterizar."
                     </p>
                     <p className="text-xs tracking-widest uppercase text-[#B8965A] mt-2 font-medium">
-                      — Oni Face
+                      Oni Face
                     </p>
                   </div>
                 </div>
@@ -259,6 +261,63 @@ export function HomeClient() {
             </div>
           </div>
         </section>
+
+        {/* Full Face: chamada para a página pilar */}
+        {FULL_FACE_PILAR && (
+          <section id="full-face" aria-labelledby="home-full-face-titulo" className="section bg-[#EDE7D9] relative overflow-hidden">
+            <div className="container-uniq relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                <AnimatedSection className="lg:col-span-7 order-2 lg:order-1">
+                  <Link
+                    href="/full-face"
+                    className="group block relative overflow-hidden rounded-2xl bg-[#D9D2C4] aspect-[4/5] sm:aspect-[3/2] shadow-[0_24px_60px_-28px_rgba(27,58,107,0.45)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1B3A6B]"
+                    aria-label="Conhecer o Full Face, escultura facial"
+                  >
+                    <img
+                      src={FULL_FACE_PILAR.heroImage}
+                      alt={FULL_FACE_PILAR.heroAlt ?? ''}
+                      width={1536}
+                      height={1024}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover object-[10%_50%] sm:object-center transition-transform duration-700 group-hover:scale-[1.02]"
+                    />
+                  </Link>
+                </AnimatedSection>
+                <AnimatedSection delay={0.1} className="lg:col-span-5 order-1 lg:order-2">
+                  <span className="eyebrow mb-3 block text-[#8A6A32]">Full Face</span>
+                  <h2 id="home-full-face-titulo" className="text-headline text-[#1A1714] mb-4">
+                    {FULL_FACE_PILAR.h1}
+                  </h2>
+                  <p className="font-heading italic text-xl sm:text-2xl leading-snug text-[#3C3831] mb-4">
+                    {FULL_FACE_PILAR.lead}
+                  </p>
+                  <p className="text-base leading-relaxed text-[#3C3831] mb-7">
+                    {FULL_FACE_PILAR.secoes[0]?.paragrafos[0]}
+                  </p>
+                  <Link href="/full-face" className="btn btn-wine min-h-11">
+                    Conhecer o Full Face
+                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </Link>
+                  <ul className="mt-7 flex flex-wrap gap-2" aria-label="Páginas de Full Face">
+                    {FULL_FACE_SUBPAGES.map((p) => (
+                      <li key={p.slug}>
+                        <Link
+                          href={p.rota}
+                          className="inline-flex items-center min-h-11 px-4 rounded-full border border-[#C4BAA8] bg-[#F7F3EC] text-[0.8125rem] text-[#3C3831] transition-colors hover:border-[#1B3A6B] hover:text-[#1B3A6B] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B3A6B]"
+                        >
+                          {p.nomeCurto}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </AnimatedSection>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <VideoReels />
 
         {/* ── TERRITÓRIOS DE COMUNICAÇÃO (PILARES) ── */}
         <section id="pilares" className="section bg-[#EDE7D9] relative overflow-hidden">
@@ -277,19 +336,19 @@ export function HomeClient() {
                 {
                   numeral: '01',
                   title: 'Desejo',
-                  description: 'A face dos sonhos não é uma referência externa. É a melhor expressão da sua própria beleza — descoberta com olhar individual.',
+                  description: 'A face dos sonhos não é uma referência externa. É a melhor expressão da sua própria beleza, descoberta com olhar individual.',
                   items: ['Leitura facial profunda', 'Escuta genuína', 'Objetivos personalizados', 'Sem padronização'],
                 },
                 {
                   numeral: '02',
                   title: 'Transformação',
                   description: 'A borboleta representa evolução delicada e mudança consciente. Cada protocolo é desenhado para revelar, não para apagar.',
-                  items: ['Protocolos completos', 'Precisão científica', 'Resultados imediatos', 'Evolução progressiva'],
+                  items: ['Protocolos completos', 'Precisão científica', 'Planejamento individual', 'Evolução progressiva'],
                 },
                 {
                   numeral: '03',
                   title: 'Individualidade',
-                  description: 'Cada face possui sua arquitetura. Cada planejamento deve ser único — construído a partir da anatomia e identidade de cada pessoa.',
+                  description: 'Cada face possui sua arquitetura. Cada planejamento deve ser único, construído a partir da anatomia e identidade de cada pessoa.',
                   items: ['Análise anatômica', 'Planejamento exclusivo', 'Proporção preservada', 'Identidade respeitada'],
                 },
                 {
@@ -321,9 +380,9 @@ export function HomeClient() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { label: 'Escuta Individual', text: 'Antes de qualquer técnica, existe uma conversa profunda para compreender expectativas, histórico e o que você deseja enxergar no espelho.' },
-                { label: 'Olhar Autoral', text: 'Cada estrutura facial é única: anatomia óssea, tônus muscular e proporções orientam todas as decisões — sem padronização.' },
-                { label: 'Protocolo Completo', text: 'A especialidade da Dra. Vanessa são protocolos faciais completos — tratamentos integrados que entregam resultado imediato e satisfatório.' },
-                { label: 'Naturalidade Boutique', text: 'O objetivo não é que percebam o procedimento. É que percebam você — mais descansada, harmônica e confiante.' },
+                { label: 'Olhar Autoral', text: 'Cada estrutura facial é única: anatomia óssea, tônus muscular e proporções orientam todas as decisões, sem padronização.' },
+                { label: 'Protocolo Completo', text: 'O foco da Dra. Vanessa são protocolos faciais completos: tratamentos integrados, pensados para o rosto como um conjunto.' },
+                { label: 'Naturalidade Boutique', text: 'O objetivo não é que percebam o procedimento. É que percebam você: mais descansada, harmônica e confiante.' },
               ].map((item, idx) => (
                 <AnimatedSection key={item.label} delay={idx * 0.06}>
                   <div className="card-uniq p-6 h-full flex flex-col justify-between">
@@ -349,7 +408,7 @@ export function HomeClient() {
                 <div className="relative overflow-hidden rounded-2xl aspect-[3/4] max-w-md mx-auto lg:mx-0 bg-[#D9D2C4] shadow-md">
                   <img
                     src="/professional.jpg"
-                    alt="Dra. Vanessa Sanabria Bevilaqua — Cirurgiã-Dentista especialista em Full Face, botox e preenchimento facial em Uberlândia MG"
+                    alt="Dra. Vanessa Sanabria Bevilaqua, cirurgiã-dentista, Full Face e harmonização facial em Uberlândia MG"
                     className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
@@ -357,8 +416,8 @@ export function HomeClient() {
                 {/* Floating credential */}
                 <div className="absolute bottom-4 right-4 lg:-right-4 card-uniq px-5 py-3.5 max-w-[260px] shadow-lg bg-white">
                   <p className="font-heading text-lg text-[#1A1714] leading-tight">Dra. Vanessa Sanabria</p>
-                  <p className="text-[0.65rem] text-[#8A8278] mt-0.5 tracking-wide">Especialista em Full Face</p>
-                  <p className="text-[0.65rem] text-[#B8965A] mt-0.5 tracking-wide font-semibold">Gerenciamento do Envelhecimento</p>
+                  <p className="text-[0.6875rem] text-[#8A8278] mt-0.5 tracking-wide">Full Face · CRO-76320 MG</p>
+                  <p className="text-[0.6875rem] text-[#B8965A] mt-0.5 tracking-wide font-semibold">Gerenciamento do Envelhecimento</p>
                 </div>
               </AnimatedSection>
 
@@ -370,10 +429,10 @@ export function HomeClient() {
                 </h2>
                 <div className="space-y-4 text-sm sm:text-base text-[#8A8278] leading-relaxed mb-8 font-light">
                   <p>
-                    Dra. Vanessa Sanabria é especialista em protocolos Full Face e gerenciamento do envelhecimento com um olhar muito particular: ela não busca criar uma nova face para você. Ela busca revelar, com precisão e sensibilidade, a melhor expressão da face que você já tem.
+                    Dra. Vanessa Sanabria se dedica aos protocolos Full Face e gerenciamento do envelhecimento com um olhar muito particular: ela não busca criar uma nova face para você. Ela busca revelar, com precisão e sensibilidade, a melhor expressão da face que você já tem.
                   </p>
                   <p>
-                    Sua especialidade são protocolos faciais completos — tratamentos que entregam um resultado imediato, satisfatório e naturalmente bonito. Com foco especial em blefaroplastia e harmonia do terço superior, ela transforma o olhar sem que pareça tratado.
+                    O foco dela são protocolos faciais completos, pensados para o rosto como um conjunto. Na blefaroplastia, ela conduz a avaliação, o planejamento do olhar e o acompanhamento, junto com a equipe multidisciplinar.
                   </p>
                   <p>
                     Além da clínica, ministra aulas e mentorias para profissionais que querem aprender a transformar faces com responsabilidade, técnica e olhar estético apurado.
@@ -385,12 +444,12 @@ export function HomeClient() {
                   {[
                     { label: 'CRO-76320 MG', sub: 'Registro Profissional' },
                     { label: 'Bucomaxilofacial', sub: 'Grad. em andamento' },
-                    { label: 'Blefaroplastia', sub: 'Foco especializado' },
+                    { label: 'Blefaroplastia', sub: 'Planejamento do olhar' },
                     { label: 'Mentora', sub: 'Cursos & Imersões' },
                   ].map((c) => (
                     <div key={c.label} className="card-uniq px-4 py-3 bg-white">
                       <p className="font-heading text-base text-[#1A1714] leading-tight">{c.label}</p>
-                      <p className="text-[0.65rem] text-[#B8965A] mt-0.5 tracking-wide font-medium uppercase">{c.sub}</p>
+                      <p className="text-[0.6875rem] text-[#B8965A] mt-0.5 tracking-wide font-medium uppercase">{c.sub}</p>
                     </div>
                   ))}
                 </div>
@@ -424,14 +483,14 @@ export function HomeClient() {
               <div className="flex items-center gap-2 self-start sm:self-auto flex-shrink-0">
                 <button
                   onClick={scrollTreatmentsPrev}
-                  className="w-10 h-10 rounded-full border border-[#D9D2C4] bg-white hover:border-[#1B3A6B] hover:text-[#1B3A6B] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+                  className="w-11 h-11 rounded-full border border-[#D9D2C4] bg-white hover:border-[#1B3A6B] hover:text-[#1B3A6B] flex items-center justify-center transition-[color,background-color,border-color,box-shadow,transform,opacity,gap] cursor-pointer shadow-sm active:scale-95"
                   aria-label="Tratamento anterior"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={scrollTreatmentsNext}
-                  className="w-10 h-10 rounded-full border border-[#D9D2C4] bg-white hover:border-[#1B3A6B] hover:text-[#1B3A6B] flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+                  className="w-11 h-11 rounded-full border border-[#D9D2C4] bg-white hover:border-[#1B3A6B] hover:text-[#1B3A6B] flex items-center justify-center transition-[color,background-color,border-color,box-shadow,transform,opacity,gap] cursor-pointer shadow-sm active:scale-95"
                   aria-label="Próximo tratamento"
                 >
                   <ChevronRight className="w-5 h-5" />
@@ -480,7 +539,7 @@ export function HomeClient() {
               <SectionTitle
                 eyebrow="Sua Jornada"
                 title="Do primeiro contato ao resultado"
-                subtitle="Uma jornada estruturada e transparente — pensada para que você entenda cada etapa com segurança e confiança."
+                subtitle="Uma jornada estruturada e transparente, pensada para que você entenda cada etapa com segurança e confiança."
               />
             </AnimatedSection>
 
@@ -490,7 +549,7 @@ export function HomeClient() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
                 {[
                   { num: '01', title: 'Escuta', text: 'Entendemos seus desejos, incômodos e o que você imagina enxergar quando se olha no espelho.' },
-                  { num: '02', title: 'Avaliação', text: 'Leitura individual da face — anatomia, proporções, qualidade tecidual e movimento.' },
+                  { num: '02', title: 'Avaliação', text: 'Leitura individual da face: anatomia, proporções, qualidade tecidual e movimento.' },
                   { num: '03', title: 'Planejamento', text: 'Definimos juntos as prioridades e o protocolo mais adequado à sua face e ao seu momento.' },
                   { num: '04', title: 'Tratamento', text: 'Protocolos executados com precisão, biomateriais nobres e técnica suave.' },
                   { num: '05', title: 'Acompanhamento', text: 'Observamos a evolução e ajustamos a estratégia conforme a resposta da sua face.' },
@@ -538,7 +597,7 @@ export function HomeClient() {
                     },
                     {
                       title: 'Gerenciamento do Envelhecimento',
-                      desc: 'Visão estratégica sobre como o tempo afeta a face — e como tratar com naturalidade, precisão e longevidade.',
+                      desc: 'Visão estratégica sobre como o tempo afeta a face, e como tratar com naturalidade, precisão e longevidade.',
                     },
                     {
                       title: 'Harmonização Avançada',
@@ -552,7 +611,7 @@ export function HomeClient() {
                     <div key={course.title} className="card-uniq p-5 flex flex-col justify-between bg-white">
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-6 h-6 rounded-full bg-[rgba(27,58,107,0.08)] flex items-center justify-center flex-shrink-0">
-                          <span className="text-[0.6rem] font-bold text-[#1B3A6B]">{String(idx + 1).padStart(2, '0')}</span>
+                          <span className="text-[0.6875rem] font-bold text-[#1B3A6B]">{String(idx + 1).padStart(2, '0')}</span>
                         </div>
                         <h4 className="font-heading text-base text-[#1A1714]">{course.title}</h4>
                       </div>
@@ -576,77 +635,77 @@ export function HomeClient() {
               />
             </AnimatedSection>
 
-            {/* Masonry grid — 11 images (0–10), alternating sizes */}
+            {/* Masonry grid, 11 images (0 a 10), alternating sizes */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4">
 
-              {/* Row 1 — large hero spanning 2 cols */}
+              {/* Row 1, large hero spanning 2 cols */}
               <AnimatedSection delay={0} className="col-span-2 row-span-2">
                 <div className="relative overflow-hidden rounded-2xl aspect-[16/11] bg-[#D9D2C4] shadow-md h-full group">
-                  <img src="/oni-0.png" alt="Dra. Vanessa Sanabria Bevilaqua — Full Face e harmonização facial Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-0.png" alt="Dra. Vanessa Sanabria Bevilaqua, Full Face e harmonização facial Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.05}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-1.jpg" alt="Oni Face Boutique — ambiente exclusivo de estética facial em Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-1.jpg" alt="Oni Face Boutique, ambiente exclusivo de estética facial em Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.08}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-2.jpg" alt="Clínica de harmonização facial Full Face — Oni Face, Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-2.jpg" alt="Clínica de harmonização facial Full Face, Oni Face, Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.1}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-3.jpg" alt="Detalhes da Oni Face Boutique — protocolos de botox e preenchimento facial Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-3.jpg" alt="Detalhes da Oni Face Boutique, protocolos de botox e preenchimento facial Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.13}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-4.jpg" alt="Interior da Oni Face — clínica de estética Full Face em Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-4.jpg" alt="Interior da Oni Face, clínica de estética Full Face em Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               {/* Second large block spanning 2 cols */}
               <AnimatedSection delay={0.15} className="col-span-2">
                 <div className="relative overflow-hidden rounded-2xl aspect-[16/9] bg-[#D9D2C4] shadow-md group">
-                  <img src="/oni-5.jpg" alt="Consultório Oni Face — tratamento facial com toxina botulínica e preenchimento, Uberlândia" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-5.jpg" alt="Consultório Oni Face, tratamento facial com toxina botulínica e preenchimento, Uberlândia" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.18}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-6.jpg" alt="Dra. Vanessa Sanabria — especialista em Full Face e blefaroplastia Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-6.jpg" alt="Dra. Vanessa Sanabria, Full Face em Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.2}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-7.jpg" alt="Equipamentos de estética facial avançada — bioestimuladores e skinbooster Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-7.jpg" alt="Equipamentos de estética facial avançada, bioestimuladores e skinbooster Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.22}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-8.jpg" alt="Experiência Full Face na Oni Face — harmonização completa em Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-8.jpg" alt="Experiência Full Face na Oni Face, harmonização completa em Uberlândia MG" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.24}>
                 <div className="relative overflow-hidden rounded-2xl aspect-square bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-9.jpg" alt="Oni Face Boutique — protocolo de rejuvenescimento facial com fillers e botox Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-9.jpg" alt="Oni Face Boutique, protocolo de rejuvenescimento facial com fillers e botox Uberlândia" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
               </AnimatedSection>
 
               {/* Last vertical image */}
               <AnimatedSection delay={0.26} className="col-span-2 md:col-span-1">
                 <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-[#D9D2C4] shadow-sm group">
-                  <img src="/oni-10.png" alt="Resultado Full Face Oni Face — tratamento facial que preserva sua identidade, Uberlândia MG" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                  <img src="/oni-10.png" alt="Resultado Full Face Oni Face, tratamento facial que preserva sua identidade, Uberlândia MG" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                   {/* Quote overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A6B]/80 via-[#1B3A6B]/20 to-transparent flex items-end p-5">
                     <p className="font-heading italic text-[#F7F3EC] text-base md:text-lg leading-snug" style={{ letterSpacing: '-0.01em' }}>
@@ -685,6 +744,8 @@ export function HomeClient() {
             </AnimatedSection>
           </div>
         </section>
+
+        <MapaOniFace titulo="Onde fica o Instituto Oni Face" />
 
       </main>
 

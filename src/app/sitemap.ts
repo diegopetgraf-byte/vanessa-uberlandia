@@ -1,35 +1,35 @@
 import { MetadataRoute } from 'next';
 import { TREATMENTS } from '@/data/treatments';
 import { TECHNOLOGIES } from '@/data/technologies';
+import { SITE_URL, FULL_FACE_ROUTES, SITEMAP_EXCLUDED } from '@/lib/seo/site';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+type Entry = MetadataRoute.Sitemap[number];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const entry = (path: string, priority: number, changeFrequency: Entry['changeFrequency'] = 'monthly'): Entry => ({
+    url: path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`,
+    lastModified: now,
+    changeFrequency,
+    priority,
+  });
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`,             lastModified: now, changeFrequency: 'weekly',  priority: 1.0 },
-    { url: `${BASE_URL}/a-uniq`,       lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/paciente-modelo`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/tratamentos`,  lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${BASE_URL}/tecnologias`,  lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/resultados`,   lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
-    { url: `${BASE_URL}/contato`,      lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+  const routes: Entry[] = [
+    entry('/', 1.0, 'weekly'),
+    // Cluster Full Face: lista fixa (src/lib/seo/site.ts). O CEO confere 200 antes do deploy.
+    ...FULL_FACE_ROUTES.map((r) => entry(r.path, r.priority, 'monthly')),
+    entry('/tratamentos', 0.8, 'weekly'),
+    ...TREATMENTS.map((t) => entry(`/tratamentos/${t.id}`, 0.7)),
+    entry('/contato', 0.7),
+    entry('/tecnologias', 0.5),
+    ...TECHNOLOGIES.map((t) => entry(`/tecnologias/${t.id}`, 0.4)),
   ];
 
-  const treatmentRoutes: MetadataRoute.Sitemap = TREATMENTS.map((t) => ({
-    url: `${BASE_URL}/tratamentos/${t.id}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
-  const technologyRoutes: MetadataRoute.Sitemap = TECHNOLOGIES.map((t) => ({
-    url: `${BASE_URL}/tecnologias/${t.id}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
-  return [...staticRoutes, ...treatmentRoutes, ...technologyRoutes];
+  const excluded = new Set<string>(SITEMAP_EXCLUDED.map((p) => `${SITE_URL}${p}`));
+  const seen = new Set<string>();
+  return routes.filter((r) => {
+    if (excluded.has(r.url) || seen.has(r.url)) return false;
+    seen.add(r.url);
+    return true;
+  });
 }

@@ -3,13 +3,14 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
+import { MapaOniFace } from '@/components/MapaOniFace';
 import { getWhatsAppUrl, WHATSAPP_DISPLAY } from '@/lib/utils';
 import { Instagram, MapPin, Clock, MessageCircle, ArrowRight } from 'lucide-react';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 export const metadata: Metadata = {
-  title: 'Contato | Oni Face · Facial Boutique | Uberlândia — MG',
+  title: { absolute: 'Contato | Instituto Oni Face, Uberlândia, MG' },
   description: 'Fale com a Oni Face e a Dra. Vanessa Sanabria. Agende sua avaliação de estética facial exclusiva em Uberlândia, MG. WhatsApp: +55 34 99803-1777.',
   alternates: { canonical: `${SITE_URL}/contato` },
   openGraph: { url: `${SITE_URL}/contato`, type: 'website' },
@@ -80,7 +81,7 @@ export default function ContatoPage() {
               <AnimatedSection className="lg:col-span-6">
                 <div className="card-uniq p-8 sm:p-10 flex flex-col gap-6 bg-white border-[#D9D2C4]">
                   <div>
-                    <span className="pill-label mb-3 inline-block bg-[rgba(27,58,107,0.08)] text-[#1B3A6B]">Facial Boutique</span>
+                    <span className="pill-label text-[0.6875rem] mb-3 inline-block bg-[rgba(27,58,107,0.08)] text-[#1B3A6B]">Facial Boutique</span>
                     <h2 className="font-heading text-3xl text-[#1A1714]">Uberlândia, MG</h2>
                     <p className="text-xs text-[#8A8278] tracking-wide mt-1">Atendimento Exclusivo com Hora Marcada</p>
                   </div>
@@ -91,7 +92,7 @@ export default function ContatoPage() {
                         <MapPin className="w-4 h-4" />
                       </div>
                       <div>
-                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Localização</p>
+                        <p className="text-[0.6875rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Localização</p>
                         <p className="text-sm sm:text-base text-[#1A1714] font-medium leading-relaxed">
                           Condomínio Âmbar Health Center · Sala 38<br />
                           Jardim Karaíba · Uberlândia, MG<br />
@@ -101,9 +102,9 @@ export default function ContatoPage() {
                           href="https://www.google.com/maps/search/?api=1&query=Condom%C3%ADnio+%C3%82mbar+Health+Center+Jardim+Kara%C3%ADba+Uberl%C3%A2ndia+MG+38411-217"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-[#1B3A6B] hover:text-[#B8965A] transition-colors"
+                          className="mt-1 inline-flex items-center gap-1 min-h-11 text-xs font-semibold text-[#1B3A6B] hover:text-[#8A6A32] transition-colors"
                         >
-                          Ver no Google Maps →
+                          Ver no Google Maps
                         </a>
                       </div>
                     </div>
@@ -113,7 +114,7 @@ export default function ContatoPage() {
                         <Clock className="w-4 h-4" />
                       </div>
                       <div>
-                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Horário de Funcionamento</p>
+                        <p className="text-[0.6875rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Horário de Funcionamento</p>
                         <p className="text-xs sm:text-sm text-[#3C3831]">Segunda a Sexta: 09h às 19h</p>
                         <p className="text-xs text-[#8A8278]">Sábado: 09h às 13h (conforme disponibilidade e agendamento prévio)</p>
                       </div>
@@ -124,7 +125,7 @@ export default function ContatoPage() {
                         <MessageCircle className="w-4 h-4" />
                       </div>
                       <div>
-                        <p className="text-[0.65rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Agendamentos & Informações</p>
+                        <p className="text-[0.6875rem] font-semibold tracking-wider uppercase text-[#8A8278] mb-1">Agendamentos & Informações</p>
                         <a
                           href={whatsappUrl}
                           target="_blank"
@@ -157,7 +158,7 @@ export default function ContatoPage() {
                   <div className="aspect-[4/3] sm:aspect-[16/11] overflow-hidden bg-[#D9D2C4] relative group">
                     <img
                       src="/2.jpg"
-                      alt="Oni Face · Facial Boutique — Uberlândia, MG"
+                      alt="Oni Face · Facial Boutique, Uberlândia, MG"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/75 via-transparent to-transparent flex items-end p-6">
@@ -180,6 +181,8 @@ export default function ContatoPage() {
           </div>
         </section>
 
+        <MapaOniFace titulo="Mapa e como chegar" className="border-t border-[#D9D2C4]" />
+
         {/* FAQ Section */}
         <section className="section bg-[#F7F3EC]">
           <div className="container-uniq">
@@ -196,7 +199,7 @@ export default function ContatoPage() {
                 },
                 {
                   q: 'Onde fica a Oni Face?',
-                  a: 'A Oni Face fica no Condomínio Âmbar Health Center, Sala 38, no Jardim Karaíba — Uberlândia, MG (CEP 38.411-217). Instruções detalhadas de acesso, estacionamento e recepção são enviadas junto com a confirmação do horário.',
+                  a: 'A Oni Face fica no Condomínio Âmbar Health Center, Sala 38, no Jardim Karaíba, Uberlândia, MG (CEP 38.411-217). Instruções detalhadas de acesso, estacionamento e recepção são enviadas junto com a confirmação do horário.',
                 },
                 {
                   q: 'Posso ir à consulta sem saber exatamente qual procedimento realizar?',

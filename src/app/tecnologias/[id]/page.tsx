@@ -11,7 +11,7 @@ import { TECHNOLOGIES, getTechnologyById } from '@/data/technologies';
 import { getWhatsAppUrl } from '@/lib/utils';
 import { CheckCircle2, ChevronLeft } from 'lucide-react';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 interface Props {
   params: Promise<{ id: string }>;

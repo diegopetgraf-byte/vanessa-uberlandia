@@ -7,14 +7,14 @@ import { SectionTitle } from '@/components/ui/SectionTitle';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { CTABanner } from '@/components/ui/CTABanner';
 import { TreatmentCard } from '@/components/ui/TreatmentCard';
-import { CATEGORY_LABELS, CATEGORY_DESCRIPTIONS, getTreatmentsByCategory, INDICATIONS } from '@/data/treatments';
+import { CATEGORY_LABELS, CATEGORY_DESCRIPTIONS, getTreatmentsByCategory, getTreatmentById, INDICATIONS } from '@/data/treatments';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 export const metadata: Metadata = {
   title: 'Tratamentos Faciais em Uberlândia MG | Full Face · Oni Face · Dra. Vanessa Sanabria',
-  description: 'Botox, preenchimento labial, bioestimuladores, blefaroplastia e protocolo Full Face completo em Uberlândia MG — Dra. Vanessa Sanabria na Oni Face Boutique · Âmbar Health Center.',
+  description: 'Botox, preenchimento labial, bioestimuladores, blefaroplastia e protocolo Full Face completo em Uberlândia MG, Dra. Vanessa Sanabria na Oni Face Boutique · Âmbar Health Center.',
   keywords: ['Full Face Uberlândia', 'botox Uberlândia', 'preenchimento labial Uberlândia', 'harmonização facial Uberlândia MG', 'blefaroplastia Uberlândia', 'bioestimuladores Uberlândia', 'tratamentos faciais Uberlândia'],
   alternates: { canonical: `${SITE_URL}/tratamentos` },
   openGraph: {
@@ -69,7 +69,7 @@ export default function TratamentosPage() {
                     Nossos <strong className="font-medium text-[#B8965A]">Protocolos Full Face</strong> tratam a face de forma integrada. Ao invés de preencher rugas individuais, restabelecemos os pontos de sustentação óssea e os coxins de gordura perdidos com o tempo. 
                   </p>
                   <p>
-                    Isso devolve o equilíbrio, o contorno natural e a leveza ao olhar — garantindo que a sua fisionomia se mantenha única e você se reconheça ao espelho com ainda mais autoestima.
+                    Isso devolve o equilíbrio, o contorno natural e a leveza ao olhar, garantindo que a sua fisionomia se mantenha única e você se reconheça ao espelho com ainda mais autoestima.
                   </p>
                 </div>
                 
@@ -86,7 +86,7 @@ export default function TratamentosPage() {
                 <div className="relative overflow-hidden rounded-2xl aspect-[3/4] max-w-sm mx-auto lg:mx-0 bg-[#D9D2C4] shadow-lg border border-white/20">
                   <img
                     src="/professional-2.png"
-                    alt="Dra. Vanessa Sanabria — especialista em Full Face, botox e preenchimento facial em Uberlândia MG"
+                    alt="Dra. Vanessa Sanabria, cirurgiã-dentista, Full Face e harmonização facial em Uberlândia MG"
                     className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
@@ -97,7 +97,7 @@ export default function TratamentosPage() {
           </div>
         </section>
 
-        {/* Category listing — Strictly Facial */}
+        {/* Category listing, Strictly Facial */}
         <section className="section bg-[#F7F3EC]">
           <div className="container-uniq">
             <AnimatedSection className="mb-10">
@@ -157,9 +157,9 @@ export default function TratamentosPage() {
                         <Link
                           key={id}
                           href={`/tratamentos/${id}`}
-                          className="pill-label bg-[#F7F3EC] text-[#3C3831] hover:bg-[#1B3A6B] hover:text-[#F7F3EC] transition-all border border-[#D9D2C4] text-[0.6rem] capitalize flex items-center gap-1"
+                          className="pill-label bg-[#F7F3EC] text-[#3C3831] hover:bg-[#1B3A6B] hover:text-[#F7F3EC] transition-all border border-[#D9D2C4] text-[0.6875rem] min-h-[44px] px-3 flex items-center gap-1"
                         >
-                          {id.replace(/-/g, ' ')}
+                          {getTreatmentById(id)?.name ?? id.replace(/-/g, ' ')}
                           <ArrowRight className="w-2.5 h-2.5 opacity-60" />
                         </Link>
                       ))}

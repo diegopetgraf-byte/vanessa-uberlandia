@@ -40,7 +40,7 @@ export default function ResultadosPage() {
               <span className="eyebrow mb-3 block">Oni Face · Facial Boutique</span>
               <h1 className="text-display-sm max-w-2xl text-[#1A1714]">Resultados & Casos Clínicos</h1>
               <p className="text-sm sm:text-base text-[#8A8278] max-w-xl mt-3 leading-relaxed font-light">
-                Resultados que valorizam a naturalidade e preservam a identidade. Cada caso é único — assim como o planejamento individualizado de cada paciente.
+                Resultados que valorizam a naturalidade e preservam a identidade. Cada caso é único, assim como o planejamento individualizado de cada paciente.
               </p>
             </AnimatedSection>
           </div>

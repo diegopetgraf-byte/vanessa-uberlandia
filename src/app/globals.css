@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ─────────────────────────────────────────────
-   ONI FACE — THEME TOKENS
+   ONI FACE, THEME TOKENS
    Muted Gold + Royal Blue palette
    Typography: Cormorant Garamond (headings) + DM Sans (body)
 ───────────────────────────────────────────── */
@@ -410,4 +410,19 @@
     scrollbar-width: none;
   }
   .scrollbar-hide::-webkit-scrollbar { display: none; }
+}
+
+/* Acessibilidade (WEBSITES design, 13/10/2026): foco visível e movimento reduzido. */
+:where(a, button, [role="button"], summary, input, select, textarea, iframe):focus-visible {
+  outline: 2px solid #1B3A6B;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

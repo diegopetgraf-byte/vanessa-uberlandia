@@ -36,7 +36,7 @@ export const FloatingWhatsApp = () => {
             aria-label="Fale conosco pelo WhatsApp"
             className="group flex items-center gap-3 bg-[#1B3A6B] text-[#F7F3EC] rounded-full shadow-lg hover:shadow-xl hover:bg-[#2C4F8A] transition-all duration-300 hover:-translate-y-1"
           >
-            {/* Pill with label — expands on hover */}
+            {/* Pill with label, expands on hover */}
             <div className="flex items-center gap-3 px-4 py-3">
               <WhatsAppIcon />
               <span className="text-xs font-medium tracking-wide hidden sm:block">

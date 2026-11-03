@@ -4,7 +4,7 @@ export const CLINIC = {
   brandName: 'Dra. Vanessa Sanabria',
   method: 'Quiet Beauty / Oni Face',
   founder: 'Dra. Vanessa Sanabria',
-  specialty: 'Especialista em Full Face',
+  specialty: 'Full Face e harmonização facial',
   tagline: 'A face dos seus sonhos ainda deve parecer sua.',
   concept: 'Transformação natural que revela quem você é.',
   whatsapp: '5534998031777',
@@ -26,5 +26,5 @@ export const CLINIC = {
     weekdays: 'Segunda a Sexta: 09h às 19h',
     saturday: 'Sábado: 09h às 13h',
   },
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br',
 } as const;

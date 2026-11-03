@@ -7,7 +7,7 @@ import { SectionTitle } from '@/components/ui/SectionTitle';
 import { CTABanner } from '@/components/ui/CTABanner';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 export const metadata: Metadata = {
   title: 'Oni Face · Boutique Facial | Filosofia e Conceito',

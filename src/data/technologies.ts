@@ -14,12 +14,12 @@ export const TECHNOLOGIES: Technology[] = [
     id: 'ultraformer',
     name: 'Ultraformer',
     headline: 'Lifting não cirúrgico com HIFU de alta intensidade',
-    description: 'O Ultraformer é considerado um dos equipamentos mais avançados do mundo para lifting não cirúrgico. Utiliza ultrassom microfocado de alta intensidade (HIFU) para atuar com precisão nas camadas profundas da pele — inclusive no SMAS, camada abordada nas cirurgias de lifting —, promovendo contração imediata dos tecidos e estimulando a síntese de colágeno ao longo dos meses seguintes. O resultado é um efeito de lifting progressivo, natural e duradouro, sem cirurgia e sem recuperação.',
+    description: 'O Ultraformer é considerado um dos equipamentos mais avançados do mundo para lifting não cirúrgico. Utiliza ultrassom microfocado de alta intensidade (HIFU) para atuar com precisão nas camadas profundas da pele, inclusive no SMAS, camada abordada nas cirurgias de lifting, promovendo contração imediata dos tecidos e estimulando a síntese de colágeno ao longo dos meses seguintes. O resultado é um efeito de lifting progressivo, natural e duradouro, sem cirurgia e sem recuperação.',
     benefits: [
       'Lifting imediato e progressivo',
       'Ação no SMAS (camada profunda)',
       'Sem cirurgia, sem anestesia geral',
-      'Sem recuperação — retorno imediato às atividades',
+      'Sem recuperação: retorno imediato às atividades',
       'Estímulo profundo de colágeno',
       'Definição do óvulo facial e do pescoço',
       'Tratamento de papada',
@@ -97,7 +97,7 @@ export const TECHNOLOGIES: Technology[] = [
     id: 'lavieen',
     name: 'Lavieen',
     headline: 'Renovação profunda da pele com mínima recuperação',
-    description: 'O Lavieen é uma tecnologia laser inovadora com microagulhas aquecidas (MFRT — Micro-focused RF Treatment) que combina laser de Er:YAG com emissão térmica precisa. Permite tratar manchas, textura, poros dilatados e rejuvenescimento com resultados expressivos e tempo de recuperação muito reduzido comparado aos lasers ablativos tradicionais.',
+    description: 'O Lavieen é uma tecnologia laser inovadora com microagulhas aquecidas (MFRT, Micro-focused RF Treatment) que combina laser de Er:YAG com emissão térmica precisa. Permite tratar manchas, textura, poros dilatados e rejuvenescimento com resultados expressivos e tempo de recuperação muito reduzido comparado aos lasers ablativos tradicionais.',
     benefits: [
       'Renovação cutânea profunda',
       'Clareamento e uniformização de manchas',

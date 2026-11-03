@@ -33,7 +33,7 @@ export const CTABanner = ({
   const titleColor = variant === 'wine' ? 'text-[#F7F3EC]' : 'text-[#1A1714]';
   const subtitleColor = variant === 'wine' ? 'text-[#F7F3EC]/88' : 'text-[#8A8278]';
   const primaryBg = variant === 'wine'
-    ? 'bg-[#B8965A] text-[#F7F3EC] hover:bg-[#D4B07A] hover:shadow-lg'
+    ? 'bg-[#D4B07A] text-[#1B3A6B] hover:bg-[#E0C392] hover:shadow-lg'
     : 'btn-wine';
 
   return (
@@ -55,7 +55,7 @@ export const CTABanner = ({
           {secondaryLabel && secondaryHref && (
             <a
               href={secondaryHref}
-              className={`btn btn-outline text-xs ${
+              className={`btn btn-outline text-xs min-h-11 ${
                 variant === 'wine'
                   ? 'border-white/40 text-white hover:border-white hover:bg-white/10'
                   : ''

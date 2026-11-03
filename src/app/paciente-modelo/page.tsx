@@ -7,13 +7,15 @@ import { CTABanner } from '@/components/ui/CTABanner';
 import { getWhatsAppUrl } from '@/lib/utils';
 import { ArrowRight, Sparkles, Gift, Calendar, MapPin, Star } from 'lucide-react';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 export const metadata: Metadata = {
-  title: 'Paciente Modelo | Oni Face · Uberlândia — Conheça a Clínica',
+  title: 'Paciente Modelo | Oni Face · Uberlândia, Conheça a Clínica',
   description:
     'Uma experiência exclusiva para quem quer conhecer a Oni Face de perto. Evento cocktail, Full Face ao vivo, e um sorteio especial para convidadas com convite físico. Uberlândia, MG.',
   alternates: { canonical: `${SITE_URL}/paciente-modelo` },
+  // Diego, 13/10/2026: fora do menu, do sitemap e do Google.
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
   openGraph: {
     url: `${SITE_URL}/paciente-modelo`,
     type: 'website',
@@ -24,17 +26,17 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
-  { src: '/oni-0.png',  alt: 'Oni Face — Dra. Vanessa Sanabria' },
-  { src: '/oni-1.jpg',  alt: 'Oni Face — Ambiente da clínica' },
-  { src: '/oni-2.jpg',  alt: 'Oni Face — Espaço exclusivo' },
-  { src: '/oni-3.jpg',  alt: 'Oni Face — Detalhes da boutique' },
-  { src: '/oni-4.jpg',  alt: 'Oni Face — Interior' },
-  { src: '/oni-5.jpg',  alt: 'Oni Face — Consultório' },
-  { src: '/oni-6.jpg',  alt: 'Oni Face — Dra. Vanessa' },
-  { src: '/oni-7.jpg',  alt: 'Oni Face — Equipamentos' },
-  { src: '/oni-8.jpg',  alt: 'Oni Face — Experiência' },
-  { src: '/oni-9.jpg',  alt: 'Oni Face — Boutique facial' },
-  { src: '/oni-10.png', alt: 'Oni Face — A transformação que ainda parece você' },
+  { src: '/oni-0.png',  alt: 'Oni Face, Dra. Vanessa Sanabria' },
+  { src: '/oni-1.jpg',  alt: 'Oni Face, Ambiente da clínica' },
+  { src: '/oni-2.jpg',  alt: 'Oni Face, Espaço exclusivo' },
+  { src: '/oni-3.jpg',  alt: 'Oni Face, Detalhes da boutique' },
+  { src: '/oni-4.jpg',  alt: 'Oni Face, Interior' },
+  { src: '/oni-5.jpg',  alt: 'Oni Face, Consultório' },
+  { src: '/oni-6.jpg',  alt: 'Oni Face, Dra. Vanessa' },
+  { src: '/oni-7.jpg',  alt: 'Oni Face, Equipamentos' },
+  { src: '/oni-8.jpg',  alt: 'Oni Face, Experiência' },
+  { src: '/oni-9.jpg',  alt: 'Oni Face, Boutique facial' },
+  { src: '/oni-10.png', alt: 'Oni Face, A transformação que ainda parece você' },
 ];
 
 const fullFaceItems = [
@@ -48,7 +50,7 @@ const fullFaceItems = [
   },
   {
     title: 'Longevidade e preservação de identidade',
-    desc: 'O objetivo não é mudar — é preservar a melhor versão do rosto que já é seu, por mais tempo e com mais qualidade.',
+    desc: 'O objetivo não é mudar: é preservar a melhor versão do rosto que já é seu, por mais tempo e com mais qualidade.',
   },
   {
     title: 'Resultados progressivos e cumulativos',
@@ -129,7 +131,7 @@ export default function PacienteModeloPage() {
                     O evento Paciente Modelo nasce de uma ideia simples: trazer mulheres cuidadosas para dentro da Oni Face, antes de qualquer decisão, para que possam conhecer o ambiente, a metodologia e a Dra. Vanessa de perto.
                   </p>
                   <p>
-                    É uma tarde leve — com cocktails, demonstrações ao vivo de protocolos Full Face e conversa real sobre o que a estética médica pode — e não pode — fazer.
+                    É uma tarde leve, com cocktails, demonstrações ao vivo de protocolos Full Face e conversa real sobre o que a estética médica pode (e não pode) fazer.
                   </p>
                   <p>
                     Quem chega com o <strong className="font-semibold text-[#1A1714]">convite físico</strong> participa de um sorteio exclusivo realizado na data impressa no convite.
@@ -175,7 +177,7 @@ export default function PacienteModeloPage() {
               <span className="eyebrow mb-2 block">A Clínica</span>
               <h2 className="font-heading text-3xl text-[#1A1714]">O ambiente que espera por você</h2>
               <p className="text-[#8A8278] text-sm mt-3 font-light max-w-lg mx-auto">
-                Um espaço pensado para o encontro entre ciência e delicadeza — onde cada detalhe fala sobre cuidado.
+                Um espaço pensado para o encontro entre ciência e delicadeza, onde cada detalhe fala sobre cuidado.
               </p>
             </AnimatedSection>
 
@@ -207,7 +209,7 @@ export default function PacienteModeloPage() {
                 O que é o Full Face?
               </h2>
               <p className="text-[#A8B8D8] text-sm sm:text-base font-light max-w-2xl mx-auto mt-4 leading-relaxed">
-                Full Face não é um procedimento isolado — é uma abordagem estratégica que trata o rosto como um todo: estrutura, volume, expressão e qualidade de pele em planejamento único e progressivo.
+                Full Face não é um procedimento isolado: é uma abordagem estratégica que trata o rosto como um todo: estrutura, volume, expressão e qualidade de pele em planejamento único e progressivo.
               </p>
             </AnimatedSection>
 
@@ -225,7 +227,7 @@ export default function PacienteModeloPage() {
 
             <AnimatedSection delay={0.4} className="mt-12 text-center">
               <p className="text-[#A8B8D8] text-sm font-light mb-6 max-w-lg mx-auto">
-                No evento, você assiste a uma demonstração ao vivo de como a Dra. Vanessa pensa e planeja um protocolo Full Face — do diagnóstico à execução.
+                No evento, você assiste a uma demonstração ao vivo de como a Dra. Vanessa pensa e planeja um protocolo Full Face, do diagnóstico à execução.
               </p>
               <a
                 href={whatsappUrl}
@@ -262,7 +264,7 @@ export default function PacienteModeloPage() {
                       O convite físico<br />vale mais do que parece.
                     </h2>
                     <p className="text-[#3C3831] text-sm sm:text-base font-light leading-relaxed mb-4">
-                      Quem recebe o convite impresso da Oni Face e comparece ao evento com ele na data indicada, participa automaticamente do nosso sorteio — realizado ao vivo no mesmo dia.
+                      Quem recebe o convite impresso da Oni Face e comparece ao evento com ele na data indicada, participa automaticamente do nosso sorteio, realizado ao vivo no mesmo dia.
                     </p>
                     <p className="text-[#8A8278] text-xs sm:text-sm font-light leading-relaxed mb-8">
                       O que está em jogo? Uma sessão de avaliação completa e um procedimento do protocolo Full Face. Surpresa garantida na data do convite.
@@ -301,12 +303,12 @@ export default function PacienteModeloPage() {
                 {
                   icon: Sparkles,
                   title: 'Resultado que ainda parece você',
-                  desc: 'A Dra. Vanessa não trabalha com antes e depois genéricos — o objetivo é refinamento, nunca substituição.',
+                  desc: 'A Dra. Vanessa não trabalha com antes e depois genéricos, o objetivo é refinamento, nunca substituição.',
                 },
                 {
                   icon: Gift,
                   title: 'Ambiente boutique em Uberlândia',
-                  desc: 'Um espaço pensado para exclusividade e silêncio — o oposto das clínicas de volume.',
+                  desc: 'Um espaço pensado para exclusividade e silêncio, o oposto das clínicas de volume.',
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <AnimatedSection key={title}>
@@ -329,7 +331,7 @@ export default function PacienteModeloPage() {
             <CTABanner
               eyebrow="Vagas limitadas"
               title="Pronta para conhecer a Oni Face?"
-              subtitle="Entre em contato pelo WhatsApp, solicite seu convite e reserve sua tarde na clínica. O sorteio acontece na data impressa — só para quem aparece."
+              subtitle="Entre em contato pelo WhatsApp, solicite seu convite e reserve sua tarde na clínica. O sorteio acontece na data impressa, só para quem aparece."
               primaryLabel="Solicitar convite"
               primaryHref={whatsappUrl}
               variant="wine"

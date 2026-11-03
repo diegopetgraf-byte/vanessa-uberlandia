@@ -26,11 +26,14 @@ export const TreatmentCard = ({
 }: TreatmentCardProps) => {
   const linkHref = href || `/tratamentos/${id}`;
   const hasImage = Boolean(imageSrc) && !isPlaceholder;
+  // Ilustrações verticais (2:3) com o rosto no terço superior: no cartão horizontal do celular,
+  // sobe o enquadramento para não cortar olhos e queixo.
+  const focoRosto = Boolean(imageSrc?.startsWith('/card_') && imageSrc.endsWith('.webp'));
 
   return (
     <Link
       href={linkHref}
-      className="group card-uniq overflow-hidden flex flex-col h-full cursor-pointer hover:shadow-xl hover:border-[#1B3A6B]/30 transition-all duration-300 bg-white"
+      className="group card-uniq overflow-hidden flex flex-col h-full cursor-pointer hover:shadow-xl hover:border-[#1B3A6B]/30 transition-[color,background-color,border-color,box-shadow,transform,opacity,gap] duration-300 bg-white"
     >
       {/* Image / Placeholder */}
       <div className={`relative overflow-hidden ${compact ? 'aspect-[16/11]' : 'aspect-[4/3] sm:aspect-[3/4]'} bg-[#F2EFE9]`}>
@@ -38,19 +41,19 @@ export const TreatmentCard = ({
           <img
             src={imageSrc}
             alt={name}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${focoRosto ? 'object-[50%_38%] sm:object-[50%_30%]' : ''}`}
             loading="lazy"
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center gap-2.5 p-6 bg-gradient-to-b from-[#EDE7D9] to-[#E0D8C8] text-[#8A8278] border border-dashed border-[#C4BAA8]/70 m-1 rounded-xl">
-            <div className="w-11 h-11 rounded-full bg-white/80 shadow-sm border border-[#D9D2C4] flex items-center justify-center text-[#1B3A6B]/50 group-hover:text-[#1B3A6B] group-hover:scale-110 transition-all duration-300">
+            <div className="w-11 h-11 rounded-full bg-white/80 shadow-sm border border-[#D9D2C4] flex items-center justify-center text-[#1B3A6B]/50 group-hover:text-[#1B3A6B] group-hover:scale-110 transition-[color,background-color,border-color,box-shadow,transform,opacity,gap] duration-300">
               <Camera className="w-5 h-5" />
             </div>
             <div className="text-center">
-              <span className="text-[0.65rem] font-medium tracking-wider uppercase text-[#8A8278] block">
+              <span className="text-[0.6875rem] font-medium tracking-wider uppercase text-[#8A8278] block">
                 Foto em breve
               </span>
-              <span className="text-[0.55rem] tracking-widest uppercase text-[#B8965A]">
+              <span className="text-[0.6875rem] tracking-widest uppercase text-[#B8965A]">
                 Oni Face
               </span>
             </div>
@@ -60,7 +63,7 @@ export const TreatmentCard = ({
         {/* Optional Category Pill */}
         {showCategory && category && hasImage && (
           <div className="absolute top-3 left-3">
-            <span className="pill-label bg-white/90 backdrop-blur-sm shadow-sm">{category}</span>
+            <span className="pill-label text-[0.6875rem] bg-white/90 backdrop-blur-sm shadow-sm">{category}</span>
           </div>
         )}
 
@@ -82,7 +85,7 @@ export const TreatmentCard = ({
 
         <div className="pt-3 border-t border-[#D9D2C4]/60 flex items-center justify-between mt-auto">
           <span
-            className="inline-flex items-center gap-1.5 text-[0.6875rem] font-medium tracking-wide uppercase text-[#1B3A6B] group-hover:gap-2.5 transition-all"
+            className="inline-flex items-center gap-1.5 text-[0.6875rem] font-medium tracking-wide uppercase text-[#1B3A6B] group-hover:gap-2.5 transition-[color,background-color,border-color,box-shadow,transform,opacity,gap]"
             aria-label={`Saiba mais sobre ${name}`}
           >
             Explorar procedimento <ArrowRight className="w-3 h-3" />

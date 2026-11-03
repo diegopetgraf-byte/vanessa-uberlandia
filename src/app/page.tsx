@@ -9,7 +9,7 @@ import {
   generateFAQSchema,
 } from '@/lib/seo/schemas';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8080';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
