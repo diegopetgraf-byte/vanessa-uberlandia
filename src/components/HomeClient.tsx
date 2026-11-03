@@ -182,7 +182,7 @@ export function HomeClient() {
 
         {/* ── ONI FACE MANIFESTO ── */}
         <section id="oni-face" className="section bg-[#F7F3EC] relative overflow-hidden">
-          <div className="absolute inset-0 bg-pattern opacity-[0.45] pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern opacity-[0.1] pointer-events-none" />
           <div className="container-uniq relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               <AnimatedSection direction="left" className="lg:col-span-6">
@@ -198,7 +198,7 @@ export function HomeClient() {
               </AnimatedSection>
 
               <AnimatedSection delay={0.15} className="lg:col-span-6">
-                <div className="space-y-4 text-sm sm:text-base text-[#8A8278] leading-relaxed font-light">
+                <div className="space-y-4 text-sm sm:text-base text-[#4A443C] leading-relaxed">
                   <p>
                     Não perseguimos rostos padronizados. Não buscamos transformar você em outra pessoa.
                   </p>
@@ -285,7 +285,7 @@ export function HomeClient() {
 
         {/* ── TERRITÓRIOS DE COMUNICAÇÃO (PILARES) ── */}
         <section id="pilares" className="section bg-[#EDE7D9] relative overflow-hidden">
-          <div className="absolute inset-0 bg-pattern opacity-[0.18] pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern opacity-[0.07] pointer-events-none" />
           <div className="container-uniq relative z-10">
             <AnimatedSection className="mb-10">
               <SectionTitle
@@ -332,7 +332,7 @@ export function HomeClient() {
 
         {/* ── DIFERENCIAIS ── */}
         <section id="diferenciais" className="section bg-[#F7F3EC] relative overflow-hidden">
-          <div className="absolute inset-0 bg-pattern opacity-[0.18] pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern opacity-[0.07] pointer-events-none" />
           <div className="container-uniq relative z-10">
             <AnimatedSection className="mb-10">
               <SectionTitle
@@ -364,7 +364,7 @@ export function HomeClient() {
 
         {/* ── DRA. VANESSA SANABRIA ── */}
         <section id="dra-vanessa" className="section bg-[#EDE7D9] relative overflow-hidden">
-          <div className="absolute inset-0 bg-pattern opacity-[0.4] pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern opacity-[0.1] pointer-events-none" />
           <div className="container-uniq relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               {/* Image */}
@@ -391,7 +391,7 @@ export function HomeClient() {
                 <h2 className="text-headline mb-6">
                   Você vai sair daqui se reconhecendo ainda mais bonita.
                 </h2>
-                <div className="space-y-4 text-sm sm:text-base text-[#8A8278] leading-relaxed mb-8 font-light">
+                <div className="space-y-4 text-sm sm:text-base text-[#4A443C] leading-relaxed mb-8">
                   <p>
                     Dra. Vanessa Sanabria se dedica aos protocolos Full Face e gerenciamento do envelhecimento com um olhar muito particular: ela não busca criar uma nova face para você. Ela busca revelar, com precisão e sensibilidade, a melhor expressão da face que você já tem.
                   </p>
@@ -434,7 +434,7 @@ export function HomeClient() {
 
         {/* ── TRATAMENTOS FACIAIS ── */}
         <section id="tratamentos" className="section bg-[#F7F3EC] relative overflow-hidden">
-          <div className="absolute inset-0 bg-pattern opacity-[0.18] pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern opacity-[0.07] pointer-events-none" />
           <div className="container-uniq relative z-10">
             {/* Header with Title and Carousel Arrows */}
             <AnimatedSection className="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -500,7 +500,7 @@ export function HomeClient() {
 
         {/* ── JORNADA DO PACIENTE ── */}
         <section id="como-funciona" className="section bg-[#EDE7D9] relative overflow-hidden">
-          <div className="absolute inset-0 bg-pattern opacity-[0.18] pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern opacity-[0.07] pointer-events-none" />
           <div className="container-uniq relative z-10">
             <AnimatedSection className="mb-12">
               <SectionTitle

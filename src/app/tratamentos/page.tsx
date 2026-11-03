@@ -44,7 +44,7 @@ export default function TratamentosPage() {
 
         {/* Page header & Full Face Pitch */}
         <section className="section bg-[#EDE7D9] border-b border-[#D9D2C4] relative overflow-hidden">
-          <div className="absolute inset-0 bg-pattern opacity-[0.35] pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern opacity-[0.1] pointer-events-none" />
           <div className="container-uniq relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
               

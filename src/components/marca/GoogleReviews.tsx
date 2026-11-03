@@ -121,7 +121,7 @@ export const GoogleReviews = () => {
 
   return (
     <section id="avaliacoes" className="section relative overflow-hidden scroll-mt-20 bg-[#1B3A6B]" aria-labelledby="avaliacoes-titulo">
-      <div className="absolute inset-0 bg-pattern opacity-[0.22] pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 bg-pattern opacity-[0.12] pointer-events-none" aria-hidden="true" />
       <div className="container-uniq relative z-10">
         <AnimatedSection>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
