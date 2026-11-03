@@ -57,14 +57,14 @@ export const FULL_FACE_PAGES: FullFacePage[] = [
     slug: 'full-face',
     rota: '/full-face',
     nomeCurto: 'Escultura Facial',
-    title: 'Escultura Facial e Full Face em Uberlândia',
+    title: 'Escultura facial e Full Face em Uberlândia',
     description:
       'Full Face como escultura facial: o rosto tratado como um conjunto, com avaliação facial completa antes de qualquer decisão. Instituto Oni Face, Uberlândia.',
-    h1: 'Escultura Facial em Uberlândia',
+    h1: 'Escultura facial em Uberlândia',
     lead: 'Harmonização pensada como um rosto inteiro, não como uma soma de preenchimentos.',
-    heroImage: '/full-face-hero.webp',
+    heroImage: '/dra/dra-vanessa-sanabria-oni-face.webp',
     heroAlt:
-      'Imagem ilustrativa: rosto feminino com linhas de planejamento facial e detalhes de olhos, nariz, lábios e queixo',
+      'Dra. Vanessa Sanabria em frente ao painel com o logo Oni Face, no Instituto Oni Face em Uberlândia',
     secoes: [
       {
         titulo: 'Full Face, para mim, é escultura facial',

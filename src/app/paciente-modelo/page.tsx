@@ -21,22 +21,20 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Paciente Modelo · Oni Face',
     description: 'Conheça a Oni Face em um evento exclusivo. Estética Full Face ao vivo, ambiente da clínica, sorteio especial e um convite para entrar nesse universo.',
-    images: [{ url: `${SITE_URL}/og-image.jpeg`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/og-oniface.jpg`, width: 1200, height: 630 }],
   },
 };
 
 const galleryImages = [
-  { src: '/oni-0.png',  alt: 'Oni Face, Dra. Vanessa Sanabria' },
   { src: '/oni-1.jpg',  alt: 'Oni Face, Ambiente da clínica' },
   { src: '/oni-2.jpg',  alt: 'Oni Face, Espaço exclusivo' },
   { src: '/oni-3.jpg',  alt: 'Oni Face, Detalhes da boutique' },
   { src: '/oni-4.jpg',  alt: 'Oni Face, Interior' },
-  { src: '/oni-5.jpg',  alt: 'Oni Face, Consultório' },
-  { src: '/oni-6.jpg',  alt: 'Oni Face, Dra. Vanessa' },
-  { src: '/oni-7.jpg',  alt: 'Oni Face, Equipamentos' },
+  { src: '/oni-5.jpg',  alt: 'Oni Face, Detalhes' },
+  { src: '/oni-6.jpg',  alt: 'Oni Face, Lavabo' },
+  { src: '/oni-7.jpg',  alt: 'Oni Face, Corredor' },
   { src: '/oni-8.jpg',  alt: 'Oni Face, Experiência' },
   { src: '/oni-9.jpg',  alt: 'Oni Face, Boutique facial' },
-  { src: '/oni-10.png', alt: 'Oni Face, A transformação que ainda parece você' },
 ];
 
 const fullFaceItems = [

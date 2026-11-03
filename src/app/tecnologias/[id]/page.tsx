@@ -137,7 +137,7 @@ export default async function TechnologyPage({ params }: Props) {
           <div className="container-uniq">
             <div className="max-w-2xl mx-auto">
               <AnimatedSection className="mb-10">
-                <h2 className="text-headline text-[#1A1714]">Perguntas Frequentes</h2>
+                <h2 className="text-headline text-[#1A1714]">Perguntas frequentes</h2>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <FAQAccordion items={tech.faq} />

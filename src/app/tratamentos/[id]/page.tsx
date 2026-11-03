@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: { absolute: `${treatment.name} em Uberlândia | Instituto Oni Face` },
     description: `${treatment.description.slice(0, 100).replace(/\s+\S*$/, '')}. Dra. Vanessa Sanabria, Instituto Oni Face, Uberlândia MG.`,
-    keywords: [treatment.name, 'Full Face Uberlândia', 'harmonização facial Uberlândia', 'botox Uberlândia', 'preenchimento Uberlândia', 'Dra Vanessa Sanabria', 'Oni Face'],
+    keywords: [treatment.name, 'Full Face Uberlândia', 'harmonização facial Uberlândia', 'toxina botulínica Uberlândia', 'preenchimento Uberlândia', 'Dra Vanessa Sanabria', 'Oni Face'],
     alternates: { canonical: `${SITE_URL}/tratamentos/${id}` },
     openGraph: {
       title: `${treatment.name} em Uberlândia | Instituto Oni Face`,
@@ -201,7 +201,7 @@ export default async function TreatmentPage({ params }: Props) {
             <div className="max-w-4xl mx-auto">
               <AnimatedSection>
                 <span className="eyebrow mb-3 block">Sobre o Procedimento</span>
-                <h2 className="text-headline mb-4 text-[#1A1714]">A ciência e a sensibilidade por trás de {treatment.name}</h2>
+                <h2 className="text-headline mb-4 text-[#1A1714]">{treatment.name}: ciência e sensibilidade</h2>
                 <p className="text-base sm:text-lg text-[#8A8278] leading-relaxed mb-6 font-light">
                   {treatment.description}
                 </p>
@@ -258,7 +258,7 @@ export default async function TreatmentPage({ params }: Props) {
               <AnimatedSection direction="left">
                 <div className="flex items-center gap-2 mb-4">
                   <Sparkles className="w-5 h-5 text-[#1B3A6B]" />
-                  <h2 className="text-headline text-[#1A1714]">Principais Benefícios</h2>
+                  <h2 className="text-headline text-[#1A1714]">Principais benefícios</h2>
                 </div>
                 <div className="space-y-3">
                   {treatment.benefits.map((benefit, idx) => (
@@ -296,7 +296,7 @@ export default async function TreatmentPage({ params }: Props) {
             <div className="container-uniq">
               <AnimatedSection className="mb-10 text-center max-w-3xl mx-auto">
                 <span className="eyebrow mb-3 block">Esclarecimentos</span>
-                <h2 className="text-headline mb-3 text-[#1A1714]">Dúvidas Frequentes</h2>
+                <h2 className="text-headline mb-3 text-[#1A1714]">Dúvidas frequentes</h2>
                 <p className="text-sm sm:text-base text-[#8A8278] font-light">
                   Respostas transparentes sobre {treatment.name}.
                 </p>
@@ -323,7 +323,7 @@ export default async function TreatmentPage({ params }: Props) {
               <AnimatedSection className="mb-8 flex items-center justify-between">
                 <div>
                   <span className="eyebrow mb-2 block">Sinergia e Combinação</span>
-                  <h2 className="text-headline text-[#1A1714]">Tratamentos Relacionados</h2>
+                  <h2 className="text-headline text-[#1A1714]">Tratamentos relacionados</h2>
                 </div>
                 <Link href="/tratamentos" className="btn btn-ghost text-xs hidden sm:inline-flex text-[#1B3A6B]">
                   Ver catálogo completo <ArrowRight className="w-3 h-3 ml-1" />
@@ -353,7 +353,7 @@ export default async function TreatmentPage({ params }: Props) {
             <AnimatedSection>
               <CTABanner
                 eyebrow={treatment.name}
-                title={`Agende sua avaliação para ${treatment.name}`}
+                title={`Agende sua avaliação de ${treatment.name.charAt(0).toLowerCase()}${treatment.name.slice(1)}`}
                 subtitle="Uma consulta individualizada na Oni Face em Uberlândia, MG. Dra. Vanessa Sanabria analisará detalhadamente sua estrutura e objetivos para definir o protocolo ideal."
                 primaryLabel="Agendar pelo WhatsApp"
                 primaryHref={getWhatsAppUrl(treatment.name)}

@@ -36,7 +36,7 @@ export default function ContatoPage() {
           <div className="container-uniq">
             <AnimatedSection>
               <span className="eyebrow mb-3 block">Oni Face · Facial Boutique</span>
-              <h1 className="text-display-sm max-w-3xl text-[#1A1714]">Contato & Localização</h1>
+              <h1 className="text-display-sm max-w-3xl text-[#1A1714]">Contato & localização</h1>
               <p className="text-sm sm:text-base text-[#8A8278] max-w-2xl mt-3 leading-relaxed font-light">
                 Agende sua consulta individualizada e comece a desenhar o seu melhor planejamento de estética facial com a Dra. Vanessa Sanabria.
               </p>
@@ -187,7 +187,7 @@ export default function ContatoPage() {
         <section className="section bg-[#F7F3EC]">
           <div className="container-uniq">
             <AnimatedSection className="mb-10 text-center max-w-2xl mx-auto">
-              <span className="eyebrow mb-2 block">Dúvidas Frequentes</span>
+              <span className="eyebrow mb-2 block">Dúvidas frequentes</span>
               <h2 className="text-headline text-[#1A1714]">Informações sobre sua consulta</h2>
             </AnimatedSection>
 

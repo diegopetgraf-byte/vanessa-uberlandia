@@ -21,11 +21,11 @@ const navLinks = [
 ];
 
 const treatmentLinks = [
-  { label: 'Harmonização Facial', href: '/tratamentos/harmonizacao-facial' },
+  { label: 'Harmonização facial', href: '/tratamentos/harmonizacao-facial' },
   { label: 'Blefaroplastia', href: '/tratamentos/blefaroplastia' },
-  { label: 'Toxina Botulínica', href: '/tratamentos/toxina-botulinica' },
-  { label: 'Preenchimento Labial', href: '/tratamentos/preenchimento-labial' },
-  { label: 'Bioestimuladores de Colágeno', href: '/tratamentos/bioestimuladores-de-colageno' },
+  { label: 'Toxina botulínica', href: '/tratamentos/toxina-botulinica' },
+  { label: 'Preenchimento labial', href: '/tratamentos/preenchimento-labial' },
+  { label: 'Bioestimuladores de colágeno', href: '/tratamentos/bioestimuladores-de-colageno' },
 ];
 
 export const Footer = () => {
@@ -54,12 +54,12 @@ export const Footer = () => {
                 className="inline-flex cursor-pointer"
                 aria-label="Ir para o topo"
               >
-                {/* Uses the real footer-logo.svg */}
                 <img
-                  src="/footer-logo.svg"
-                  alt="Oni Face · Vanessa Sanabria"
-                  className="h-20 md:h-28 w-auto"
-                  style={{ maxWidth: 400 }}
+                  src="/marca/logo-oniface.svg"
+                  alt="Oni Face Facial Boutique"
+                  width={3411}
+                  height={1024}
+                  className="h-16 md:h-20 w-auto"
                 />
               </Link>
             </div>
@@ -133,7 +133,7 @@ export const Footer = () => {
           {/* Treatments Column */}
           <div className="md:col-span-3 lg:col-span-4 space-y-4">
             <h3 className="text-[0.75rem] sm:text-xs font-semibold tracking-[0.12em] uppercase text-[#1A1714]">
-              Tratamentos Faciais
+              Tratamentos faciais
             </h3>
             <ul className="space-y-3" role="list">
               {treatmentLinks.map((link) => (

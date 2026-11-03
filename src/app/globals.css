@@ -395,8 +395,8 @@
   .border-gold  { border-color: #B8965A; }
 
   .bg-pattern {
-    background-image: url('/pattern.svg');
-    background-size: 600px;
+    background-image: url('/marca/pattern-linha.webp');
+    background-size: 260px;
     background-repeat: repeat;
   }
   .bg-pattern-subtle {

@@ -13,7 +13,7 @@ import { Providers } from '@/components/Providers';
 import { SITE_URL, SITE_NAME } from '@/lib/seo/site';
 import { JsonLd, generateGlobalGraph } from '@/lib/seo/schemas';
 
-const OG_IMAGE = `${SITE_URL}/og.png`;
+const OG_IMAGE = `${SITE_URL}/og-oniface.jpg`;
 
 export const viewport = {
   width: 'device-width',

@@ -96,8 +96,8 @@ export function generateOrganizationSchema(): Json {
     name: SITE_NAME,
     alternateName: SITE_ALTERNATE_NAMES,
     url: absoluteUrl('/'),
-    logo: { '@type': 'ImageObject', url: absoluteUrl('/og.png'), width: 1200, height: 630 },
-    image: absoluteUrl('/og.png'),
+    logo: { '@type': 'ImageObject', url: absoluteUrl('/marca/logo-oniface-quadrado.png'), width: 800, height: 800 },
+    image: absoluteUrl('/og-oniface.jpg'),
     description:
       'Instituto Oni Face, da cirurgiã-dentista Dra. Vanessa Sanabria Bevilaqua (CRO-76320 MG): Full Face e harmonização facial em Uberlândia, MG.',
     sameAs: SAME_AS,
@@ -136,8 +136,8 @@ export function generateLocalBusinessSchema(): Json {
     url: absoluteUrl('/'),
     description:
       'Consultório da cirurgiã-dentista Dra. Vanessa Sanabria Bevilaqua (CRO-76320 MG) para Full Face, harmonização facial, bioestimuladores, preenchimento e toxina botulínica em Uberlândia, MG.',
-    image: [absoluteUrl(PROFESSIONAL.image), absoluteUrl('/og.png')],
-    logo: absoluteUrl('/og.png'),
+    image: [absoluteUrl(PROFESSIONAL.image), absoluteUrl('/og-oniface.jpg')],
+    logo: absoluteUrl('/marca/logo-oniface-quadrado.png'),
     telephone: PHONE,
     address: postalAddress(),
     geo: { '@type': 'GeoCoordinates', latitude: GEO.latitude, longitude: GEO.longitude },

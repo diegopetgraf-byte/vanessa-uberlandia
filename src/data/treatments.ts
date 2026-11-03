@@ -4,7 +4,7 @@ export type TreatmentCategory =
   | 'instituto-fs';
 
 export const CATEGORY_LABELS: Record<TreatmentCategory, string> = {
-  'facial': 'Estética Facial',
+  'facial': 'Estética facial',
   'corporal': 'Estética Corporal',
   'instituto-fs': 'Mentoria',
 };
@@ -50,7 +50,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'harmonizacao-facial',
-    name: 'Harmonização Facial',
+    name: 'Harmonização facial',
     category: 'facial',
     subtitle: 'Equilíbrio, proporção e sustentação em estética facial avançada',
     description: 'A Harmonização Facial na Oni Face é um planejamento integrado de alta precisão que combina técnicas injetáveis para restaurar vetores de sustentação, proporção e harmonia facial. Afastando-se de modismos e rostos padronizados, Dra. Vanessa Sanabria analisa minuciosamente a anatomia individual, dinâmica muscular e perda de volume tecidual para entregar um rejuvenescimento elegante, seguro e imperceptível aos olhos desavisados.',
@@ -73,19 +73,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/card_harmonizacao.jpg',
     howItWorks: [
       {
-        title: '1. Diagnóstico Anatômico e Escuta',
+        title: '1. Diagnóstico anatômico e escuta',
         desc: 'Avaliação presencial minuciosa da estrutura óssea, compartimentos de gordura e mímica facial, compreendendo as expectativas e histórico do paciente.'
       },
       {
-        title: '2. Planejamento Estratégico FS',
+        title: '2. Planejamento estratégico',
         desc: 'Construção de um mapa exclusivo de aplicação focado em pontos estratégicos de ancoragem (lifting vetorial) e refinamento proporcional.'
       },
       {
-        title: '3. Execução com Microcânulas',
+        title: '3. Execução com microcânulas',
         desc: 'Aplicação técnica suave com cânulas de ponta atraumática e biomateriais de padrão internacional, minimizando riscos e hematomas.'
       },
       {
-        title: '4. Acompanhamento e Revisão',
+        title: '4. Acompanhamento e revisão',
         desc: 'Sessão de retorno programada para avaliar a acomodação dos tecidos e garantir o resultado refinado proposto no planejamento.'
       }
     ],
@@ -111,7 +111,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'toxina-botulinica',
-    name: 'Toxina Botulínica',
+    name: 'Toxina botulínica',
     category: 'facial',
     subtitle: 'Suavização natural de linhas de expressão e descanso do olhar',
     description: 'A aplicação de toxina botulínica na Oni Face vai além de paralisar músculos: trata-se de um refinamento dinâmico que relaxa seletivamente as tensões faciais responsáveis por rugas na testa, glabela e olhos (pés de galinha). A dosagem estratégica e a precisão nos pontos de injeção garantem uma expressão leve, descansada e comunicativa, livre do aspecto congelado.',
@@ -134,26 +134,26 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/card_facial_injectables.jpg',
     howItWorks: [
       {
-        title: '1. Mapeamento da Expressividade',
+        title: '1. Mapeamento da expressividade',
         desc: 'Análise detalhada das forças de contração muscular durante diversas expressões para definir microdoses personalizadas.'
       },
       {
-        title: '2. Aplicação com Agulhas Ultrafinas',
+        title: '2. Aplicação com agulhas ultrafinas',
         desc: 'Injeções precisas nos ventres musculares específicos, proporcionando relaxamento focal sem comprometer os músculos vizinhos.'
       },
       {
-        title: '3. Início da Ação e Pico',
+        title: '3. Início da ação e pico',
         desc: 'Os primeiros efeitos tornam-se visíveis entre 48 e 72 horas, com o resultado completo estabelecido em até 15 dias.'
       },
       {
-        title: '4. Revisão em 15 Dias',
+        title: '4. Revisão em 15 dias',
         desc: 'Consulta de retorno para avaliar a simetria perfeita e realizar microajustes caso seja indicado.'
       }
     ],
     faqs: [
       {
         question: 'Vou ficar com a expressão congelada ou artificial?',
-        answer: 'Absolutamente não. Na Oni Face utilizamos técnicas modernas de microdosagem (Baby Botox / Botox Estratégico), preservando totalmente o movimento natural do rosto.'
+        answer: 'A proposta é o contrário disso. A dose e os pontos de aplicação são planejados para o seu rosto, com o objetivo de suavizar sem tirar o movimento natural da expressão.'
       },
       {
         question: 'Quando começo a ver o resultado?',
@@ -222,7 +222,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'preenchimento-labial',
-    name: 'Preenchimento Labial',
+    name: 'Preenchimento labial',
     category: 'facial',
     subtitle: 'Contorno refinado, hidratação profunda e proporção labial perfeita',
     description: 'O Preenchimento Labial na Oni Face tem como assinatura a elegância e o respeito à proporção áurea da boca em relação ao restante do rosto. Utilizamos ácidos hialurônicos ultraflexíveis e específicos para a mucosa labial, entregando definição do arco do cupido, hidratação e volume delicado sem efeito "bico de pato" ou perda da textura natural dos lábios.',
@@ -245,19 +245,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/labial.jpeg',
     howItWorks: [
       {
-        title: '1. Análise Estética e Morfologia',
+        title: '1. Análise estética e morfologia',
         desc: 'Avaliação das proporções labiais em repouso e no sorriso, definindo se o foco é contorno, eversão, projeção ou hidratação.'
       },
       {
-        title: '2. Anestesia para Conforto Total',
+        title: '2. Anestesia para conforto total',
         desc: 'Aplicação de anestésico tópico potente e bloqueio anestésico suave para procedimento 100% indolor.'
       },
       {
-        title: '3. Escultura Labial Estratégica',
+        title: '3. Escultura labial estratégica',
         desc: 'Depósito milimétrico de ácido hialurônico de alta maleabilidade em pontos selecionados da borda e tubérculos labiais.'
       },
       {
-        title: '4. Finalização e Orientações',
+        title: '4. Finalização e orientações',
         desc: 'Massagem suave de modelagem e orientações de hidratação e cuidados pós-procedimento.'
       }
     ],
@@ -279,7 +279,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'bioestimuladores-de-colageno',
-    name: 'Bioestimuladores de Colágeno',
+    name: 'Bioestimuladores de colágeno',
     category: 'facial',
     subtitle: 'Estímulo biológico endógeno para firmeza, densidade e sustentação cutânea',
     description: 'Os bioestimuladores de colágeno (como ácido poli-L-lático e hidroxiapatita de cálcio) são o padrão-ouro na regeneração tecidual moderna. Diferente dos preenchedores que apenas ocupam espaço, os bioestimuladores atuam ativando os fibroblastos a produzirem novo colágeno do tipo I e III de forma progressiva. O resultado é uma pele visivelmente mais firme, espessa, elástica e resistente à flacidez ao longo dos meses.',
@@ -302,19 +302,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/bioestimuladores_final.jpg',
     howItWorks: [
       {
-        title: '1. Mapeamento das Zonas de Flacidez',
+        title: '1. Mapeamento das zonas de flacidez',
         desc: 'Identificação dos vetores de tração e das áreas de maior perda de matriz extracelular na face.'
       },
       {
-        title: '2. Diluição e Preparo Farmacêutico',
+        title: '2. Diluição e preparo farmacêutico',
         desc: 'Preparo individualizado do bioestimulador para garantir dispersão homogênea e conforto na aplicação.'
       },
       {
-        title: '3. Aplicação em Rede Subdérmica',
+        title: '3. Aplicação em rede subdérmica',
         desc: 'Distribuição uniforme do produto através de cânula na camada dérmica profunda, estimulando os fibroblastos.'
       },
       {
-        title: '4. Evolução Biológica Progressiva',
+        title: '4. Evolução biológica progressiva',
         desc: 'A síntese de colágeno inicia-se em poucas semanas, com pico de melhora da firmeza visível entre 60 e 90 dias.'
       }
     ],
@@ -336,7 +336,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'fios-de-sustentacao',
-    name: 'Fios de Sustentação',
+    name: 'Fios de sustentação',
     category: 'facial',
     subtitle: 'Lifting mecânico imediato com reposicionamento tecidual e colágeno',
     description: 'Os Fios de Sustentação de PDO (Polidioxanona) e PLLA são filamentos 100% absorvíveis e biocompatíveis projetados para tracionar suavemente as estruturas caídas da face, reposicionando bochechas, suavizando o sulco nasogeniano e definindo a linha mandibular. Além da tração mecânica imediata, os fios estimulam a formação de um cordão fibroso de colágeno ao longo do seu trajeto de absorção.',
@@ -359,19 +359,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/card_fios-de-sustentacao.webp',
     howItWorks: [
       {
-        title: '1. Desenho Vetorial de Tração',
+        title: '1. Desenho vetorial de tração',
         desc: 'Marcação precisa dos eixos de sustentação e dos pontos de ancoragem anatômica.'
       },
       {
-        title: '2. Anestesia Local Focal',
+        title: '2. Anestesia local focal',
         desc: 'Anestesia suave nos pontos de entrada e saída dos fios, garantindo um procedimento sem dor.'
       },
       {
-        title: '3. Inserção e Ancoragem dos Fios',
+        title: '3. Inserção e ancoragem dos fios',
         desc: 'Passagem dos fios através de microcânulas especiais no plano subcutâneo com tração controlada dos tecidos.'
       },
       {
-        title: '4. Ajuste e Conforto',
+        title: '4. Ajuste e conforto',
         desc: 'Acomodação dos tecidos e orientações específicas sobre mímica facial e repouso nos primeiros dias.'
       }
     ],
@@ -412,19 +412,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/skinbooster_final.jpg',
     howItWorks: [
       {
-        title: '1. Higienização e Anestesia Tópica',
+        title: '1. Higienização e anestesia tópica',
         desc: 'Preparo da pele com higienização profunda e creme anestésico de alta eficácia.'
       },
       {
-        title: '2. Microinjeções Dérmicas Precisas',
+        title: '2. Microinjeções dérmicas precisas',
         desc: 'Distribuição de microgotas de ácido hialurônico na derme através de agulha ultrafina ou cânula.'
       },
       {
-        title: '3. Hidratação Contínua dos Tecidos',
+        title: '3. Hidratação contínua dos tecidos',
         desc: 'As moléculas atraem e retêm água nas camadas profundas, restaurando a elasticidade celular.'
       },
       {
-        title: '4. Luminosidade Progressiva',
+        title: '4. Luminosidade progressiva',
         desc: 'A pele ganha viço já nos primeiros dias, com melhora contínua nas semanas seguintes.'
       }
     ],
@@ -442,7 +442,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'lipo-de-papada',
-    name: 'Lipo de Papada',
+    name: 'Lipo de papada',
     category: 'facial',
     subtitle: 'Redução enzimática da gordura submentoniana e definição cervical',
     description: 'A Lipo Enzimática de Papada é um protocolo não-cirúrgico para eliminação da gordura localizada na região submentoniana. Através da aplicação de ativos lipolíticos biocompatíveis (como o ácido deoxicolato), ocorre a quebra seletiva e a eliminação gradual das células adiposas que causam o duplo queixo, devolvendo o ângulo reto e a elegância ao contorno do pescoço e mandíbula.',
@@ -464,19 +464,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/card_lipo-de-papada.webp',
     howItWorks: [
       {
-        title: '1. Mapeamento da Gordura Localizada',
+        title: '1. Mapeamento da gordura localizada',
         desc: 'Delimitação da área de gordura submentoniana através de grade com pontos de injeção milimétricos.'
       },
       {
-        title: '2. Aplicação com Microagulhas',
+        title: '2. Aplicação com microagulhas',
         desc: 'Injeção suave do ativo lipolítico diretamente no panículo adiposo sob o queixo.'
       },
       {
-        title: '3. Ação Lipolítica Seletiva',
+        title: '3. Ação lipolítica seletiva',
         desc: 'O composto quebra as membranas dos adipócitos, que são metabolizados e eliminados pelo organismo.'
       },
       {
-        title: '4. Sessões Seriadas e Avaliação',
+        title: '4. Sessões seriadas e avaliação',
         desc: 'Realização de ciclos de 2 a 4 sessões com intervalo de 30 dias para evolução progressiva.'
       }
     ],
@@ -498,7 +498,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'bioestimuladores-corporais',
-    name: 'Bioestimuladores Corporais',
+    name: 'Bioestimuladores corporais',
     category: 'corporal',
     subtitle: 'Firmeza, efeito lifting e melhora da textura em glúteos, abdômen, braços e coxas',
     description: 'A aplicação de bioestimuladores de colágeno corporais é indicada para combater a flacidez tecidual profunda, melhorar a sustentação dos glúteos (efeito lifting e arredondamento sutil) e tratar a pele frouxa em áreas críticas como o abdômen pós-parto, a parte interna das coxas e os braços ("tchauzinho"). O tratamento rejuvenesce a estrutura dérmica com naturalidade absoluta.',
@@ -521,19 +521,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/card_bioestimuladores.jpg',
     howItWorks: [
       {
-        title: '1. Diagnóstico Corporal e Fotodocumentação',
+        title: '1. Diagnóstico corporal e fotodocumentação',
         desc: 'Avaliação das áreas de maior flacidez, tônus muscular e histórico do paciente.'
       },
       {
-        title: '2. Vetorização Estratégica',
+        title: '2. Vetorização estratégica',
         desc: 'Marcação dos vetores de sustentação onde o produto atuará com maior eficiência tensora.'
       },
       {
-        title: '3. Aplicação Subdérmica Homogênea',
+        title: '3. Aplicação subdérmica homogênea',
         desc: 'Distribuição do bioestimulador com cânula longa, cobrindo amplas áreas com mínimo desconforto.'
       },
       {
-        title: '4. Neocolagênese Contínua',
+        title: '4. Neocolagênese contínua',
         desc: 'A síntese de colágeno progride ao longo de 90 dias, conferindo sustentação e toque firme à pele.'
       }
     ],
@@ -551,7 +551,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'protocolos-flacidez',
-    name: 'Protocolos para Flacidez',
+    name: 'Protocolos para flacidez',
     category: 'corporal',
     subtitle: 'Abordagem combinada para restauração do tônus e firmeza dérmica',
     description: 'Nosso protocolo para flacidez corporal combina tecnologias consagradas e bioativos tensores de alta performance para reestruturar as fibras elásticas da pele. O tratamento é desenhado sob medida após avaliação presencial, atacando a flacidez em múltiplas profundidades para restaurar o tônus e a compactação tecidual.',
@@ -573,19 +573,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/card_body_planning.jpg',
     howItWorks: [
       {
-        title: '1. Mapeamento da Qualidade Cutânea',
+        title: '1. Mapeamento da qualidade cutânea',
         desc: 'Análise do grau de flacidez (leve, moderada ou severa) e espessura do tecido.'
       },
       {
-        title: '2. Plano de Ação Combinado',
+        title: '2. Plano de ação combinado',
         desc: 'Definição da sinergia entre bioestimulação injetável e terapias complementares.'
       },
       {
-        title: '3. Aplicação das Terapias',
+        title: '3. Aplicação das terapias',
         desc: 'Sessões sequenciais que ativam a regeneração do colágeno e a contração das fibras dérmicas.'
       },
       {
-        title: '4. Acompanhamento dos Resultados',
+        title: '4. Acompanhamento dos resultados',
         desc: 'Reavaliação periódica das medidas e da firmeza da área tratada.'
       }
     ],
@@ -599,7 +599,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'protocolos-celulite',
-    name: 'Protocolos para Celulite',
+    name: 'Protocolos para celulite',
     category: 'corporal',
     subtitle: 'Tratamento das causas reais: microcirculação, fibroses e flacidez',
     description: 'A celulite não é apenas gordura: é uma alteração multifatorial que envolve retenção hídrica, trave fibrosa repuxando a pele e flacidez de sustentação. Na Oni Face, tratamos a celulite em sua raiz através de protocolos integrados que desfazem as fibroses profundas, estimulam a microcirculação e promovem a firmeza do tecido, alisando o relevo da pele.',
@@ -621,19 +621,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/card_silhouettes.jpg',
     howItWorks: [
       {
-        title: '1. Classificação do Grau de Celulite',
+        title: '1. Classificação do grau de celulite',
         desc: 'Identificação dos componentes inflamatórios, fibróticos e de flacidez em cada região.'
       },
       {
-        title: '2. Descompressão e Rompimento de Fibroses',
+        title: '2. Descompressão e rompimento de fibroses',
         desc: 'Aplicação de técnicas direcionadas para soltar as traves que repuxam a epiderme para baixo.'
       },
       {
-        title: '3. Estímulo Circulatório e Regeneração',
+        title: '3. Estímulo circulatório e regeneração',
         desc: 'Injeção de mesocócteis bioativos e bioestimuladores para alisar o relevo tecidual.'
       },
       {
-        title: '4. Manutenção e Uniformidade',
+        title: '4. Manutenção e uniformidade',
         desc: 'Orientações de cuidados corporais para preservar a pele lisa e uniforme por longos períodos.'
       }
     ],
@@ -647,7 +647,7 @@ export const TREATMENTS: Treatment[] = [
 
   {
     id: 'protocolos-gordura-localizada',
-    name: 'Enzimas: Gordura Localizada',
+    name: 'Enzimas: gordura localizada',
     category: 'corporal',
     subtitle: 'Lipoenzimática de alta precisão para redução de depósitos adiposos resistentes',
     description: 'A Lipo Enzimática Corporal (intradermoterapia lipolítica) utiliza mesclas de princípios ativos consagrados capazes de emulsificar e acelerar a quebra das células adiposas em áreas onde a gordura insiste em não sair com treinos e dieta, como flancos, abdômen inferior, interno de coxas e gordurinha do sutiã.',
@@ -669,19 +669,19 @@ export const TREATMENTS: Treatment[] = [
     imageSrc: '/planejamento-estetica-corporal-facial.webp',
     howItWorks: [
       {
-        title: '1. Avaliação Adipométrica',
+        title: '1. Avaliação adipométrica',
         desc: 'Medição da prega de gordura na área de interesse e planejamento da dosagem correta.'
       },
       {
-        title: '2. Aplicação das Enzimas Lipolíticas',
+        title: '2. Aplicação das enzimas lipolíticas',
         desc: 'Injeções subcutâneas finas com mesclas estéreis formuladas para agir diretamente no tecido adiposo.'
       },
       {
-        title: '3. Ação Metabólica',
+        title: '3. Ação metabólica',
         desc: 'Os ativos decompõem as moléculas de triglicerídeos nas células de gordura, permitindo sua eliminação.'
       },
       {
-        title: '4. Ciclo de Sessões',
+        title: '4. Ciclo de sessões',
         desc: 'Sessões quinzenais ou mensais de acordo com a resposta individual e o volume a ser tratado.'
       }
     ],

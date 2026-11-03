@@ -68,9 +68,9 @@ export default function TecnologiasPage() {
             </AnimatedSection>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {[
-                { title: 'Evidência Clínica', text: 'Apenas equipamentos com estudos clínicos publicados e resultados comprovados para rejuvenescimento e pele são adotados na Oni Face.' },
+                { title: 'Evidência clínica', text: 'Apenas equipamentos com estudos clínicos publicados e resultados comprovados para rejuvenescimento e pele são adotados na Oni Face.' },
                 { title: 'Segurança', text: 'A segurança da sua face é inegociável. Todos os parâmetros são calibrados especificamente para a anatomia de cada paciente.' },
-                { title: 'Eficácia Real', text: 'Os resultados clínicos na nossa prática confirmam a escolha. Acompanhamos a evolução de cada paciente.' },
+                { title: 'Eficácia real', text: 'Os resultados clínicos na nossa prática confirmam a escolha. Acompanhamos a evolução de cada paciente.' },
               ].map((item, idx) => (
                 <AnimatedSection key={item.title} delay={idx * 0.08}>
                   <div className="flex flex-col gap-4">

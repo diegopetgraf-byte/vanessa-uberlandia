@@ -92,7 +92,7 @@ export function FullFaceArticle({ page, retrato, comMapa = false, comVideos = fa
           <section className="bg-[#EDE7D9] pb-12 sm:pb-16 lg:pb-20 pt-8 sm:pt-12">
             <div className="container-uniq">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                <div className="lg:col-span-5 order-1">
+                <div className="lg:col-span-7 order-2 lg:order-1">
                   <span className="eyebrow block mb-4 text-[#8A6A32]">Full Face · {CLINIC.city}</span>
                   <h1
                     className="font-heading font-light text-[#1A1714] leading-[1.05] mb-5"
@@ -114,16 +114,16 @@ export function FullFaceArticle({ page, retrato, comMapa = false, comVideos = fa
                     </Link>
                   </div>
                 </div>
-                <div className="lg:col-span-7 order-2">
-                  <div className="relative overflow-hidden rounded-2xl bg-[#D9D2C4] shadow-[0_24px_60px_-28px_rgba(27,58,107,0.45)] aspect-[4/5] sm:aspect-[3/2]">
+                <div className="lg:col-span-5 order-1 lg:order-2">
+                  <div className="relative overflow-hidden rounded-2xl bg-[#D9D2C4] shadow-[0_24px_60px_-28px_rgba(27,58,107,0.45)] aspect-[4/5] max-w-md mx-auto lg:max-w-none">
                     <img
                       src={page.heroImage}
                       alt={page.heroAlt ?? ''}
-                      width={1536}
-                      height={1024}
+                      width={1024}
+                      height={1536}
                       fetchPriority="high"
                       decoding="async"
-                      className="absolute inset-0 w-full h-full object-cover object-[10%_50%] sm:object-center"
+                      className="absolute inset-0 w-full h-full object-cover object-[50%_30%]"
                     />
                     <div className="absolute inset-0 ring-1 ring-inset ring-[#1B3A6B]/10 rounded-2xl pointer-events-none" aria-hidden="true" />
                   </div>

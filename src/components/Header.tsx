@@ -108,10 +108,11 @@ export const Header = () => {
               aria-label="Oni Face · Facial Boutique, página inicial"
             >
               <img
-                src="/header-logo.svg"
-                alt="Oni Face · Vanessa Sanabria"
-                className="h-8 md:h-10 w-auto"
-                style={{ maxWidth: 220 }}
+                src="/marca/logo-oniface.svg"
+                alt="Oni Face Facial Boutique"
+                width={3411}
+                height={1024}
+                className="h-10 md:h-12 w-auto"
               />
             </Link>
 
@@ -243,7 +244,7 @@ export const Header = () => {
             >
               <div className="flex items-center justify-between p-6 border-b border-[#D9D2C4]">
                 <Link href="/" onClick={handleLogoClick} className="cursor-pointer">
-                  <img src="/header-logo.svg" alt="Oni Face" className="h-8 w-auto" />
+                  <img src="/marca/logo-oniface.svg" alt="Oni Face Facial Boutique" width={3411} height={1024} className="h-10 w-auto" />
                 </Link>
                 <button
                   onClick={closeMenu}

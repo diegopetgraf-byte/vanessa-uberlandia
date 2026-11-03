@@ -19,7 +19,7 @@ export function truncateDescription(text: string, maxLength: number = 155): stri
  * Ensures a URL is absolute by prefixing it with the site URL if needed.
  */
 export function toAbsoluteUrl(url: string): string {
-  if (!url) return `${SITE_URL}/og.png`;
+  if (!url) return `${SITE_URL}/og-oniface.jpg`;
   if (url.startsWith('http')) return url;
   const cleanPath = url.startsWith('/') ? url : `/${url}`;
   return `${SITE_URL}${cleanPath}`;

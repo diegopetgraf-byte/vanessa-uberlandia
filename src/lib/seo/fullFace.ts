@@ -89,7 +89,7 @@ export function fullFacePageSchemas(page: FullFaceSeoInput): Record<string, unkn
 /** Metadata da página: title absoluto (sem o sufixo do template), canonical e OG. */
 export function buildFullFaceMetadata(page: FullFaceSeoInput): Metadata {
   const url = absoluteUrl(page.rota);
-  const image = absoluteUrl(page.heroImage || '/og.png');
+  const image = absoluteUrl(page.heroImage || '/og-oniface.jpg');
   return {
     title: { absolute: page.title },
     description: page.description,

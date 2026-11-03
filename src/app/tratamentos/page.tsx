@@ -13,15 +13,15 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://institutooniface.com.br';
 
 export const metadata: Metadata = {
-  title: 'Tratamentos Faciais em Uberlândia MG | Full Face · Oni Face · Dra. Vanessa Sanabria',
-  description: 'Botox, preenchimento labial, bioestimuladores, blefaroplastia e protocolo Full Face completo em Uberlândia MG, Dra. Vanessa Sanabria na Oni Face Boutique · Âmbar Health Center.',
-  keywords: ['Full Face Uberlândia', 'botox Uberlândia', 'preenchimento labial Uberlândia', 'harmonização facial Uberlândia MG', 'blefaroplastia Uberlândia', 'bioestimuladores Uberlândia', 'tratamentos faciais Uberlândia'],
+  title: 'Tratamentos faciais em Uberlândia MG | Full Face · Oni Face · Dra. Vanessa Sanabria',
+  description: 'Toxina botulínica, preenchimento labial, bioestimuladores, blefaroplastia e protocolo Full Face completo em Uberlândia MG, Dra. Vanessa Sanabria na Oni Face Boutique · Âmbar Health Center.',
+  keywords: ['Full Face Uberlândia', 'toxina botulínica Uberlândia', 'preenchimento labial Uberlândia', 'harmonização facial Uberlândia MG', 'blefaroplastia Uberlândia', 'bioestimuladores Uberlândia', 'tratamentos faciais Uberlândia'],
   alternates: { canonical: `${SITE_URL}/tratamentos` },
   openGraph: {
     url: `${SITE_URL}/tratamentos`,
     type: 'website',
     title: 'Tratamentos Full Face em Uberlândia MG | Oni Face · Dra. Vanessa Sanabria',
-    description: 'Botox, preenchimento, bioestimuladores e blefaroplastia. Protocolo Full Face completo com Dra. Vanessa Sanabria na Oni Face Boutique, Uberlândia MG.',
+    description: 'Toxina botulínica, preenchimento, bioestimuladores e blefaroplastia. Protocolo Full Face completo com Dra. Vanessa Sanabria na Oni Face Boutique, Uberlândia MG.',
   },
 };
 
@@ -44,7 +44,7 @@ export default function TratamentosPage() {
 
         {/* Page header & Full Face Pitch */}
         <section className="section bg-[#EDE7D9] border-b border-[#D9D2C4] relative overflow-hidden">
-          <div className="absolute inset-0 bg-pattern opacity-[0.08] pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern opacity-[0.35] pointer-events-none" />
           <div className="container-uniq relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
               
@@ -85,7 +85,7 @@ export default function TratamentosPage() {
               <AnimatedSection delay={0.15} className="lg:col-span-5">
                 <div className="relative overflow-hidden rounded-2xl aspect-[3/4] max-w-sm mx-auto lg:mx-0 bg-[#D9D2C4] shadow-lg border border-white/20">
                   <img
-                    src="/professional-2.png"
+                    src="/dra/dra-vanessa-sanabria-retrato.webp"
                     alt="Dra. Vanessa Sanabria, cirurgiã-dentista, Full Face e harmonização facial em Uberlândia MG"
                     className="w-full h-full object-cover object-top"
                     loading="lazy"
