@@ -10,6 +10,7 @@ import { GOOGLE_PERFIL_URL, GOOGLE_REVIEWS, type GoogleReview } from '@/data/goo
  * nas cores da Oni Face). Sem número de avaliações nem nota média, a pedido
  * do Diego (03/11/2026). Gira sozinho a cada 6 s, pausa no hover e no foco,
  * e para de vez quando a pessoa toca, arrasta, rola, usa o teclado ou as setas.
+ * No celular não há setas: a pessoa arrasta os cards com o dedo.
  */
 const TITULO = 'O que dizem as pacientes';
 const LONG = 220;
@@ -128,7 +129,7 @@ export const GoogleReviews = () => {
               <span className="eyebrow mb-4 block text-[#D9BE8C]">Avaliações no Google</span>
               <h2 id="avaliacoes-titulo" className="text-headline text-[#F7F3EC] max-w-2xl">{TITULO}</h2>
             </div>
-            <div className="flex gap-3">
+            <div className="hidden md:flex gap-3">
               <button type="button" onClick={() => { stopped.current = true; step(-1); }} aria-label="Avaliação anterior" className="flex h-11 w-11 items-center justify-center rounded-full border border-[#F7F3EC]/40 text-[#F7F3EC] transition-colors hover:border-[#D9BE8C] hover:text-[#D9BE8C]">
                 <ChevronLeft className="h-5 w-5" aria-hidden="true" />
               </button>

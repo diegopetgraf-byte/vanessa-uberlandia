@@ -1,6 +1,6 @@
 /**
  * Avaliações do Instituto Oni Face no Google (perfil cid 2751962473751785507),
- * copiadas como estão em 03/11/2026. Ficaram de fora as avaliações sem texto
+ * copiadas como estão em 03/11/2026 (nomes em Title Case, pedido do Diego). Ficaram de fora as avaliações sem texto
  * e as das contas da própria clínica e da agência.
  */
 export type GoogleReview = { nome: string; texto: string; estrelas: 5; data: string };
@@ -16,7 +16,7 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     data: 'Outubro de 2026',
   },
   {
-    nome: 'João Gabriel Faria pinto',
+    nome: 'João Gabriel Faria Pinto',
     texto:
       'Me surpreendi desde o atendimento on-line até o dia que fui na clínica pessoalmente para a consulta com a Dra!\nUm espaço maravilhoso e com atendimento nota 1000!\nHoje eu rejuveneci uns 15 anos !\nE estou com autoestima bem alta agora ,depois da transformação que a Dra me fez!\nAgradeço ela sempre ❤️❤️❤️',
     estrelas: 5,
@@ -30,13 +30,13 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     data: 'Outubro de 2026',
   },
   {
-    nome: 'williane Faria',
+    nome: 'Williane Faria',
     texto: 'Excelente profissional! Mãos de fada, amei o atendimento e os resultados! 🥰',
     estrelas: 5,
     data: 'Outubro de 2026',
   },
   {
-    nome: 'Marllon PETTER',
+    nome: 'Marllon Petter',
     texto: 'Espaço maravilhoso,aconchegante,atendimento acolhedor ótima profissional.',
     estrelas: 5,
     data: 'Outubro de 2026',
