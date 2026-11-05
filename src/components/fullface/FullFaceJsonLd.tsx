@@ -50,6 +50,8 @@ export function FullFaceJsonLd({ page }: { page: FullFacePage }) {
     },
     breadcrumb: { '@id': `${url}#breadcrumb` },
   };
+  // ProfilePage exige mainEntity: a pessoa do perfil, já declarada no layout com este @id.
+  if (isSobre) webPage.mainEntity = { '@id': ENTITY_IDS.professional };
   if (!isSobre) webPage.audience = { '@type': 'PeopleAudience', audienceType: 'Paciente' };
   if (page.heroImage) {
     webPage.primaryImageOfPage = { '@type': 'ImageObject', url: absoluteUrl(page.heroImage) };
